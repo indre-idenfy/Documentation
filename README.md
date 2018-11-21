@@ -4,7 +4,7 @@ In order for you to start using our API you will need two things – ***API key*
 
 |Email              |Position                       |
 |-------------------|-------------------------------|
-|darius@idenfy.com  |`CSO`                          |
+|sales@idenfy.com   |`Sales`                        |
 |support@idenfy.com |`Support`                      |
 |info@idenfy.com    |`Support`                      |
 
