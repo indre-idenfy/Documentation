@@ -1,9 +1,10 @@
 # iDenfy API implementation
 ## Getting started
 In order for you to start using our API you will need two things – ***API key*** and ***API secret***. Both can be retrieved by contacting *iDenfy support* or *iDenfy sales team*. Emails are given below:
+
 |Email              |Position                       |
 |-------------------|-------------------------------|
-|darius@idenfy.com  |`CSO`                          |
+|sales@idenfy.com   |`Sales`                        |
 |support@idenfy.com |`Support`                      |
 |info@idenfy.com    |`Support`                      |
 
@@ -11,11 +12,11 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 ## Generating token
 If you have ***API key*** and ***API secret*** you may now create an identification token.
 ### Sending request
-Send a *HTTP Post* request to: [https://ivs.idenfy.com/api/v2/token](https://ivs.idenfy.com/api/v2/token)
+Send a *HTTP Post* request to: [https://ivs.idenfy.com/api/v2/token](https://ivs.idenfy.com/api/v2/token)<br>
 The request must contain JSON with optional and mandatory parameters:
 
 |Key|Required|Explanation|Type|Constraints<img width=/>|Default value|
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|
 |`clientId`|Yes|A unique string identifying a client.|String|- Not null<br>- Max length 100<img width=750/>|-|
 |`firstName`|No|A name(s) of a client to be identified.|String|- Min length 1<br>- Max length 100|-|
 |`lastName`|No|A surname(s) of a client to be identified.|String|- Min length 1<br>- Max length 100|-|
@@ -23,8 +24,8 @@ The request must contain JSON with optional and mandatory parameters:
 |`errorUrl`|No|An url where a client will be redirected after a failed identification.|String|- Min length 5<br>- Max length 2048|`https://`<br>`ui.idenfy.com/`<br>`result?status=fail`|
 |`locale`|No|A country code in alpha-2 format. Determines what default language a client will see in identification UI.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`lt`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`en`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`ru`|`en`|
 |`expiryTime`|No|Length of time in seconds after which a newly generated token will become invalid.|Integer|- More than 0|`3600`|
-|sessionLength|No|Length of time in seconds where a client is given to identify himself in indentification UI.|Integer|- More than 60<br>- Less than 3600|`600`|
-|country|No|A default document country in alpha-2 code for a client. A client will not be able to select a different country.|String|- Any country in alpha-2 code|`null`|
+|`sessionLength`|No|Length of time in seconds where a client is given to identify himself in indentification UI.|Integer|- More than 60<br>- Less than 3600|`600`|
+|`country`|No|A default document country in alpha-2 code for a client. A client will not be able to select a different country.|String|- Any country in alpha-2 code|`null`|
 ### Receiving response
 |Key|Explanation|Constraints|Example value|
 |-|-|-|-|
