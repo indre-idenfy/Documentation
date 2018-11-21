@@ -16,7 +16,7 @@ Send a *HTTP Post* request to: [https://ivs.idenfy.com/api/v2/token](https://ivs
 The request must contain JSON with optional and mandatory parameters:
 
 |Key|Required|Explanation|Type|Constraints<img width=/>|Default value|
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|
 |`clientId`|Yes|A unique string identifying a client.|String|- Not null<br>- Max length 100<img width=750/>|-|
 |`firstName`|No|A name(s) of a client to be identified.|String|- Min length 1<br>- Max length 100|-|
 |`lastName`|No|A surname(s) of a client to be identified.|String|- Min length 1<br>- Max length 100|-|
