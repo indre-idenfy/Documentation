@@ -1,3 +1,4 @@
+
 # iDenfy API implementation
 ## Getting started
 In order for you to start using our API you will need two things – ***API key*** and ***API secret***. Both can be retrieved by contacting *iDenfy support* or *iDenfy sales team*. Emails are given below:
@@ -33,3 +34,39 @@ The request must contain JSON with optional and mandatory parameters:
 |`authToken`|A unique string for identification process (will be passed as an url parameter when redirecting a client to identification platform).|- Length equals 26|`"3FA5TFPA2ZE3LMPGGS1EGOJNJE"`
 |`scanRef`|A unique string identifying a client identification in iDenfy’s side.|- Length equals 36|`"d2714c8a-ec05-11e8-834f-067891e3383a"`
 |`clientId`|A unique string identifying a client in your companies side. (The same value when requesting to generate a token)|- More than 60<br>- Less than 3600|`“5F7E4FR14”`
+
+### Graphical representation of token generation (UML activity)
+
+![](https://raw.githubusercontent.com/idenfy/Documentation/master/iDenfy%20documentation.jpg =550x)
+
+### Examples
+#### Example requests
+
+You can choose not to send any data regarding your client that needs to be identified. The only mandatory parameter is **clientId**.
+```json 
+{
+"clientId": "100000"
+}
+```
+As our only mandatory parameter is **clientId**, howerver we strongly recommend that you would append at least client’s name and surname if possible. It increases the success rate of identification verification.
+```json
+{
+"clientId": "100000",
+“firstName”: “John Tom”,
+“lastName”: “Smith ”
+}
+```
+Specify all of the parameters for full control.
+```json
+{
+"clientId": "100000",
+“firstName”: “John Tom”,
+“lastName”: “Smith ”,
+“successUrl”: “https://www.my-company.com/idenfy/success”,
+“errorUrl”: “https://www.my-company.com/idenfy/fail”,
+“locale”: “en”,
+“expiryTime”: 600,
+“sessionLength”: 600,
+“country”: “en”
+}
+```
