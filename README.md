@@ -1,6 +1,7 @@
 # iDenfy API implementation
 ## Getting started
 In order for you to start using our API you will need two things – ***API key*** and ***API secret***. Both can be retrieved by contacting *iDenfy support* or *iDenfy sales team*. Emails are given below:
+
 |Email              |Position                       |
 |-------------------|-------------------------------|
 |darius@idenfy.com  |`CSO`                          |
