@@ -13,3 +13,7 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 ## Steps
 
 - [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
+
+## Extra
+- [Vocabulary]()
+- [iDenfy IVS API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
