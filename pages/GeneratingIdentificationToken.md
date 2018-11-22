@@ -26,7 +26,7 @@ The request must contain JSON with optional and mandatory parameters:
 
 ### Graphical representation of token generation (UML activity)
 
-<img src="https://raw.githubusercontent.com/idenfy/Documentation/master/iDenfy%20documentation.jpg" alt="Token generation UML activity diagram" width="450">
+<img src="https://raw.githubusercontent.com/idenfy/Documentation/master/resources/TokenGenerationUmlActivityDiagram.jpg" alt="Token generation UML activity diagram" width="450">
 
 ### Examples
 #### Example requests
