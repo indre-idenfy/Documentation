@@ -12,4 +12,4 @@ In order for you to start using our API you will need two things – ***API key*
 Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com/start-trial/) and fill up the form. Our team will contact you.
 ## Steps
 
-- [Generating identification token](https://github.com/idenfy/Documentation/blob/master/README.md)
+- [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
