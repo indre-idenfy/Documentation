@@ -44,29 +44,43 @@ The request must contain JSON with optional and mandatory parameters:
 
 You can choose not to send any data regarding your client that needs to be identified. The only mandatory parameter is **clientId**.
 ```json 
-{
-"clientId": "100000"
+{  
+   "clientId":"100000"
 }
 ```
 As our only mandatory parameter is **clientId**, howerver we strongly recommend that you would append at least client’s name and surname if possible. It increases the success rate of identification verification.
 ```json
-{
-"clientId": "100000",
-"firstName": "John Tom",
-"lastName": "Smith "
+{  
+   "clientId":"100000",
+   "firstName":"John Tom",
+   "lastName":"Smith "
 }
 ```
 Specify all of the parameters for full control.
 ```json
-{
-"clientId": "100000",
-"firstName": "John Tom",
-"lastName": "Smith ",
-"successUrl": "https://www.my-company.com/idenfy/success",
-"errorUrl": "https://www.my-company.com/idenfy/fail",
-"locale": "en",
-"expiryTime": 600,
-"sessionLength": 600,
-"country": "en"
+{  
+   "clientId":"100000",
+   "firstName":"John Tom",
+   "lastName":"Smith ",
+   "successUrl":"https://www.my-company.com/idenfy/success",
+   "errorUrl":"https://www.my-company.com/idenfy/fail",
+   "locale":"en",
+   "expiryTime":600,
+   "sessionLength":600,
+   "country":"en"
 }
 ```
+
+#### Example response
+If supplied data in JSON and ***API key*** with ***API secret*** are valid, you should receive a successful response providing you ***scanRef*** which is the main identifier of an identification in *iDefny* platform.
+
+```json
+{
+  "message": "Token created successfully",
+  "authToken": "3FA5TFPA2ZE3LMPGGS1EGOJNJE",
+  "scanRef": "d2714c8a-ec05-11e8-834f-067891e3383a",
+  "clientId": 100000
+}
+```
+
+Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standart *iDenfy* API error response. For more on *iDenfy* API responses visit [iDenfy error messages].
