@@ -73,3 +73,13 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
 ```
 
 Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standart *iDenfy* API error response. For more on *iDenfy* API responses visit [iDenfy error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md).
+
+### FAQ:
+
+#### What is the difference between expiryTime and sessionLength parameters?
+
+**expiryTime** parameter defines how long the generated token is going to live. For example, if token was generated with expiry time of 3600 (1 hour) a client can start his identification process any time withing that 1 hour. After an hour is passed, a token will no longer be valid and and a client will see an internal “session expired” page. However **sessionLength** determines how long a client can stay in identification platform. **sessionLength** takes effect only when a client visits the identification platform. For example, if token was generated with session length of 600 (10 minutes) a client has 10 minutes to identify himself (take photos of documents and his face) in the platform. After 10 minutes a client will see an internal “session expired” page.
+
+#### What if my client’s name/surname contains non-Latin characters?
+
+We accept any type of characters (Latin and non-Latin).
