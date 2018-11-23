@@ -14,9 +14,16 @@ If you wish to have an iFrame implementation – there is a slightly different a
 
 </center>
 
+***NOTE!*** 
+When using iFrame locale parameter (when generating token) will have no effect. To force iFrame to use locale append `"lang=<alpha-2-country-code>"` url parameter. Example is given below.
+
+
+
 ### Examples
 
-An example redirect url looks like this:<br>https://ui.idenfy.com/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE
+An example redirect url:<br>https://ui.idenfy.com/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE
+
+An example redirect url with english locale:<br>https://ui.idenfy.com/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE&lang=en
 
 #### Example code
 
