@@ -2,7 +2,7 @@
 
 When interacting with iDenfy API you may encounter error responses. This means that you have tried to do an action which is not allowed or malformed in some way.
 
-A standard error response has a HTTP status code 400 and a JSON body which:
+A standard error response has a HTTP status code 400 and a JSON body which contains:
 
 |JSON key      |Explanation                                                                                                 |
 |--------------|------------------------------------------------------------------------------------------------------------|
