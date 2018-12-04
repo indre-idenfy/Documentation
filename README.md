@@ -16,4 +16,4 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 
 ## Extra
 - [Vocabulary]()
-- [iDenfy IVS API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
+- [API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
