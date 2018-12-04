@@ -17,5 +17,5 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 - [Client redirect to identification WEB platform (iFrame)](https://github.com/idenfy/Documentation/blob/master/pages/ClientRedirectToWebUiIframe.md)
 
 ## Extra
-- [Vocabulary]()
+- [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
 - [API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
