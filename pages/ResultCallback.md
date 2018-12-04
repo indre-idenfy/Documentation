@@ -6,7 +6,7 @@ Request HTTP body is in JSON format which is described in tables below:
 
 |JSON key    |Type    |Constraints      |Explanation                                                                            |
 |------------|--------|-----------------|---------------------------------------------------------------------------------------|
-|`status`    |`Object`|-<img width=350/>|Dictionary that contains the status of the identification e.g. APPROVED.               |
+|`status`    |`Object`|-                |Dictionary that contains the status of the identification e.g. APPROVED.               |
 |`data`      |`Object`|-                |Dictionary that contains parsed data from clients identity document.                   |
 |`fileUrls`  |`Object`|-                |Dictionary that contains url links to download or view client's identification photos. |
 |`aml`       |`Object`|-                ||
