@@ -1,5 +1,18 @@
 # Standard API errors
 
+When interacting with iDenfy API you may encounter error responses. This means that you have tried to do an action which is not allowed or malformed in some way.
+
+A standard error response has a HTTP status code 400 and a JSON body which:
+
+|JSON key      |Explanation                                                                                                 |
+|--------------|------------------------------------------------------------------------------------------------------------|
+|`identifier`  |A constant indicating a type of error. Never changes, therefore can be used in code to automate processes. For possible values see the table below.  |
+|`message`     |A human readable message describing an error. Mainly used for programers to get a clue of what went wrong.  |
+
+### Error identifier constants
+
+A list of error constants and their explanations.
+
 |Error identifier          |Explanation                                                            |
 |--------------------------|-----------------------------------------------------------------------|
 |`INTERNAL_ERROR`          |Unhandled unknown internal error at *iDenfy* API side.                 |
