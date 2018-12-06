@@ -44,6 +44,8 @@ Request HTTP body is in JSON format which is described in tables below:
 
 ### File urls table
 
-|JSON key    |Type    |Constraints      |Explanation|
-|------------|--------|-----------------|-----------|
-|            |        |                 |           |
+|JSON key    |Type          |Constraints      |Explanation|
+|------------|--------------|-----------------|-----------|
+|`FRONT`     |`String (URL)`|- Max length 500 |An URL to download front document side photo with which a client has completed an identification.|
+|`BACK`      |`String (URL)`|- Max length 500 |An URL to download back document side photo with which a client has completed an identification.|
+|`FACE`      |`String (URL)`|- Max length 500 |An URL to download face photo with which a client has completed an identification.|
