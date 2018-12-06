@@ -12,7 +12,7 @@ Request HTTP body is in JSON format which is described in tables below:
 
 |JSON key    |Type    |Constraints      |Explanation                                                                                                   |
 |------------|--------|-----------------|--------------------------------------------------------------------------------------------------------------|
-|`status`    |`Object`|-                |Dictionary that contains the status of the identification. [Refer to status table](#status-table).                                      |
+|`status`    |`Object`|-                |Dictionary that contains the status of the identification. [Refer to status table](#identification-status-table).                                      |
 |`data`      |`Object`|-                |Dictionary that contains parsed data from clients identity document. [Refer to data table](#data-table).                                          |
 |`fileUrls`  |`Object`|-                |Dictionary that contains url links to download or view client's identification photos. [Refer to file urls table](#file-urls-table)                        |
 |`aml`       |`Object`|-                |Dictionary that contains anti-money-laundering (AML) service data. Only applicable if AML is enabled for you. [Refer to AML documentation](). |
