@@ -1,6 +1,12 @@
-# Identification result callback
+# Identification result webhook callback
 
 When a client completes identification - your registered web hook endpoint will receive a HTTP POST request containing data and status of the identification.
+
+Your API **must** return HTTP response with status code `200`. Otherwise a client will see a failed identification message and will be redirected to a fail url.
+
+If you are experiencing any issues receiving a callback - [Refer to a callback troubleshooting section](#callback-troubleshooting).
+
+## Callback structure
 
 Request HTTP body is in JSON format which is described in tables below:
 
@@ -49,3 +55,58 @@ Request HTTP body is in JSON format which is described in tables below:
 |`FRONT`     |`String (URL)`|- Max length 500 |An URL to download front document side photo with which a client has completed an identification.|
 |`BACK`      |`String (URL)`|- Max length 500 |An URL to download back document side photo with which a client has completed an identification.|
 |`FACE`      |`String (URL)`|- Max length 500 |An URL to download face photo with which a client has completed an identification.|
+
+## Examples
+
+This is an example JSON body in the callback HTTP request.
+
+```json
+{
+    "status":{
+        "overall":"APPROVED",
+        "autoDocument":"DOC_VALIDATED",
+        "autoFace":"FACE_MATCH",
+        "manualDocument":null,
+        "manualFace":null
+    },
+    "data":{
+        "selectedCountry":"LT",
+        "docFirstName":"FIRST-NAME-EXAMPLE",
+        "docLastName":"LAST-NAME-EXAMPLE",
+        "docNumber":"XXXXXXXXX",
+        "docPersonalCode":"XXXXXXXXX",
+        "docExpiry":"YYYY-MM-DD",
+        "docDob":"YYYY-MM-DD",
+        "docType":"ID_CARD",
+        "docSex":"UNDEFINED",
+        "docNationality":"LT",
+        "docIssuingCountry":"LT",
+        "manuallyDataChanged":false
+    },
+    "fileUrls":{
+        "FRONT":"https://ivs.idenfy.com/storage/get/<JWT_TOKEN>/FRONT.jpg",
+        "BACK":"https://ivs.idenfy.com/storage/get/<JWT_TOKEN>/BACK.jpg",
+        "FACE":"https://ivs.idenfy.com/storage/get/<JWT_TOKEN>/FACE.jpg"
+    },
+    "aml":{
+        "suspected":false,
+        "results":{
+        }
+    },
+    "lid":{
+        "suspected":false,
+        "results":{
+        }
+    },
+    "clientId":"123",
+    "scanRef":"scan-ref" 
+}
+```
+
+## Callback troubleshooting
+
+Not receiving a callback? These are the first steps you should take in order to resolve an issue:
+- Ensure that you have provided a valid callback endpoint (it does not contain typos and is a fully specified url with http schema, port and domain name).
+- Ensure that the provided endpoint can be reached from internet.
+- Ensure that your SSL is set up correctly (if using https).
+- Ensure that you are **actually** not getting a callback and your framework is not accidentally returning some other HTTP response e.g. 422 or 500.
