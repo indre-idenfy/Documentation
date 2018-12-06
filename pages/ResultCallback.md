@@ -21,15 +21,47 @@ Request HTTP body is in JSON format which is described in tables below:
 |`clientId`  |`String`|- Max length 100 |A unique string to trace back a client on your side.                                                          |
 
 
-### Status table
+### Identification status table
 
 |JSON key        |Type    |Constraints      |Explanation|
 |----------------|--------|-----------------|-----------|
-|`overall`       |`String`|- Max length 30  |An overall status of the identification. It is a combination of manual and automatic verification results. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- NOT_REVIEWED                                              |
-|`autoFace`      |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE  |
+|`overall`       |`String`|- Max length 30  |An overall status of the identification. It is a combination of manual and automatic verification results. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- NOT_REVIEWED<br>[For value explanations refer to status vocabulary](#identification-status-values-vocabulary).                                              |
+|`autoFace`      |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](#identification-status-values-vocabulary).  |
 |`manualFace`    |`String`|- Max length 30  |A manual face analysis result (decision made by a human). Possible values are the same as  `autoFace` field.                                                                                                                        |
-|`autoDocument`  |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_TOO_BLURRY<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE|
+|`autoDocument`  |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_TOO_BLURRY<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](#identification-status-values-vocabulary).|
 |`manualDocument`|`String`|- Max length 30  |A manual document analysis result (decision made by a human). Possible values are the same as `autoDocument` field.|
+
+#### Identification status values vocabulary
+|Value                        |Explanation                                     |
+|-----------------------------|------------------------------------------------|
+|`APPROVED`                   |Identification was successful and approved by an automated platform or a manual reviewer.|
+|`DENIED`                     |Identification was not successful and was denied by an automated platform or a manual reviewer.|
+|`SUSPECTED`                  |Identification seemed fraudulent for an automated platform so it was immediately terminated.|
+|`NOT_REVIEWED`               |Identification was not reviewed by an automated platform or a manual reviewer.|
+|`FACE_MATCH`                 |Selfie face matched face from the identity document.|
+|`FACE_MISMATCH`              |Selfie face did not match face from the identity document.|
+|`NO_FACE_FOUND`              |No faces could be found in the selfie photo.|
+|`TOO_MANY_FACES`             |Too many faces found in the selfie photo.|
+|`FACE_TOO_BLURRY`            |Selfie face was too blurry and face matching could not be performed.|
+|`FACE_ERROR`                 |Unclassified error happened when locating/matching faces.|
+|`DOC_VALIDATED`              |Document was successfully analysed and approved.|
+|`DOC_INFO_MISMATCH`          |When generating token provided data mismatched with the data parsed from the document.|
+|`DOC_NOT_FOUND`              |Document could not be found in the photo.|
+|`DOC_NOT_SUPPORTED`          |A client has tried to identify himself with an unsupported document.|
+|`DOC_FACE_NOT_FOUND`         |A face in the document could not be located.|
+|`DOC_NAME_ERROR`             |In the front side of the document a name field could not be found or parsed.|
+|`DOC_SURNAME_ERROR`          |In the front side of the document a surname field could not be found or parsed.|
+|`DOC_EXPIRY_ERROR`           |In the front side of the document a document expiry date field could not be found or parsed.|
+|`DOC_DOB_ERROR`              |In the front side of the document a date of birth field could not be found or parsed.|
+|`DOC_PERSONAL_NUMBER_ERROR`  |In the front side of the document a personal code field could not be found or parsed.|
+|`DOC_NUMBER_ERROR`           |In the front side of the document a document number field could not be found or parsed.|
+|`DOC_TOO_BLURRY`             |Document looks too blurry in the photo and data parsing can not be performed.|
+|`MRZ_NOT_FOUND`              |Machine Readable Zone (MRZ) could not be located.|
+|`MRZ_OCR_READING_ERROR`      |Failed to read and parse Machine Readable Zone (MRZ). Possibly check-digit discrepancy.|
+|`DOC_EXPIRED`                |Document is expired and identification on this document can not be performed.|
+|`COUNTRY_MISMATCH`           |Selected country and identity document issuing country do not match.|
+|`DOC_ERROR`                  |Unclassified error happened while analysing identity document.|
+|`AUTO_UNVERIFIABLE`          |This identification can not be automatically verified and needs to be verified by human.|
 
 ### Data table
 
