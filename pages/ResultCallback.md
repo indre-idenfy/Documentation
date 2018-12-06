@@ -27,9 +27,20 @@ Request HTTP body is in JSON format which is described in tables below:
 
 ### Data table
 
-|JSON key    |Type    |Constraints      |Explanation|
-|------------|--------|-----------------|-----------|
-|            |        |                 |           |
+|JSON key             |Type    |Constraints      |Explanation|
+|---------------------|--------|-----------------|-----------|
+|`docFirstName`       |`String`|- Max length 100 |Clients name parsed from the document.|
+|`docLastName`        |`String`|- Max length 100 |Clients surname parsed from the document.|
+|`docNumber`          |`String`|- Max length 15  |Clients document number parsed from the document.|
+|`docPersonalCode`    |`String`|- Max length 15  |Clients personal code parsed from the document.|
+|`docExpiry`          |`String`|- Max length 10  |Clients document expiry date parsed from the document.|
+|`docDob`             |`String`|- Max length 10  |Clients date of birth parsed from the document.|
+|`docType`            |`String`|- Max length 30  |Clients used document type to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
+|`docSex`             |`String`|- Max length 10  |Clients sex parsed from the document. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
+|`docNationality`     |`String`|- Max length 2   |Clients nationality parsed from the document. Returned value is an alpha-2 country code.|
+|`docIssuingCountry`  |`String`|- Max length 2   |Clients documents issuing country parsed from the document. Returned value is an alpha-2 country code.|
+|`selectedCountry`    |`String`|- Max length 2   |Clients selected country in identification platform. Returned value is an alpha-2 country code.|
+|`manuallyDataChanged`|`Bool`  |-                |Indicates whether a manual reviewer has changed any parsed data from the document. Applicable only when a human reviews an identification. In automated verification response this value is `false`.|
 
 ### File urls table
 
