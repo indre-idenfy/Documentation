@@ -39,6 +39,7 @@ Request HTTP body is in JSON format which is described in tables below:
 
 |JSON key    |Type    |Constraints      |Explanation                                                                                                   |
 |------------|--------|-----------------|--------------------------------------------------------------------------------------------------------------|
+|`platform`  |`String`|- Max length 30  |Tells from which device (platform) a client completed an identification. Possible values:<br>- PC<br>- MOBILE<br>- TABLET<br>- MOBILE_APP<br>- MOBILE_SDK<br>- OTHER|
 |`status`    |`Object`|-                |Dictionary that contains the status of the identification. [Refer to status table](#identification-status-table).                                      |
 |`data`      |`Object`|-                |Dictionary that contains parsed data from clients identity document. [Refer to data table](#data-table).                                          |
 |`fileUrls`  |`Object`|-                |Dictionary that contains url links to download or view client's identification photos. [Refer to file urls table](#file-urls-table)                        |
@@ -89,6 +90,7 @@ This is an example JSON body in the callback HTTP request.
 
 ```json
 {
+    "platform":"MOBILE_APP",
     "status":{
         "overall":"APPROVED",
         "autoDocument":"DOC_VALIDATED",
