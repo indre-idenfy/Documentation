@@ -6,6 +6,33 @@ Your API **must** return HTTP response with status code `200`. Otherwise a clien
 
 If you are experiencing any issues receiving a callback - [Refer to a callback troubleshooting section](#callback-troubleshooting).
 
+## Identification and callback flow
+
+### When to expect a callback
+
+There are certain points of time in identity verification process when your API should expect to receive a callback.
+
+Your API should expect to receive a callback immediately when:
+- A client has successfully completed an identification
+- A client has consecutively failed to identify himself and has reached maximum reattempts allowed in the identification platform.  
+- A client was suspected for a fraudulent activity and his session was terminated.
+
+Your API should not expect to receive an immediate callback when (In case of these events your API will receive a callback only when a **token** or **session** has expired. For more on these variables refer to [Generating identification token]()):
+- A client has consecutively failed to identify himself and has not reached maximum reattempts allowed in the identification platform.
+- A client did not start an identification session.
+
+### How many callbacks to expect
+
+In total you should expect two consecutive callbacks per identification: 
+- One generated for an automatic verification.
+- Second generated for a manual verification.
+
+Two consecutive callbacks are represented in an UML activity graph below:
+
+<img src="https://raw.githubusercontent.com/idenfy/Documentation/master/resources/ClientIdentificationWorkflowActivityDiagram.jpg" alt="Token generation UML activity diagram" width="600">
+
+On how to differentiate which callback represents manual or automatic verification refer to [FAQ section](#faq)
+
 ## Callback structure
 
 Request HTTP body is in JSON format which is described in tables below:
@@ -110,3 +137,12 @@ Not receiving a callback? These are the first steps you should take in order to 
 - Ensure that the provided endpoint can be reached from internet.
 - Ensure that your SSL is set up correctly (if using https).
 - Ensure that you are **actually** not getting a callback and your framework is not accidentally returning some other HTTP response e.g. 422 or 500.
+
+## FAQ
+
+
+#### How do I differentiate which (manual or automatic) verification a callback represents?
+
+All the necessary information lies in the `status` field of a callback.
+If `autoDocument` with `autoFace` fields are not empty and `manualDocument` with `manualFace` are empty - it means the callback represents automatic verification. 
+If `manualDocument` with `manualFace` fields are not empty - it means the callback represents manual verification.
