@@ -17,7 +17,7 @@ Your API should expect to receive a callback immediately when:
 - A client has consecutively failed to identify himself and has reached maximum reattempts allowed in the identification platform.  
 - A client was suspected for a fraudulent activity and his session was terminated.
 
-Your API should not expect to receive an immediate callback when (In case of these events your API will receive a callback only when a **token** or **session** has expired. For more on these variables refer to [Generating identification token]()):
+Your API should not expect to receive an immediate callback when (In case of these events your API will receive a callback only when a **token** (token property `tokenExpiry`) or a **token session** (token property `sessionLength`) has expired. For more on these variables refer to [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)):
 - A client has consecutively failed to identify himself and has not reached maximum reattempts allowed in the identification platform.
 - A client did not start an identification session.
 
