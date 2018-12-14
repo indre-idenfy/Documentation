@@ -15,7 +15,9 @@
 |`APPROVED`                   |Identification was successful and approved by an automated platform or a manual reviewer.|
 |`DENIED`                     |Identification was not successful and was denied by an automated platform or a manual reviewer.|
 |`SUSPECTED`                  |Identification seemed fraudulent for an automated platform so it was immediately terminated.|
-|`NOT_REVIEWED`               |Identification was not reviewed by an automated platform or a manual reviewer.|
+|`REVIEWING`                  |Client has selected 'Other Documents'. With this type of identification an automatic verification is not possible therefore it is being reviewed by a human. 'Other Documents' type may be not applicable to you. Contact iDenfy support to turn this feature on or off.|
+|`EXPIRED`                    |A token associated with this identification got expired and an identification process never took place (token was not used).|
+|`ACTIVE`                     |An identification has no decisive status. A token representing this identification was not used and is still active and can be used by a client any moment.|
 |`FACE_MATCH`                 |Selfie face matched face from the identity document.|
 |`FACE_MISMATCH`              |Selfie face did not match face from the identity document.|
 |`NO_FACE_FOUND`              |No faces could be found in the selfie photo.|
