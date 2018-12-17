@@ -20,7 +20,7 @@ Returned response:
 
 |JSON key        |Type    |Constraints      |Explanation|
 |----------------|--------|-----------------|-----------|
-|`overall`       |`String`|- Max length 30  |An overall status of the identification. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- REVIEWING<br>- ACTIVE<br>- EXPIRED<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).                                              |
+|`status`        |`String`|- Max length 30  |An overall status of the identification. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- REVIEWING<br>- ACTIVE<br>- EXPIRED<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).                                              |
 |`scanRef`       |`String`|- Max length 36  |A unique string to trace back an identification on iDenfy’s side.                                             |
 |`clientId`      |`String`|- Max length 100 |A unique string to trace back a client on your side.                                                          |
 
