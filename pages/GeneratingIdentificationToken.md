@@ -3,7 +3,7 @@
 If you have ***API key*** and ***API secret*** you can create an identification token.
 ### Sending request
 Send a *HTTP Post* request to: [https://ivs.idenfy.com/api/v2/token](https://ivs.idenfy.com/api/v2/token)<br>
-The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.
+The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.<br>
 The request must contain JSON with optional and mandatory parameters:
 
 |Key|Required|Explanation|Type|Constraints<img width=/>|Default value|
