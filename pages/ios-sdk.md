@@ -8,7 +8,7 @@
 ## Getting started
 
 * SDK supports iOS 9.0
-* SDK supports Swift Swift 4.2
+* SDK supports Swift 4.2
 
 ### 1. Obtaining token
 SDK requires token for starting initialization. [Token generation guide](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
@@ -57,13 +57,11 @@ Following method will provide callbacks from the SDK:
 ### Swift
 ```swift
     idenfyController.handleIDenfyCallbacks(
-            onSuccess: { (AuthenticationResultResponse
-                ) in
+            onSuccess: { (AuthenticationResultResponse) in
             }, 
             onError: { (IdenfyErrorResponse) in
             }, 
-            onUserExit: {
-                
+            onUserExit: { 
             })
 ```
 
@@ -91,7 +89,7 @@ Country code must be in alpha-2 code.
 If default document country was selected during **token generation** the terms of services and country information View can be removed.
 ```swift
    IdenfyBuilder()
-    .withPresentInitialView("country_code")
+    .withPresentInitialView(false)
     ...
 ```
  ### 3. Custom locale
@@ -119,10 +117,9 @@ SDK provides various ways of changing UI for better design integration.
 let idenfyUISettings = IdenfyUIBuilder()
     .withCustomColors(colorPrimary: UIColor, colorPrimaryDark: UIColor, colorAccent: UIColor)
     .withCustomLoadingView(loadingView: UIView?)
-
-    //provide custom loading view
     .build()
-
+```
+```swift
     let idenfySettings = IdenfyBuilder()
     .withUISettings(idenfyUISettings)
     ...
@@ -145,6 +142,6 @@ The storyboard file can be *fully customised*. The only requirement is to includ
     .withCustomStoryboard(true)
     ...
 ```
-
+*Note: If custom storyboard is selected, UISettings will still override Interface Builder.
 
 
