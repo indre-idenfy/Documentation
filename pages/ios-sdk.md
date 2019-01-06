@@ -2,7 +2,8 @@
 
 *   [Getting started](#getting-started)
 *   [Callbacks](#callbacks)
-*   [Customising Flow](#customising-flow)
+*   [Customising flow](#customising-flow)
+*   [UI Customisation](#ui-customisation)
 
 ## Getting started
 
@@ -19,7 +20,6 @@ SDK requires token for starting initialization. [Token generation guide](https:/
 <key>NSCameraUsageDescription</key>
 <string>Required for document and facial capture</string>
 ```
-
 ### 3. Adding the SDK dependency
 ```ruby
 pod 'iDenfySDK'
@@ -30,7 +30,6 @@ Run `pod install` to get the sdk.
 ### 4. Configuring SDK
 
 It is required to provide following configuration:
-
 ### Swift
 ```swift
  let idenfySettings = IdenfyBuilder()
@@ -72,7 +71,7 @@ Alternatively each callback can be listened separately, by only calling particul
 
  [Additional information about callbacks](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
 
- ## Customising Flow
+ ## Customising flow
  SDK provides various options for changing identification flow. All requirements can be specified inside of IdenfyBuilder()
 
  ### 1. Setting documents country of issue
@@ -89,8 +88,7 @@ Country code must be in alpha-2 code.
 
  ### 2. Removing initial ViewController
 
-If default document country was selected during token generation the terms of services and country information View can be removed.
-
+If default document country was selected during **token generation** the terms of services and country information View can be removed.
 ```swift
    IdenfyBuilder()
     .withPresentInitialView("country_code")
@@ -103,5 +101,50 @@ If default document country was selected during token generation the terms of se
  - English (en) GB
  - Polish (es) PL
  - Russian (es) RU
+ - Lithuanian (es) LT
+
+The language of SDK is selected by the language configurations of the **device**. In order to setup custom localization the following method must be called
+```swift
+   IdenfyBuilder()
+    .withCustomSelectedLocale("locale")
+    ...
+```
+## UI Customisation
+
+SDK provides various ways of changing UI for better design integration.
+ ### 1. UI settings
+
+### Swift
+```swift
+let idenfyUISettings = IdenfyUIBuilder()
+    .withCustomColors(colorPrimary: UIColor, colorPrimaryDark: UIColor, colorAccent: UIColor)
+    .withCustomLoadingView(loadingView: UIView?)
+
+    //provide custom loading view
+    .build()
+
+    let idenfySettings = IdenfyBuilder()
+    .withUISettings(idenfyUISettings)
+    ...
+    
+```
+Default colors have following values and represent UI elements in the ViewControllers:
+```swift
+var idenfyColorPrimary:UIColor = UIColor(red: 54.0/255.0, green: 70.0/255.0, blue: 93.0/255.0, alpha: 1.0)
+var idenfyColorPrimaryDark:UIColor = UIColor(red: 43/255.0, green: 56/255.0, blue: 74/255.0, alpha: 1.0)
+var idenfyColorAccent:UIColor = UIColor(red:139/255.0, green: 199/255.0, blue: 224/255.0, alpha: 1.0)    
+```
+ ### 2. Custom Storyboard
+ 
+Additionaly SDK provides storyboard file, which contains whole design of an SDK. 
+
+The storyboard file can be *fully customised*. The only requirement is to include storyboard file in the **app folder** of your application and provide following method:
+
+```swift
+   IdenfyBuilder()
+    .withCustomStoryboard(true)
+    ...
+```
+
 
 
