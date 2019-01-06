@@ -119,6 +119,7 @@ let idenfyUISettings = IdenfyUIBuilder()
     .withCustomLoadingView(loadingView: UIView?)
     .build()
 ```
+Provide created UISettings when initializing idenfySettings:
 ```swift
     let idenfySettings = IdenfyBuilder()
     .withUISettings(idenfyUISettings)
