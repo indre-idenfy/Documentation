@@ -17,6 +17,7 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 - [Client redirect to identification WEB platform (iFrame)](https://github.com/idenfy/Documentation/blob/master/pages/ClientRedirectToWebUiIframe.md)
 - [Webhook callback](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md)
 - [Additional identification data retrieval](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationDataRetrieval.md)
+- [IOS SDK](https://github.com/idenfy/Documentation/blob/master/pages/ios-sdk.md)
 
 ## Extra
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
