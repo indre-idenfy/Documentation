@@ -85,5 +85,92 @@ It is required to override onActivityResult for receiving responses.
 
 ## Customising flow
  SDK provides various options for changing identification flow. All requirements can be specified inside of IdenfyBuilder()
-
  
+ *Note: SDK provides Builder pattern to improve code testibility and maitanance. Equivalently setters can also be used.
+ 
+ ### 1. Setting documents country of issue
+
+Following method will specify country of issue and will remove countries selection and terms of service Fragment
+
+```java
+   IdenfySettings.IdenfyBuilder()
+    .withIssuingCountry("country_code")
+    ...
+```
+ ### 2. Removing initial Fragment
+
+If default document country was selected during **token generation** the terms of services and country information View can be removed.
+```java
+   IdenfySettings.IdenfyBuilder()
+    .withPresentInitialView(false)
+    ...
+```
+
+### 3. Setting custom results view
+
+If results view UI is not suitable for your design we provide customisation. We provide full xml file of results view
+```java
+   IdenfySettings.IdenfyBuilder()
+    .withCustomResultsView(true)
+    ...
+```
+
+### 4. Custom locale
+
+ By default SDK provides following translations:
+
+ - English (en) GB
+ - Polish (es) PL
+ - Russian (es) RU
+ - Lithuanian (es) LT
+
+The language of SDK is selected by the language configurations of the **device**. In order to setup custom localization the following method must be called
+```java
+   IdenfySettings.IdenfyBuilder()
+    .withCustomSelectedLocale("locale")
+    ...
+```
+## UI Customisation
+
+SDK provides various ways of changing UI for better design integration.
+ ### 1. UI settings
+
+### Java
+```java
+IdenfyUISettings idenfyUISettings = new 
+IdenfyUISettings.IdenfyUIBuilder()
+    .build()
+```
+ ### 2. Customisable features
+ Setting different progress indicator for custom layout
+```java
+IdenfyUISettings.IdenfyUIBuilder()
+    ...
+    withCustomLoadingView(Integer drawableId)
+    .build
+```
+Removing actionBarLayout from UI. Helps to easier customize UI.
+```java
+IdenfyUISettings.IdenfyUIBuilder()
+    ...
+    withAppBarLayoutEnabled(boolean isActionBarEnabled)
+    .build
+```
+
+To set custom typeface.
+```java
+IdenfyUISettings.IdenfyUIBuilder()
+    ...
+    withTypefacePath(String pathOfTypeface)
+    .build
+```
+Colors can be easily changed by overriding values in the colors.xml of app module
+
+
+
+
+
+
+
+
+
