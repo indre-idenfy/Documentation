@@ -16,6 +16,7 @@ Our current gradle configuration supports newest support library:
 
 `buildToolsVersion '28.0.3'`
 
+
 ### 1. Obtaining token
 SDK requires token for starting initialization. [Token generation guide](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
 
@@ -35,7 +36,7 @@ In the app level gradle add following implementation:
 repositories {
   ...
   dependencies {  
-      implementation 'idenfySdk:com.idenfy.idenfySdk:1.0.7' 
+      implementation 'idenfySdk:com.idenfy.idenfySdk:+' 
     }
 }
 ```
@@ -48,6 +49,15 @@ IdenfySettings idenfySettings = new IdenfySettings.IdenfyBuilder()
                 .withAuthToken("AUTH_TOKEN")
                 .build();
 ```
+### 5. Enabling Java 8 support
+It is required to enable Java 8 support, if it was already not provided:
+```gradle
+ compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+```
+
 ### 5. Presenting Activity
 
 Instance of IdenfyController is required for starting a flow.
@@ -81,6 +91,7 @@ It is required to override onActivityResult for receiving responses.
     }
 ```
 
+
 [Additional information about callbacks](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
 
 ## Customising flow
@@ -88,16 +99,7 @@ It is required to override onActivityResult for receiving responses.
  
  *Note: SDK provides Builder pattern to improve code testibility and maitanance. Equivalently setters can also be used.
  
- ### 1. Setting documents country of issue
-
-Following method will specify country of issue and will remove countries selection and terms of service Fragment
-
-```java
-   IdenfySettings.IdenfyBuilder()
-    .withIssuingCountry("country_code")
-    ...
-```
- ### 2. Removing initial Fragment
+ ### 1. Removing initial Fragment
 
 If default document country was selected during **token generation** the terms of services and country information View can be removed.
 ```java
@@ -106,7 +108,7 @@ If default document country was selected during **token generation** the terms o
     ...
 ```
 
-### 3. Setting custom results view
+### 2. Setting custom results view
 
 If results view UI is not suitable for your design we provide customisation. We provide full xml file of results view
 ```java
@@ -115,7 +117,7 @@ If results view UI is not suitable for your design we provide customisation. We 
     ...
 ```
 
-### 4. Custom locale
+### 3. Custom locale
 
  By default SDK provides following translations:
 
@@ -164,8 +166,17 @@ IdenfyUISettings.IdenfyUIBuilder()
     withTypefacePath(String pathOfTypeface)
     .build
 ```
-Colors can be easily changed by overriding values in the colors.xml of app module
+Colors can be easily changed by overriding values of the colors.xml in the app module
 
+`idenfyColorPrimary`: Sets most attributes in the UI.
+
+`idenfyColorPrimaryDark`: Sets the background color of the`Toolbar`
+
+`idenfyColorAccent`: Sets the color of button, checkboxes, icons.
+
+`idenfyNextButtonColor`: Defines the color of the next button, inherits from idenfyColorAccent by default.
+
+More than 20 other color customisations available within SDK.
 
 
 
