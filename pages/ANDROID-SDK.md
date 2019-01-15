@@ -64,7 +64,7 @@ Instance of IdenfyController is required for starting a flow.
 
 ### Java
 ```java
-   IdenfyController.getInstance().startActivityForResult(context IdenfyController.IDENFY_REQUEST_CODE, idenfySettings);
+   IdenfyController.getInstance().startActivityForResult(context, IdenfyController.IDENFY_REQUEST_CODE, idenfySettings);
    //context must be of a activity type
 ```
 ## Callbacks
