@@ -64,7 +64,8 @@ Instance of IdenfyController is required for starting a flow.
 
 ### Java
 ```java
-   IdenfyController.getInstance().startActivityForResult(this, IdenfyController.IDENFY_REQUEST_CODE, idenfySettings);
+   IdenfyController.getInstance().startActivityForResult(context IdenfyController.IDENFY_REQUEST_CODE, idenfySettings);
+   //context must be of a activity type
 ```
 ## Callbacks
 SDK provides following callbacks: onSuccess, onError and onUserExit.
@@ -141,30 +142,27 @@ SDK provides various ways of changing UI for better design integration.
 ```java
 IdenfyUISettings idenfyUISettings = new 
 IdenfyUISettings.IdenfyUIBuilder()
-    .build()
+    .build();
 ```
  ### 2. Customisable features
  Setting different progress indicator for custom layout
 ```java
 IdenfyUISettings.IdenfyUIBuilder()
-    ...
     withCustomLoadingView(Integer drawableId)
-    .build
+    ...
 ```
 Removing actionBarLayout from UI. Helps to easier customize UI.
 ```java
 IdenfyUISettings.IdenfyUIBuilder()
-    ...
     withAppBarLayoutEnabled(boolean isActionBarEnabled)
-    .build
+    ...
 ```
 
 For setting custom typeface.
 ```java
 IdenfyUISettings.IdenfyUIBuilder()
-    ...
     withTypefacePath(String pathOfTypeface)
-    .build
+    ...
 ```
 Colors can be easily changed by overriding values of the colors.xml in the app module
 
