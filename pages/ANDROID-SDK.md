@@ -40,6 +40,14 @@ repositories {
     }
 }
 ```
+### 3. Enabling Java 8 support
+It is required to enable Java 8 support, if it was already not provided:
+```gradle
+ compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+```
 
 ### 4. Configuring SDK
 It is required to provide following configuration:
@@ -49,17 +57,9 @@ IdenfySettings idenfySettings = new IdenfySettings.IdenfyBuilder()
                 .withAuthToken("AUTH_TOKEN")
                 .build();
 ```
-### 5. Enabling Java 8 support
-It is required to enable Java 8 support, if it was already not provided:
-```gradle
- compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
-    }
-```
+
 
 ### 5. Presenting Activity
-
 Instance of IdenfyController is required for starting a flow.
 
 ### Java
@@ -159,7 +159,7 @@ IdenfyUISettings.IdenfyUIBuilder()
     .build
 ```
 
-To set custom typeface.
+For setting custom typeface.
 ```java
 IdenfyUISettings.IdenfyUIBuilder()
     ...
