@@ -36,10 +36,11 @@ In the app level gradle add following implementation:
 repositories {
   ...
   dependencies {  
-      implementation 'idenfySdk:com.idenfy.idenfySdk:+' 
+      implementation 'idenfySdk:com.idenfy.idenfySdk:1.1.1' 
     }
 }
 ```
+*Note: All new versions will support backwards compatibility.
 ### 3. Enabling Java 8 support
 It is required to enable Java 8 support, if it was already not provided:
 ```gradle
