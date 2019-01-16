@@ -72,19 +72,8 @@ Alternatively each callback can be listened separately, by only calling particul
  ## Customising flow
  SDK provides various options for changing identification flow. All requirements can be specified inside of IdenfyBuilder()
 
- ### 1. Setting documents country of issue
 
-Following method will specify country of issue and will remove countries selection and terms of service UIViewController
-
-```swift
-   IdenfyBuilder()
-    .withIssuingCountry("country_code")
-    ...
-```
-Country code must be in alpha-2 code.
-
-
- ### 2. Removing initial ViewController
+ ### 1. Removing initial ViewController
 
 If default document country was selected during **token generation** the terms of services and country information View can be removed.
 ```swift
@@ -92,7 +81,7 @@ If default document country was selected during **token generation** the terms o
     .withPresentInitialView(false)
     ...
 ```
- ### 3. Custom locale
+ ### 2. Custom locale
 
  By default SDK provides following translations:
 
