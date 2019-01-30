@@ -36,7 +36,7 @@ In the app level gradle add following implementation:
 repositories {
   ...
   dependencies {  
-      implementation 'idenfySdk:com.idenfy.idenfySdk:1.1.1' 
+      implementation 'idenfySdk:com.idenfy.idenfySdk:+' 
     }
 }
 ```
