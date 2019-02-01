@@ -10,3 +10,12 @@ You can customize the look and feel of our platform to better suite your compani
 - Regular text color
 - Regular buttons color
 - Continue buttons color
+- Background color
+
+![iDenfy](/resources/LOGO.jpg)
+![iDenfy](/resources/HEADER.jpg)
+![iDenfy](/resources/HEADERTEXT.jpg)
+![iDenfy](/resources/TITLE.jpg)
+![iDenfy](/resources/BUTTON.jpg)
+![iDenfy](/resources/CONTINUE.jpg)
+![iDenfy](/resources/BACKGROUND.jpg)
