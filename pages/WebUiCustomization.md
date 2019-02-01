@@ -58,6 +58,6 @@ NOTE! Provided color must be in hex format e.g. #4286f4
 You can change the color of the background to better suite you overall theme.
 
 NOTE! Provided color must be in hex format e.g. #4286f4
-NOTE! We recomend you not to change background color or at least use very bright colors as there are still some design flaws regarding other components backgrounds.
+<br>NOTE! We recomend you not to change background color or at least use very bright colors as there are still some design flaws regarding other components backgrounds.
 
 <kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/BACKGROUND.jpg" alt="Header example." width="700"></kbd>
