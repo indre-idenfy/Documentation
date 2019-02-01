@@ -24,6 +24,8 @@
 |`TOO_MANY_FACES`             |Too many faces found in the selfie photo.|
 |`FACE_TOO_BLURRY`            |Selfie face was too blurry and face matching could not be performed.|
 |`FACE_ERROR`                 |Unclassified error happened when locating/matching faces.|
+|`FACE_NOT_ANALYSED`          |Identification was denied for some other reason e.g. it was suspected therefore face analysis was not performed.|
+|`FAKE_FACE`                  |Selfie face looks not real.|
 |`DOC_VALIDATED`              |Document was successfully analysed and approved.|
 |`DOC_INFO_MISMATCH`          |When generating token provided data mismatched with the data parsed from the document.|
 |`DOC_NOT_FOUND`              |Document could not be found in the photo.|
@@ -41,4 +43,7 @@
 |`DOC_EXPIRED`                |Document is expired and identification on this document can not be performed.|
 |`COUNTRY_MISMATCH`           |Selected country and identity document issuing country do not match.|
 |`DOC_ERROR`                  |Unclassified error happened while analysing identity document.|
+|`DOC_NOT_ANALYSED`           |Identification was denied for some other reason e.g. it was suspected therefore document analysis was not performed.|
+|`DOC_DAMAGED`                |Document is damaged or cracked therefore no logner valid.|
+|`DOC_FAKE`                   |Document is forged therefore invalid.|
 |`AUTO_UNVERIFIABLE`          |This identification can not be automatically verified and needs to be verified by human.|
