@@ -17,7 +17,7 @@ The request must contain JSON with optional and mandatory parameters:
 |`expiryTime`|No|Length of time in seconds after which a newly generated token will become invalid.|Integer|- More than 0|`3600`|
 |`sessionLength`|No|Length of time in seconds where a client is given to identify himself in indentification UI.|Integer|- More than 60<br>- Less than 3600|`600`|
 |`country`|No|A default document country in alpha-2 code for a client. A client will not be able to select a different country.|String|- Any country in alpha-2 code|`null`|
-|`documents`|No|Supported identification documents for the client.|List\[String\]|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`ID_CARD`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`PASSPORT`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`RESIDENCE_PERMIT`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`DRIVER_LICENSE`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`OTHER`
+|`documents`|No|Supported identification documents for the client.|List\[String\]|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`ID_CARD`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`PASSPORT`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`RESIDENCE_PERMIT`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`DRIVER_LICENSE`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`OTHER`|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`ID_CARD`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`PASSPORT`|
 ### Receiving response
 |Key|Explanation|Constraints|Example value|
 |-|-|-|-|
