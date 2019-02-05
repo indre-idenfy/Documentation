@@ -58,7 +58,7 @@ Specify all of the parameters for full control.
    "locale":"en",
    "expiryTime":600,
    "sessionLength":600,
-   "country":"en"
+   "country":"lt",
    "documents":["PASSPORT", "OTHER"]
 }
 ```
