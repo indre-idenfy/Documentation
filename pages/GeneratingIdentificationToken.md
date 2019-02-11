@@ -22,8 +22,8 @@ The request must contain JSON with optional and mandatory parameters:
 |Key|Explanation|Constraints|Example value|
 |-|-|-|-|
 |`message`|A message for a developer about the status of generated token.|- Max length 100<img width=375/>|`"Token created successfully"`
-|`authToken`|A unique string for identification process (will be passed as an url parameter when redirecting a client to identification platform).|- Length equals 40|`"3FA5TFPA2ZE3LMPGGS1EGOJNJE"`
-|`scanRef`|A unique string identifying a client identification in iDenfy’s side.|- Length equals 40|`"d2714c8a-ec05-11e8-834f-067891e3383a"`
+|`authToken`|A unique string for identification process (will be passed as an url parameter when redirecting a client to identification platform).|- Length <= 40|`"3FA5TFPA2ZE3LMPGGS1EGOJNJE"`
+|`scanRef`|A unique string identifying a client identification in iDenfy’s side.|- Length <= 40|`"d2714c8a-ec05-11e8-834f-067891e3383a"`
 |`clientId`|A unique string identifying a client in your companies side. (The same value when requesting to generate a token)|- Not null<br>- Max length 100|`"5F7E4FR14"`
 
 ### Graphical representation of token generation (UML activity)
