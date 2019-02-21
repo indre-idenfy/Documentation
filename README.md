@@ -23,7 +23,7 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 ## Interface customization
 - [WEB UI platform customization](https://github.com/idenfy/Documentation/blob/master/pages/WebUiCustomization.md)
 - Android SDK UI customization (in progress...)
-- iOS SDK UI customization (in progress..)
+- iOS SDK UI customization (in progress...)
 
 ## Extra
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
