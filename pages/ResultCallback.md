@@ -31,7 +31,7 @@ Two consecutive callbacks are represented in an UML activity graph below:
 
 <img src="https://raw.githubusercontent.com/idenfy/Documentation/master/resources/ClientIdentificationWorkflowActivityDiagram.jpg" alt="Token generation UML activity diagram" width="600">
 
-On how to differentiate which callback represents manual or automatic verification refer to [FAQ section](#faq)
+On how to differentiate which callback represents manual or automatic verification refer to [FAQ section](https://github.com/idenfy/Documentation/blob/master/pages/FAQ.md)
 
 ## Callback structure
 
@@ -139,12 +139,3 @@ Not receiving a callback? These are the first steps you should take in order to 
 - Ensure that the provided endpoint can be reached from internet.
 - Ensure that your SSL is set up correctly (if using https).
 - Ensure that you are **actually** not getting a callback and your framework is not accidentally returning some other HTTP response e.g. 422 or 500.
-
-## FAQ
-
-
-#### How do I differentiate which (manual or automatic) verification a callback represents?
-
-All the necessary information lies in the `status` field of a callback.
-If `autoDocument` with `autoFace` fields are not empty and `manualDocument` with `manualFace` are empty - it means the callback represents automatic verification. 
-If `manualDocument` with `manualFace` fields are not empty - it means the callback represents manual verification.
