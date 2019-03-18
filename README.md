@@ -28,3 +28,4 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 ## Extra
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
 - [API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
+- [FAQ](https://github.com/idenfy/Documentation/blob/master/pages/FAQ.md)
