@@ -34,6 +34,24 @@ This status means that our algorithms have detected a possible fraudulent activi
 identification process e.g. printed document or a face from mobile screen, etc. In such case
 identification is terminated and a notification is sent with overall status as "SUSPECTED". 
 
+- ##### What causes identification to be denied?
+There are many reasons why an identification can be denied. There might be various cases
+associated with document scanning e.g. could not locate a face in a document, could 
+not read name/surname from the document, document is too blurry, etc. Also, there might
+be various cases associated with face detection and matching e.g. selfie face and 
+document face look too different. Furthermore, in case LID or AML is enabled 
+(see [Functionality configuration]() section) an identification could be denied because
+the document used was registered as lost or a person is in PEP sanctions list.
+
+- ##### When identification is considered approved?
+It is considered approved when document and face analysis both succeed.
+Document analysis: data from a document was read successfully and matched 
+data provided when generating token. Face analysis: selfie face and document face
+both match. Also, in case LID or AML is enabled 
+(see [Functionality configuration]() section), a person has a valid document and is 
+not in PEP sanctions list.
+
+
 ## Identification flow FAQ's
 
 - ##### I see that a user has done a second identification even though the previous one was successful. Why is he allowed to do further identifications?
@@ -72,3 +90,10 @@ If `autoDocument` with `autoFace` fields are not empty and
 `manualDocument` with `manualFace` field are empty - it means the callback represents 
 automatic verification. If `manualDocument` with `manualFace` fields are not empty - 
 it means the callback represents manual verification.
+
+- ##### What happens if my provided webhook endpoint is not accessible temporary?
+iDenfy API will repeat a call once. If both times there was an error a "failed callback"
+state is associated with the identification. If user has successfully identified himself
+and callback has failed, a user will see an information popup, where it states that 
+identification succeeded but there was an issue saving data. Also, a user will be 
+redirected to a failure page.
