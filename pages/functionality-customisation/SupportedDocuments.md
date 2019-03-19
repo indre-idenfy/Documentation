@@ -1,4 +1,4 @@
-# Supported documents list
+# Allowed documents list
 
 #### Short description
 This list tells what documents are supported for a client's identification.
