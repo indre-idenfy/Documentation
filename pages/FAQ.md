@@ -18,7 +18,7 @@ process and algorithms accurately read data from a document.
 - ##### When does a manual verification "kick in"?
 By default every single automatically verified identification is reviewed once more 
 by our manual reviewers. This behaviour can be altered by your custom needs 
-(see [Functionality configuration]() section).
+(see [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation) section).
 
 - ##### How do I know when identification was verified manually/automatically?
 After a finished identification process in iDenfy platform you will be notified via email
@@ -40,7 +40,7 @@ associated with document scanning e.g. could not locate a face in a document, co
 not read name/surname from the document, document is too blurry, etc. Also, there might
 be various cases associated with face detection and matching e.g. selfie face and 
 document face look too different. Furthermore, in case LID or AML is enabled 
-(see [Functionality configuration]() section) an identification could be denied because
+(see [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation) section) an identification could be denied because
 the document used was registered as lost or a person is in PEP sanctions list.
 
 - ##### When identification is considered approved?
@@ -48,7 +48,7 @@ It is considered approved when document and face analysis both succeed.
 Document analysis: data from a document was read successfully and matched 
 data provided when generating token. Face analysis: selfie face and document face
 both match. Also, in case LID or AML is enabled 
-(see [Functionality configuration]() section), a person has a valid document and is 
+(see [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation) section), a person has a valid document and is 
 not in PEP sanctions list.
 
 
@@ -82,7 +82,7 @@ We accept any type of characters (Latin and non-Latin).
 ## Webhook callback FAQ's
 
 - ##### I am not receiving a callback. Why?
-Please check the [Callback troubleshooting]() section. 
+Please check the [Callback troubleshooting](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md#callback-troubleshooting) section. 
 
 - ##### How do I differentiate which (manual or automatic) verification a callback represents?
 Within received callback look for 'status' entry.
