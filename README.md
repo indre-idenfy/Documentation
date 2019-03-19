@@ -25,6 +25,17 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 - Android SDK UI customization (in progress...)
 - iOS SDK UI customization (in progress...)
 
+## Functionality customisation
+- [Asking for a manual review](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/AskingForManualReview.md)
+- [Can upload photos](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CanUpload.md)
+- [Check anti-money-laundering](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CheckAML.md)
+- [Check lost-invalid-documents](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CheckLID.md)
+- [Countries blacklist](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CountriesBlacklist.md)
+- [Expired sessions notifications](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/ExpiredSessions.md)
+- [Face liveliness check](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/FaceLiveliness.md)
+- [Manual review of identifications](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/ReviewSuccessfulAndFailed.md)
+- [Allowed documents list](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/SupportedDocuments.md)
+
 ## Extra
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
 - [API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
