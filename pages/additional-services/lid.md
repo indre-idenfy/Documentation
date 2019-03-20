@@ -15,7 +15,7 @@ Overall response can be seen in the table below:
 |`status`          |`Object`    |The overall status of the service check.                   | 
 |`data`            |`List`      |Data returned from services.                               |
 |`serviceName`     |`String`    |The name of the service that was used to check a person.   |
-|`serviceGroupType`|`String`    |The type of the servi  ce that was used. It is always `AML`. |
+|`serviceGroupType`|`String`    |The type of the servi  ce that was used. It is always `LID`. |
 |`uid`             |`String`    |A unique identifier for a request. NOTE that it is unique only in one request scope. It is not unique globally. This parameter is only useful when doing multi-person checks.|
 |`errorMessage`    |`String`    |In case of an error in the checking process a human readable error message is given.|
 
