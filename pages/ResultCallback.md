@@ -120,9 +120,18 @@ This is an example JSON body in the callback HTTP request.
         "FACE":"https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FACE.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>"
     },
     "aml":{
-        "suspected":false,
-        "results":{
-        }
+        "status": {
+            "serviceSuspected": false,
+            "checkSuccessful": true,
+            "serviceFound": true,
+            "serviceUsed": true,
+            "overallStatus": "NOT_SUSPECTED"
+        },
+        "data": [],
+        "serviceName": "PilotApiAmlV2",
+        "serviceGroupType": "AML",
+        "uid": "OHT8GR5ESRF5XROWE5ZGCC123",
+        "errorMessage": null
     },
     "lid":{
         "suspected":false,
