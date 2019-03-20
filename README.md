@@ -36,6 +36,10 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 - [Manual review of identifications](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/ReviewSuccessfulAndFailed.md)
 - [Allowed documents list](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/SupportedDocuments.md)
 
+## Additional services
+- [AML, PEP & Sanctions]()
+- [Lost & Invalid documents]()
+
 ## Extra
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
 - [API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
