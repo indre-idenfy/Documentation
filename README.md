@@ -38,7 +38,7 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 
 ## Additional services
 - [AML, PEP & Sanctions](https://github.com/idenfy/Documentation/blob/master/pages/additional-services/aml.md)
-- [Lost & Invalid documents]()
+- [Lost & Invalid documents](https://github.com/idenfy/Documentation/blob/master/pages/additional-services/lid.md)
 
 ## Extra
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
