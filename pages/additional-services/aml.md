@@ -58,8 +58,8 @@ A service response in `data` field returns a list of objects which are detailed 
     },
     "data": [
         {
-            "name": "DALIA",
-            "surname": "GRYBAUSKAITE",
+            "name": "NAME",
+            "surname": "SURNAME",
             "reason": "LITHUANIA: GOVERNMENT - PRESIDENT",
             "nationality": "LITHUANIA",
             "dob": "1956",
@@ -70,8 +70,8 @@ A service response in `data` field returns a list of objects which are detailed 
             "isActive": true
         },
         {
-            "name": "DALIA",
-            "surname": "GRYBAUSKAITE ",
+            "name": "NAME",
+            "surname": "SURNAME2",
             "reason": "LITHUANIA: GOVERNMENT - PRESIDENT",
             "nationality": "LITHUANIA",
             "dob": "1956",
