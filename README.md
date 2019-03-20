@@ -37,7 +37,7 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 - [Allowed documents list](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/SupportedDocuments.md)
 
 ## Additional services
-- [AML, PEP & Sanctions]()
+- [AML, PEP & Sanctions](https://github.com/idenfy/Documentation/blob/master/pages/additional-services/aml.md)
 - [Lost & Invalid documents]()
 
 ## Extra
