@@ -51,13 +51,14 @@ Request HTTP body is in JSON format which is described in tables below:
 
 ### Identification status table
 
-|JSON key        |Type    |Constraints      |Explanation|
-|----------------|--------|-----------------|-----------|
-|`overall`       |`String`|- Max length 30  |An overall status of the identification. It is a combination of manual and automatic verification results. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- REVIEWING<br>- ACTIVE<br>- EXPIRED<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).                                              |
-|`autoFace`      |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).  |
-|`manualFace`    |`String`|- Max length 30  |A manual face analysis result (decision made by a human). Possible values are the same as  `autoFace` field.                                                                                                                        |
-|`autoDocument`  |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_TOO_BLURRY<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
-|`manualDocument`|`String`|- Max length 30  |A manual document analysis result (decision made by a human). Possible values are the same as `autoDocument` field.|
+|JSON key          |Type    |Constraints      |Explanation|
+|------------------|--------|-----------------|-----------|
+|`overall`         |`String`|- Max length 30  |An overall status of the identification. It is a combination of manual and automatic verification results. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- REVIEWING<br>- ACTIVE<br>- EXPIRED<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).                                              |
+|`suspicionReasons`|`List  `|-                |A list of suspicion reasons constants (strings) indicating why identification was suspected.|
+|`autoFace`        |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).  |
+|`manualFace`      |`String`|- Max length 30  |A manual face analysis result (decision made by a human). Possible values are the same as  `autoFace` field.                                                                                                                        |
+|`autoDocument`    |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_TOO_BLURRY<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
+|`manualDocument`  |`String`|- Max length 30  |A manual document analysis result (decision made by a human). Possible values are the same as `autoDocument` field.|
 
 ### Data table
 
@@ -93,6 +94,7 @@ This is an example JSON body in the callback HTTP request.
     "platform":"MOBILE_APP",
     "status":{
         "overall":"APPROVED",
+        "suspicionReasons": [],
         "autoDocument":"DOC_VALIDATED",
         "autoFace":"FACE_MATCH",
         "manualDocument":null,
@@ -113,9 +115,9 @@ This is an example JSON body in the callback HTTP request.
         "manuallyDataChanged":false
     },
     "fileUrls":{
-        "FRONT":"https://ivs.idenfy.com/storage/get/<JWT_TOKEN>/FRONT.jpg",
-        "BACK":"https://ivs.idenfy.com/storage/get/<JWT_TOKEN>/BACK.jpg",
-        "FACE":"https://ivs.idenfy.com/storage/get/<JWT_TOKEN>/FACE.jpg"
+        "FRONT":"https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FRONT.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
+        "BACK":"https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/BACK.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
+        "FACE":"https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FACE.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>"
     },
     "aml":{
         "suspected":false,
