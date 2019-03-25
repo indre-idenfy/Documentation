@@ -27,6 +27,9 @@ and/or a HTTP call to you custom API endpoint. By default you can expect one not
 automatic and the second one is from manual verifications). Manual verification notification
 is always the last notification. 
 
+- ##### Is it possible that after a manual verification photos can get changed or modified by a manual reviewer?
+No. The only thing that might change is the data read from the document due to possible OCR reading inaccuracies.
+
 ## Identification status FAQ's
 
 - ##### What does "SUSPECTED" mean and when is it triggered?
