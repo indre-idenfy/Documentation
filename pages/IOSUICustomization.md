@@ -20,6 +20,8 @@ In order to use custom design you would need to include attached **Idenfy.storyb
 
 **IdenfyImages.xcassets** are also required in the target application to match storyboard content.
 
+*Note. Contact support for providing iDenfy resources.
+
 ### 2. Updating IdenfySettings
 
 SDK needs to be comnfigured in order to use custom storyboard.
@@ -56,7 +58,7 @@ iDenfy SDK provides additional liveness customization.
  ### 1. Creating IdenfyLivenessUIHelper
 
  ```swift
- let idenfyZoomSettings = IdenfyLivenessUISettings()
+ let idenfyLivenessUISettings = IdenfyLivenessUISettings()
 ```
  ### 2. Applying settings
 
@@ -65,33 +67,33 @@ iDenfy SDK provides additional liveness customization.
  ```swift
  
  //Allows you to change color of the feedback bar shown during Liveness
- idenfyZoomSettings.livenessFeedbackBackgroundColor  = UIColor.blue
+idenfyLivenessUISettings.livenessFeedbackBackgroundColor  = UIColor.blue
 
 //Allows you to change color of the feedback FontColor shown during Liveness
-idenfyZoomSettings.livenessFeedbackFontColor = UIColor.blue
+idenfyLivenessUISettings.livenessFeedbackFontColor = UIColor.blue
 
 // Color of the mainscreen, Pre-Enrollment, and Retry screens' background
-idenfyZoomSettings.livenessMainBackgroundColor = UIColor.blue
+idenfyLivenessUISettings.livenessMainBackgroundColor = UIColor.blue
 
 // Color of the mainscreen, Pre-Enrollment, and Retry screens' foreground
-idenfyZoomSettings.livenessMainForegroundColor = UIColor.blue
+idenfyLivenessUISettings.livenessMainForegroundColor = UIColor.blue
 
 // Color of the background surrounding the oval outline during Liveness
-idenfyZoomSettings.livenessFrameBackgroundColor = UIColor.blue
+idenfyLivenessUISettings.livenessFrameBackgroundColor = UIColor.blue
 
 // Color of the animated 'progress spinner' strokes during Liveness
-idenfyZoomSettings.livenessIdentificationOvalProgressColor1 = UIColor.blue
-        idenfyZoomSettings.livenessIdentificationOvalProgressColor2 = UIColor.white
+idenfyLivenessUISettings.livenessIdentificationOvalProgressColor1 = UIColor.blue
+
+idenfyLivenessUISettings.livenessIdentificationOvalProgressColor2 = UIColor.white
 
 // Color of the outline of the oval during Liveness
-idenfyZoomSettings.livenessIdentificationProgressStrokeColor = UIColor.blue
+idenfyLivenessUISettings.livenessIdentificationProgressStrokeColor = UIColor.blue
 
 // Thickness of the outline of the oval during Liveness
-idenfyZoomSettings.livenessIdentificationProgressStrokeWidth = 8.0
+idenfyLivenessUISettings.livenessIdentificationProgressStrokeWidth = 8.0
 
 // Radial offset of the animated 'progress spinner' strokes relative to the outermost bounds of the oval outline. As this value increases, animations move closer toward the oval's center
-idenfyZoomSettings.livenessIdentificationProgressRadialOffset = 16.0
-...
+idenfyLivenessUISettings.livenessIdentificationProgressRadialOffset = 16.0
 ```
  ### 3. Updating IdenfyUISettings
 

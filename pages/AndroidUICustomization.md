@@ -13,15 +13,14 @@ iDenfy SDK groups various components and enable different customization options.
  ### *  Back navigation components
 `idenfy_camera_session_back_navigation.xml` provides full customization via XML.
 
-Colors
+**Colors**
 
-`idenfyDocumentsCameraSessionBackArrowColor`:Defines the color of the back arrow, inside of documents camera session view.
-
-`idenfyDocumentsResultsBackArrowColor`:Defines the color of the back arrow, inside of documents result view.
-
-`idenfyFaceSessionCameraBackArrowColor`:Defines the color of the back arrow, inside of selfie camera session view.
-
-`idenfyFaceResultsCameraBackArrowColor`:Defines the color of the back arrow, inside of selfie result view.
+|Color name              |Description                     |
+|-------------------|-------------------------------|
+|`idenfyDocumentsCameraSessionBackArrowColor`   |Defines the color of the back arrow, inside of documents camera session view.                        |
+|`idenfyDocumentsResultsBackArrowColor`|Defines the color of the back arrow, inside of documents result view.                    |
+|`idenfyFaceSessionCameraBackArrowColor`  |Defines the color of the back arrow, inside of selfie camera session view.                     |
+|`idenfyFaceResultsCameraBackArrowColor`  |Defines the color of the back arrow, inside of selfie result view.                    |
 
 *Same pattern applies with text near the back icon.
 
@@ -33,7 +32,6 @@ iDenfy SDK provides additional liveness customization.
 
  ```java
  IdenfyLivenessUISettings idenfyLivenessUISettings = new IdenfyLivenessUISettings();
-    ...
 ```
  ### 2. Applying settings
 
@@ -65,15 +63,14 @@ idenfyLivenessUISettings.setLivenessIdentificationProgressStrokeWidth(14);
 
 // Radial offset of the animated 'progress spinner' strokes relative to the outermost bounds of the oval outline. As this value increases, animations move closer toward the oval's center
 idenfyLivenessUISettings.setLivenessIdentificationProgressRadialOffset(16);
-    ...
 ```
  ### 3. Updating IdenfyUISettings
 
 ```java
  IdenfyUISettings idenfyUISettings = new IdenfyUISettings.IdenfyUIBuilder().
-        ...
-        withLivenessUISettings(idenfyLivenessUISettings).
-                        build();
+    ...
+    withLivenessUISettings(idenfyLivenessUISettings).
+    build();
 ```
 
 
