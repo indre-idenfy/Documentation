@@ -56,7 +56,7 @@ iDenfy SDK provides additional liveness customization.
  ### 1. Creating IdenfyLivenessUIHelper
 
  ```swift
- let idenfyZoomSettings =            IdenfyLivenessUISettings()
+ let idenfyZoomSettings = IdenfyLivenessUISettings()
 ```
  ### 2. Applying settings
 
