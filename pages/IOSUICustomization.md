@@ -6,7 +6,7 @@
 *   [Liveness Customization](#liveness-customization)
 
 ## Getting started
-IOS SDK provides various customization options with code or Idenfy.storyboard
+IOS SDK provides various customization options with *programming code* or *Idenfy.storyboard*.
 
 
 ## Customization with Storyboard
