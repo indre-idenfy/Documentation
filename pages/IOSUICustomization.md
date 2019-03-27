@@ -10,7 +10,7 @@ IOS SDK provides various customization options with *programming code* or *Idenf
 
 
 ## Customization with Storyboard
-iDenfy SDK groups various components and enable different customization options.
+iDenfy SDK groups various components and enables different customization options.
 
 Full design changes can be adjusted with Storyboard.
 
