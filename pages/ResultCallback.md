@@ -91,55 +91,64 @@ This is an example JSON body in the callback HTTP request.
 
 ```json
 {
-    "platform":"MOBILE_APP",
-    "status":{
-        "overall":"APPROVED",
-        "suspicionReasons": [],
-        "autoDocument":"DOC_VALIDATED",
-        "autoFace":"FACE_MATCH",
-        "manualDocument":null,
-        "manualFace":null
+  "clientId": "123",
+  "scanRef": "scan-ref",
+  "platform": "MOBILE_APP",
+  "status": {
+    "overall": "APPROVED",
+    "suspicionReasons": [],
+    "autoDocument": "DOC_VALIDATED",
+    "autoFace": "FACE_MATCH",
+    "manualDocument": null,
+    "manualFace": null
+  },
+  "data": {
+    "selectedCountry": "LT",
+    "docFirstName": "FIRST-NAME-EXAMPLE",
+    "docLastName": "LAST-NAME-EXAMPLE",
+    "docNumber": "XXXXXXXXX",
+    "docPersonalCode": "XXXXXXXXX",
+    "docExpiry": "YYYY-MM-DD",
+    "docDob": "YYYY-MM-DD",
+    "docType": "ID_CARD",
+    "docSex": "UNDEFINED",
+    "docNationality": "LT",
+    "docIssuingCountry": "LT",
+    "manuallyDataChanged": false
+  },
+  "fileUrls": {
+    "FRONT": "https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FRONT.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
+    "BACK": "https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/BACK.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
+    "FACE": "https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FACE.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>"
+  },
+  "aml": {
+    "status": {
+      "serviceSuspected": false,
+      "checkSuccessful": true,
+      "serviceFound": true,
+      "serviceUsed": true,
+      "overallStatus": "NOT_SUSPECTED"
     },
-    "data":{
-        "selectedCountry":"LT",
-        "docFirstName":"FIRST-NAME-EXAMPLE",
-        "docLastName":"LAST-NAME-EXAMPLE",
-        "docNumber":"XXXXXXXXX",
-        "docPersonalCode":"XXXXXXXXX",
-        "docExpiry":"YYYY-MM-DD",
-        "docDob":"YYYY-MM-DD",
-        "docType":"ID_CARD",
-        "docSex":"UNDEFINED",
-        "docNationality":"LT",
-        "docIssuingCountry":"LT",
-        "manuallyDataChanged":false
+    "data": [],
+    "serviceName": "PilotApiAmlV2",
+    "serviceGroupType": "AML",
+    "uid": "OHT8GR5ESRF5XROWE5ZGCC123",
+    "errorMessage": null
+  },
+  "lid": {
+    "status": {
+      "serviceSuspected": false,
+      "checkSuccessful": true,
+      "serviceFound": true,
+      "serviceUsed": true,
+      "overallStatus": "NOT_SUSPECTED"
     },
-    "fileUrls":{
-        "FRONT":"https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FRONT.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
-        "BACK":"https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/BACK.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
-        "FACE":"https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FACE.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>"
-    },
-    "aml":{
-        "status": {
-            "serviceSuspected": false,
-            "checkSuccessful": true,
-            "serviceFound": true,
-            "serviceUsed": true,
-            "overallStatus": "NOT_SUSPECTED"
-        },
-        "data": [],
-        "serviceName": "PilotApiAmlV2",
-        "serviceGroupType": "AML",
-        "uid": "OHT8GR5ESRF5XROWE5ZGCC123",
-        "errorMessage": null
-    },
-    "lid":{
-        "suspected":false,
-        "results":{
-        }
-    },
-    "clientId":"123",
-    "scanRef":"scan-ref" 
+    "data": [],
+    "serviceName": "IrdInvalidPapers",
+    "serviceGroupType": "LID",
+    "uid": "OHT8GR5ESRF5XROWE5ZGCC123",
+    "errorMessage": null
+  }
 }
 ```
 
