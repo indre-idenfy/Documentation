@@ -12,13 +12,16 @@ In order for you to start using our API you will need two things – ***API key*
 Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com/start-trial/) and fill up the form. Our team will contact you.
 ## Integration steps
 
+Firstly, generate an identification token. A token is used to identify your client with our services.
 - [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
+Secondly, redirect a client to our web or mobile platforms.
 - [Client redirect to identification WEB platform](https://github.com/idenfy/Documentation/blob/master/pages/ClientRedirectToWebUi.md)
 - [Client redirect to identification WEB platform (iFrame)](https://github.com/idenfy/Documentation/blob/master/pages/ClientRedirectToWebUiIframe.md)
-- [Webhook callback](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md)
-- [Additional identification data retrieval](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationDataRetrieval.md)
 - [iOS SDK](https://github.com/idenfy/Documentation/blob/master/pages/ios-sdk.md)
 - [Android SDK](https://github.com/idenfy/Documentation/blob/master/pages/ANDROID-SDK.md)
+Thirdly, register a webhook endpoint where your API will receive identification results or simply call specific endpoints to retrieve data.
+- [Webhook callback](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md)
+- [Additional identification data retrieval](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationDataRetrieval.md)
 
 ## Interface customization
 - [WEB UI platform customization](https://github.com/idenfy/Documentation/blob/master/pages/WebUiCustomization.md)
