@@ -10,7 +10,7 @@ In order for you to start using our API you will need two things – ***API key*
 |info@idenfy.com    |`Support`                      |
 
 Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com/start-trial/) and fill up the form. Our team will contact you.
-## Steps
+## Integration steps
 
 - [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
 - [Client redirect to identification WEB platform](https://github.com/idenfy/Documentation/blob/master/pages/ClientRedirectToWebUi.md)
