@@ -23,7 +23,7 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 - [iOS SDK](https://github.com/idenfy/Documentation/blob/master/pages/ios-sdk.md)
 - [Android SDK](https://github.com/idenfy/Documentation/blob/master/pages/ANDROID-SDK.md)
 
-*Thirdly*, (optional) register a webhook endpoint where your API will receive identification results or simply call specific endpoints to retrieve data.
+*Thirdly (optional)*, register a webhook endpoint where your API will receive identification results or simply call specific endpoints to retrieve data.
 
 - [Webhook callback](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md)
 - [Additional identification data retrieval](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationDataRetrieval.md)
