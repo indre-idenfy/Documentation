@@ -104,3 +104,8 @@ state is associated with the identification. If user has successfully identified
 and callback has failed, a user will see an information popup, where it states that 
 identification succeeded but there was an issue saving data. Also, a user will be 
 redirected to a failure page.
+
+## Camera issues FAQ's
+
+- ##### Why your platform can not detect camera when using an iPhone with Chrome or Firefox web-browser?
+Currently (as of 2019-05) apple does not allow accessing camera to any browser expect Safari.
