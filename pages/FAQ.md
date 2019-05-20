@@ -108,4 +108,7 @@ redirected to a failure page.
 ## Camera issues FAQ's
 
 - ##### Why your platform can not detect camera when using an iPhone with Chrome or Firefox web-browser?
-Currently (as of 2019-05) apple does not allow accessing camera to any browser expect Safari.
+Currently (as of 2019-05) apple does not allow accessing camera to any browser except Safari.
+
+- ##### Why your platform can not detect camera on Chrome with iFrame integration?
+When using an `iframe` tag, make sure to add an attribute `allow="camera"`. 
