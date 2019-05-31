@@ -46,7 +46,7 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 
 ## Additional services
 Fraud services check people against global databases for PEP, Sanctions, negative news, lost and invalid document registries.
-- [Fraud services]()
+- [Fraud services](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/FraudApi.md)
 
 ## Security
 - [Callback signing](https://github.com/idenfy/Documentation/blob/master/pages/CallbackSigning.md)
