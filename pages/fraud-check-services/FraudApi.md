@@ -21,6 +21,25 @@ The request must contain JSON with parameters:
 |`services`|Yes     |`List[String]`|Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`AML`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`LID`|Types of services to apply. `AML` - Anti money laundering service, `LID` - Lost and invalid documents registry.|
 |`data`    |Yes     |`List[Dict]`  |-          |Supplied data for fraud check services.|
 
+##### Specifying AML services
+
+By default if `AML` service is specified in `services` - a name check against global databases for PEPs and Sanctions is performed.
+To have specific `AML` services applied in `data` entry specify names of the services:
+
+|AML service name   |Type    |Default|Constraints|
+|-------------------|--------|-------|-----------|
+|`nameCheck`        |`Bool`  |`true` |-          |
+|`negativeNews`     |`Bool`  |`false`|-          |
+
+##### Specifying LID services
+
+If `LID` service is specified in `services` and `mode` is specified as `DATA` - a `country` parameter should be also provided in `data` entry. This is because a `LID` service
+is associated to a single country.
+
+|LID data key   |Type    |Default|Constraints         |
+|---------------|--------|-------|--------------------|
+|`country`      |`String`|-      |Country alpha-2 code|
+
  ### Receiving response
 |Key       |Type         |Explanation|
 |----------|-------------|-----------|

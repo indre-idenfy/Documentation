@@ -1,4 +1,4 @@
-# AML, PEP & Sanctions
+# AML, PEP & Sanctions, Negative news
 This service checks whether given person is in PEP or sanctions list, checks negative news.
 
 #### Pricing
