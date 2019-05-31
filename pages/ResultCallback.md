@@ -43,8 +43,8 @@ Request HTTP body is in JSON format which is described in tables below:
 |`status`    |`Object`|-                |Dictionary that contains the status of the identification. [Refer to status table](#identification-status-table).                                      |
 |`data`      |`Object`|-                |Dictionary that contains parsed data from clients identity document. [Refer to data table](#data-table).                                          |
 |`fileUrls`  |`Object`|-                |Dictionary that contains url links to download or view client's identification photos. [Refer to file urls table](#file-urls-table)                        |
-|`aml`       |`Object`|-                |Dictionary that contains anti-money-laundering (AML) service data. Only applicable if AML is enabled for you. [Refer to AML documentation](https://github.com/idenfy/Documentation/blob/master/pages/additional-services/aml.md). |
-|`lid`       |`Object`|-                |Dictionary that contains lost-invalid-documents (LID) service data. Only applicable if LID is enabled for you. [Refer to LID documentation](https://github.com/idenfy/Documentation/blob/master/pages/additional-services/lid.md).|
+|`aml`       |`Object`|-                |Dictionary that contains anti-money-laundering (AML) service data. Only applicable if AML is enabled for you. [Refer to AML documentation](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/aml.md). |
+|`lid`       |`Object`|-                |Dictionary that contains lost-invalid-documents (LID) service data. Only applicable if LID is enabled for you. [Refer to LID documentation](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/lid.md).|
 |`scanRef`   |`String`|- Max length 36  |A unique string to trace back an identification on iDenfy’s side.                                             |
 |`clientId`  |`String`|- Max length 100 |A unique string to trace back a client on your side.                                                          |
 |`startTime` |`Int   `|-                |A timestamp of when a client starts the identification process.|
