@@ -24,8 +24,8 @@ The request must contain JSON with parameters:
  ### Receiving response
 |Key       |Type         |Explanation|
 |----------|-------------|-----------|
-|`AML`     |`List[Dict]` |Fraud check results from AML services. If `AML` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [AML documentation]().|
-|`LID`     |`List[Dict]` |Fraud check results from LID services. If `LID` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [LID documentation]().|
+|`AML`     |`List[Dict]` |Fraud check results from AML services. If `AML` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [AML documentation](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/aml.md).|
+|`LID`     |`List[Dict]` |Fraud check results from LID services. If `LID` service was not specified in the request this key is not present in the response. For a complete response documentation please refer to [LID documentation](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/lid.md).|
 
 ### Examples
 
