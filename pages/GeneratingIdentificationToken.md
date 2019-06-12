@@ -33,8 +33,8 @@ that were optional and not specified during token generation. Additionally, the 
 |---|---|---|---|
 |`message`|A message for a developer about the status of generated token.|- Max length 100<img width=375/>|`"Token created successfully"`
 |`authToken`|A unique string for identification process (will be passed as an url parameter when redirecting a client to identification platform).|- Length <= 40|`"3FA5TFPA2ZE3LMPGGS1EGOJNJE"`
-|`scanRef`|A unique string identifying a client identification in iDenfy’s side.|- Length <= 40|`"d2714c8a-ec05-11e8-834f-067891e3383a"`
-|`clientId`|A unique string identifying a client in your companies side. (The same value when requesting to generate a token)|- Not null<br>- Max length 100|`"5F7E4FR14"`
+|`scanRef`|A unique string identifying a client identification on iDenfy’s side.|- Length <= 40|`"d2714c8a-ec05-11e8-834f-067891e3383a"`
+|`clientId`|A unique string identifying a client on your companies side. (The same value when requesting to generate a token)|- Not null<br>- Max length 100|`"5F7E4FR14"`
 
 ### Graphical representation of token generation (UML activity)
 
@@ -144,4 +144,4 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
   "sex": null
 }
 ```
-Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standart *iDenfy* API error response. For more on *iDenfy* API responses visit [iDenfy error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md).
+Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standard *iDenfy* API error response. For more on *iDenfy* API responses visit [iDenfy error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md).
