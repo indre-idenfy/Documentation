@@ -54,6 +54,7 @@ Fraud services check people against global databases for PEP, Sanctions, negativ
 
 ## Security
 - [Callback signing](https://github.com/idenfy/Documentation/blob/master/pages/CallbackSigning.md)
+- [IP whitelisting]()
 
 ## Extra
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
