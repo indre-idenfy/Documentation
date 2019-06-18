@@ -46,8 +46,8 @@ function verifyPostData(req, res, next) {
     }
 
     const hmac = crypto.createHmac('sha256', API_SECRET)
-    const digest = hmac.update(payload).digest('hex')
-    const checksum = req.headers['idenfy-signature']
+    const digest = Buffer(hmac.update(payload).digest('hex'))
+    const checksum = Buffer(req.headers['idenfy-signature'])
     
     if (!checksum || !digest || !crypto.timingSafeEqual(checksum, digest)) {
         return next(`Request body digest (${digest}) did not match Idenfy-Signature (${checksum}).`)
