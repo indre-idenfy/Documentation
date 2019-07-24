@@ -57,7 +57,7 @@ Fraud services check people against global databases for PEP, Sanctions, negativ
 - [IP whitelisting](https://github.com/idenfy/Documentation/blob/master/pages/IpWhitelisting.md)
 
 ## Tutorials
-- [Administration platform]()
+- [Administration platform](https://github.com/idenfy/Documentation/blob/master/pages/tutorials/admin-platform-tutorials.md)
 - [API integration]()
 - [Frontend WEB]()
 - [Mobile SDKs]()
