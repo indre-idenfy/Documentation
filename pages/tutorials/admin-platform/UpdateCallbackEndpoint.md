@@ -1,6 +1,6 @@
-# Update callback endpoint url
+# Update webhook callback endpoint url
 This tutorial shows you how you can add/remove/change callback endpoint url.
-For more information on callback endpoint, please visit here: [Callback endpoint](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md). 
+For more information on callback endpoint, please visit here: [Webhook callback endpoint](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md). 
 
 ## Add, remove or update endpoint
 - Login to your current manger account in administration platform (https://admin.idenfy.com).<br>
