@@ -107,7 +107,7 @@ Our algorithms automatically detect documents in provided photos.
 In document analysis process we check whether document is expired.
 
 - #### Document face biometric data points
-Our document face detection and recognition A.I. models place 168
+Our document face detection and recognition A.I. models place 160
 biometric points on found document face for accurate face comparison.
 
 - #### Document face blur detection
@@ -182,7 +182,7 @@ how many faces are visible in the photo. If there is more that one, identificati
 is automatically denied.
 
 - #### Seflie face biometric data points
-Our selfie face detection and recognition A.I. models place 168
+Our selfie face detection and recognition A.I. models place 160
 biometric points on found selfie face for accurate face comparison.
 
 ---
