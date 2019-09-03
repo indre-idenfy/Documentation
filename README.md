@@ -10,9 +10,9 @@ Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com
 
 ## Understaning the platform
 Our platform has many features - it is best for you to know them all and cherry-pick what is most suitable for you.
-<br>Firstly, visit our complete features list to better know what features are available:<br>
+<br><br>Firstly, visit our complete features list to better know what features are available:<br>
 [Complete features list](https://github.com/idenfy/Documentation/blob/master/pages/FeaturesList.md).
-<br>Secondly, visit our FAQs list and read most common questions to better understand how various features play together and what are the most common issues for other businesses:<br>
+<br><br>Secondly, visit our FAQs list and read most common questions to better understand how various features play together and what are the most common issues for other businesses:<br>
 [FAQs](https://github.com/idenfy/Documentation/blob/master/pages/FAQ.md).
 
 ## Integration steps
