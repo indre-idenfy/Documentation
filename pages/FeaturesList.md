@@ -4,15 +4,33 @@ This is the complete list of iDenfy supported features ranging from *document/fa
 scanning* to *api integration*.
 
 ### Administration platform
+We provide an administration platform for observing identifications and statistics.
 
-##### Administration platform
-##### Colleague account registration
-##### Identification account configuration
-##### Identification list generation
-##### Identification listing and search
-##### Identification token generation
-##### PDF generation
-##### Success rates and statistics 
+- ##### Colleague account registration
+You can register your colleagues to administration platform. [Read more]().
+
+- ##### Identification account configuration
+You can configure colors, web-hooks, emails addresses and other 
+identification account features. [Read more]().
+
+- ##### Identification list generation
+You can filter and generate a list of identifications into various 
+formats (e.g. txt, csv). [Read more]().
+
+- ##### Identification listing and search
+You can observe identifications in real time and and search for 
+specific ones by applying various filters. [Read more]().
+
+- ##### Identification token generation
+You can generate identification urls, then copy and send them to your clients
+without needing to integrate our API. [Read more]().
+
+- ##### PDF generation
+You can generate a PDF report for any identification. [Read more]().
+
+- ##### Success rates and statistics 
+You can observe various statistics and success rates by applying various
+filters. [Read more]().
 
 ### Identification Api
 
@@ -46,7 +64,6 @@ scanning* to *api integration*.
 ##### Document template dates reading
 ##### Document template name and surname reading
 ##### Document template other fields reading
-##### Real time document scanning
 ##### Supported document types
 ##### Document template and mrz data comparison
 ##### Utility bill analysis
