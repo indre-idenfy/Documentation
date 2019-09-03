@@ -8,7 +8,7 @@ In order for you to start using our API you will need two things – ***API key*
 
 Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com/start-trial/) and fill up the form. Our team will contact you.
 
-## Understaning the platform
+## Understanding the platform
 Our platform has many features - it is best for you to know them all and cherry-pick what is most suitable for you.
 <br><br>*Firstly*, visit our complete features list to better know what features are available:<br>
 [Complete features list](https://github.com/idenfy/Documentation/blob/master/pages/FeaturesList.md).
