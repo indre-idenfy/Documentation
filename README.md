@@ -2,16 +2,20 @@
 
 ## Getting started
 In order for you to start using our API you will need two things – ***API key*** and ***API secret***. Both can be retrieved by contacting *iDenfy support* or *iDenfy sales team*. Emails are given below:
-
-|Email              |Position                       |
-|-------------------|-------------------------------|
-|sales@idenfy.com   |`Sales`                        |
-|support@idenfy.com |`Support`                      |
-|info@idenfy.com    |`Support`                      |
+- sales@idenfy.com
+- support@idenfy.com
+- info@idenfy.com
 
 Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com/start-trial/) and fill up the form. Our team will contact you.
-## Integration steps
 
+## Understaning the platform
+Our platform has many features - it is best for you to know them all and cherry-pick what is most suitable for you.
+<br>Firstly, visit our complete features list to better know what features are available:<br>
+[Complete features list](https://github.com/idenfy/Documentation/blob/master/pages/FeaturesList.md).
+<br>Secondly, visit our FAQs list and read most common questions to better understand how various features play together and what are the most common issues for other businesses:<br>
+[FAQs](https://github.com/idenfy/Documentation/blob/master/pages/FAQ.md).
+
+## Integration steps
 *Firstly*, generate an identification token. A token is used to identify your client with our services.
 
 - [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)
