@@ -46,6 +46,7 @@ scanning* to *api integration*.
 ##### Document template dates reading
 ##### Document template name and surname reading
 ##### Document template other fields reading
+##### Real time document scanning
 ##### Supported document types
 ##### Document template and mrz data comparison
 ##### Utility bill analysis
@@ -77,8 +78,9 @@ scanning* to *api integration*.
 ### Mobile and Web 
 
 ##### Android SDK
-##### iOS SDK
 ##### Immediate redirect
+##### iOS SDK
+##### Mobile real time document scanning
 ##### Mobile UI customization
 ##### Redirect to success/error page
 ##### Redirect to unverified page
