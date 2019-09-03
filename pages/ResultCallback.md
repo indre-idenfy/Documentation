@@ -29,7 +29,7 @@ In total you should expect two consecutive callbacks per identification:
 
 Two consecutive callbacks are represented in an UML activity graph below:
 
-<img src="https://raw.githubusercontent.com/idenfy/Documentation/master/resources/ClientIdentificationWorkflowActivityDiagram.jpg" alt="Token generation UML activity diagram" width="600">
+<img src="https://raw.githubusercontent.com/idenfy/Documentation/master/resources/ClientIdentificationWorkflowActivityDiagram.jpg" alt="Token generation UML activity diagram" width="700">
 
 On how to differentiate which callback represents manual or automatic verification refer to [FAQ section](https://github.com/idenfy/Documentation/blob/master/pages/FAQ.md)
 
@@ -63,6 +63,8 @@ Request HTTP body is in JSON format which is described in tables below:
 |`manualDocument`  |`String`|- Max length 30  |A manual document analysis result (decision made by a human). Possible values are the same as `autoDocument` field.|
 
 ### Data table
+
+Note, that any of the specified fields below can be `null`.
 
 |JSON key             |Type    |Constraints      |Explanation|
 |---------------------|--------|-----------------|-----------|
