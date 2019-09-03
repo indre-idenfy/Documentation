@@ -105,6 +105,9 @@ and callback has failed, a user will see an information popup, where it states t
 identification succeeded but there was an issue saving data. Also, a user will be 
 redirected to a failure page.
 
+- ##### Do you repeat callback sending?
+Yes. iDenfy API will repeat a call once (after 0.5 seconds) if the initial callback sending has failed. If the second callback fails - an associated identification is flaged with "callback failed" state.
+
 ## Camera issues FAQ's
 
 - ##### Why your platform can not detect camera when using an iPhone with Chrome or Firefox web-browser?
