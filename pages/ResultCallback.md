@@ -55,11 +55,51 @@ Request HTTP body is in JSON format which is described in tables below:
 
 |JSON key          |Type    |Constraints      |Explanation|
 |------------------|--------|-----------------|-----------|
-|`overall`         |`String`|- Max length 30  |An overall status of the identification. It is a combination of manual and automatic verification results. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- REVIEWING<br>- ACTIVE<br>- EXPIRED<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).                                              |
+|`overall`         |`String`|- Max length 30  |An overall status of the identification. It is a combination of manual and automatic verification results. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- REVIEWING<br>- ACTIVE<br>- EXPIRED<br>- DELETED<br>- ARCHIVED<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).                                              |
 |`suspicionReasons`|`List  `|-                |A list of suspicion reasons constants (strings) indicating why identification was suspected.|
-|`autoFace`        |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).  |
+|`autoFace`        |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:
+<br>- FACE_MATCH
+<br>- FACE_MISMATCH
+<br>- NO_FACE_FOUND
+<br>- TOO_MANY_FACES
+<br>- FACE_TOO_BLURRY
+<br>- FACE_UNCERTAIN
+<br>- FACE_NOT_ANALYSED
+<br>- FACE_ERROR
+<br>- AUTO_UNVERIFIABLE
+<br>- FAKE_FACE
+<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).  |
 |`manualFace`      |`String`|- Max length 30  |A manual face analysis result (decision made by a human). Possible values are the same as  `autoFace` field.                                                                                                                        |
-|`autoDocument`    |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_TOO_BLURRY<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
+|`autoDocument`    |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:
+<br>- DOC_VALIDATED
+<br>- DOC_INFO_MISMATCH
+<br>- DOC_NOT_FOUND
+<br>- DOC_NOT_FULLY_VISIBLE
+<br>- DOC_NOT_SUPPORTED
+<br>- DOC_FACE_NOT_FOUND
+<br>- DOC_TOO_BLURRY
+<br>- DOC_FACE_GLARED
+<br>- MRZ_NOT_FOUND
+<br>- MRZ_OCR_READING_ERROR
+<br>- DOC_EXPIRED
+<br>- COUNTRY_MISMATCH
+<br>- DOC_TYPE_MISMATCH
+<br>- DOC_DAMAGED
+<br>- DOC_FAKE
+<br>- DOC_ERROR
+<br>- AUTO_UNVERIFIABLE
+<br>- DOC_NOT_ANALYSED
+
+<br>- DOC_NAME_ERROR
+<br>- DOC_SURNAME_ERROR
+<br>- DOC_EXPIRY_ERROR
+<br>- DOC_DOB_ERROR
+<br>- DOC_PERSONAL_NUMBER_ERROR
+<br>- DOC_NUMBER_ERROR
+<br>- DOC_DATE_OF_ISSUE_ERROR
+<br>- DOC_SEX_ERROR
+<br>- DOC_NATIONALITY_ERROR
+<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
 |`manualDocument`  |`String`|- Max length 30  |A manual document analysis result (decision made by a human). Possible values are the same as `autoDocument` field.|
 
 ### Data table
@@ -74,12 +114,17 @@ Note, that any of the specified fields below can be `null`.
 |`docPersonalCode`    |`String`|- Max length 15  |Clients personal code parsed from the document.|
 |`docExpiry`          |`String`|- Max length 10  |Clients document expiry date parsed from the document.|
 |`docDob`             |`String`|- Max length 10  |Clients date of birth parsed from the document.|
+|`docDateOfIssue`     |`String`|- Max length 10  |Clients date of issue parsed from the document.|
 |`docType`            |`String`|- Max length 30  |Clients used document type to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
-|`docSex`             |`String`|- Max length 10  |Clients sex parsed from the document. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
+|`docSex`             |`String`|- Max length 6  |Clients sex parsed from the document. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
 |`docNationality`     |`String`|- Max length 2   |Clients nationality parsed from the document. Returned value is an alpha-2 country code.|
 |`docIssuingCountry`  |`String`|- Max length 2   |Clients documents issuing country parsed from the document. Returned value is an alpha-2 country code.|
 |`selectedCountry`    |`String`|- Max length 2   |Clients selected country in identification platform. Returned value is an alpha-2 country code.|
-|`manuallyDataChanged`|`Bool`  |-                |Indicates whether a manual reviewer has changed any parsed data from the document. Applicable only when a human reviews an identification. In automated verification response this value is `false`.|
+|`birthPlace`           |`String`|- Max length 60  |Clients date of issue parsed from the document.|
+|`authority`            |`String`|- Max length 60  |Clients date of issue parsed from the document.|
+|`address`              |`String`|- Max length 80  |Clients date of issue parsed from the document.|
+|`driverLicenseCategory`|`String`|- Max length 30  |Clients date of issue parsed from the document.|
+|`manuallyDataChanged`  |`Bool`  |-                |Indicates whether a manual reviewer has changed any parsed data from the document. Applicable only when a human reviews an identification. In automated verification response this value is `false`.|
 
 ### File urls table
 
