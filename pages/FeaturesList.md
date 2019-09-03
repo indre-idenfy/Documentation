@@ -3,32 +3,36 @@
 This is the complete list of iDenfy supported features ranging from *document/face
 scanning* to *api integration*.
 
+---
+
 ### Administration platform
 We provide an administration platform for observing identifications and statistics.
 
-- ##### Colleague account registration
+---
+
+- #### Colleague account registration
 You can register your colleagues to administration platform. [Read more]().
 
-- ##### Identification account configuration
+- #### Identification account configuration
 You can configure colors, web-hooks, emails addresses and other 
 identification account features. [Read more]().
 
-- ##### Identification list generation
+- #### Identification list generation
 You can filter and generate a list of identifications into various 
 formats (e.g. txt, csv). [Read more]().
 
-- ##### Identification listing and search
+- #### Identification listing and search
 You can observe identifications in real time and and search for 
 specific ones by applying various filters. [Read more]().
 
-- ##### Identification token generation
+- #### Identification token generation
 You can generate identification urls, then copy and send them to your clients
 without needing to integrate our API. [Read more]().
 
-- ##### PDF generation
+- #### PDF generation
 You can generate a PDF report for any identification. [Read more]().
 
-- ##### Success rates and statistics 
+- #### Success rates and statistics 
 You can observe various statistics and success rates by applying various
 filters. [Read more]().
 
@@ -43,13 +47,21 @@ filters. [Read more]().
 ##### SSL encrypted traffic
 ##### Storing identification data
 
+---
+
 ### Constraints
+
+---
 
 ##### Allowed document types
 ##### Countries blacklist
 ##### Mandatory document fields
 
+---
+
 ### Document scanning
+
+---
 
 ##### Document and client provided data comparison
 ##### Document blur check
@@ -69,14 +81,22 @@ filters. [Read more]().
 ##### Utility bill analysis
 ##### Manual document review
 
+---
+
 ### Face scanning
+
+---
 
 ##### Blurry selfie face detection
 ##### More than one face detection
 ##### Seflie face biometric data points
 ##### Selfie face detection
 
+---
+
 ### Fraud prevention
+
+---
 
 ##### Active liveness detection
 ##### AML names check
@@ -92,7 +112,11 @@ filters. [Read more]().
 ##### Passive mobile screen selfie detection
 ##### Screen pixels detection
 
+---
+
 ### Mobile and Web 
+
+---
 
 ##### Android SDK
 ##### Immediate redirect
@@ -107,7 +131,11 @@ filters. [Read more]().
 ##### Web iFrame
 ##### Web UI customizaton
 
+---
+
 ### Notifications
+
+---
 
 ##### Expired identification sessions
 ##### Identification emails
