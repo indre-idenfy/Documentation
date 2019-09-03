@@ -108,6 +108,10 @@ redirected to a failure page.
 - ##### Do you repeat callback sending?
 Yes. iDenfy API will repeat a call once (after 0.5 seconds) if the initial callback sending has failed. If the second callback fails - an associated identification is flaged with "callback failed" state.
 
+- ##### How many callbacks to expect?
+If your identifications are processed only automatically - just one - after processing is done. 
+If your identifications are processed automatically and then reviewed manually (Please refer to [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation)) - then in total two - one after an automatic processing and one after a manual verification.
+
 ## Camera issues FAQ's
 
 - ##### Why your platform can not detect camera when using an iPhone with Chrome or Firefox web-browser?
