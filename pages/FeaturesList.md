@@ -188,49 +188,128 @@ biometric points on found selfie face for accurate face comparison.
 ---
 
 ### Fraud prevention
+The best KYC provider is the one that has the most fraud prevention techniques.
+We have many algorithms and apis for fraud prevention.
 
 ---
 
 - #### Active liveness detection
-- #### AML names check
-- #### AML negative news check
-- #### Background identification process video capturing
-- #### Black and white printed document detection
-- #### Document from mobile screen detection
-- #### Document surface analysis for fake detection
-- #### Fraud prevention api
-- #### LID documents check
-- #### Manual fraud prevention
+We have integrated an active filter into our web and mobile 
+solutions to ensure face liveliness. 
+(Active means a user is asked to take certain actions in order to successfully
+determine an output.)
+
 - #### Passive document selfie detection
+Our A.I. based algorithms automatically detect whether a 
+seflie from the photo is genuine or shown from the document.
+
 - #### Passive mobile screen selfie detection
+Our A.I. based algorithms automatically detect whether a 
+seflie from the photo is genuine or shown from the mobile screen.
+
 - #### Screen pixels detection
+Our A.I. models can detect Moiré patterns and prevent photos taken from screens.
+
+- #### Document surface analysis for fake detection
+Our A.I. based algorithms analyse document surface to determine whether
+document is printed or not.
+
+- #### Document from mobile screen detection
+Our A.I. based algorithms can detect a document photo taken from mobile screen.
+
+- #### Black and white printed document detection
+Our A.I. based algorithms can detect a black&white printed documents.
+
+- #### Background identification process video capturing
+We take a video while your clients do the identification process to 
+better determine fraudulent actions.
+
+- #### Manual fraud prevention
+We have a dedicated manual fraud prevention team which ensures no fraudulent
+identifications get passed.
+
+- #### Fraud prevention api
+We expose a separate fraud prevention rest API which connects to various 
+world-wide databases. The api can be called independently from identification
+api and kyc process.
+
+- #### AML names check
+We provide an AML (anti-money-laundering) names check functionality where a
+client can be checked against global PEPS and sanctions lists.
+
+- #### AML negative news check
+We provide an AML (anti-money-laundering) negative news check functionality 
+where a client can be checked against various negative media articles.
+
+- #### LID documents check
+We provide a LID (lost-invalid-documents) check functionality where a client's
+document can be checked against national databases.
 
 ---
 
 ### Mobile and Web 
+We provide mobile (app/sdk) and web identification platforms.
 
 ---
 
 - #### Android SDK
+We provide an android SDK which can be integrated directly into your app.
+
 - #### Immediate redirect
+We support an "immediate redirect" flow which, when enabled, redirects a user 
+to success/error page without showing any success/failure messages.
+
 - #### iOS SDK
+We provide an iOS SDK which can be integrated directly into your app.
+
 - #### Mobile real time document scanning
+We provide in-real-time document scanning for better user experience.
+
 - #### Mobile UI customization
+We provide white-labeling for our iOS and Android SKDs.
+
 - #### Redirect to success/error page
+After successful or unsuccessful identification analysis your client is redirected
+to a success or error page.
+
 - #### Redirect to unverified page
+We redirect your client to an "unverified" page if a client has not started an
+identification process and canceled the identification. 
+
 - #### Showing custom support email
+You can choose to show your support email in our support page.
+
 - #### Uploading photo
+We support functionality which, when enabled, allows clients to upload documents
+instead of taking photos.
+
 - #### Uploading utility bill
+Separately from "upload photo" functionality, when enabled, it allows to upload
+scanned utility bills instead of taking a photo.
+
 - #### Web iFrame
+We provide a web iFrame solution for best integration into your web app.
+
 - #### Web UI customization
+We provide white-labeling for our web ui platform. You can customize
+colors and logos.
+
 - #### Localisation
+Our web and app platforms support *LT*, *RU*, *EN* and *PL* languages.
 
 ---
 
 ### Notifications
+We provide various notifications about identification states.
 
 ---
 
 - #### Expired identification sessions
+We send a notification (email and/or callback) about expired sessions.
+
 - #### Identification emails
+We can send an email about approved/denied identifications.
+
 - #### Identification callback endpoint
+We send a full information about a completed identification to your specified
+url endpoint.
