@@ -42,17 +42,6 @@ Our platform has many features - it is best for you to know them all and cherry-
 - [Android SDK Customization](https://github.com/idenfy/Documentation/blob/master/pages/AndroidUICustomization.md)
 - [iOS SDK Customization](https://github.com/idenfy/Documentation/blob/master/pages/IOSUICustomization.md)
 
-## Functionality customisation
-- [Asking for a manual review](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/AskingForManualReview.md)
-- [Can upload photos](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CanUpload.md)
-- [Check anti-money-laundering](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CheckAML.md)
-- [Check lost-invalid-documents](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CheckLID.md)
-- [Countries blacklist](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/CountriesBlacklist.md)
-- [Expired sessions notifications](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/ExpiredSessions.md)
-- [Face liveliness check](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/FaceLiveliness.md)
-- [Manual review of identifications](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/ReviewSuccessfulAndFailed.md)
-- [Allowed documents list](https://github.com/idenfy/Documentation/blob/master/pages/functionality-customisation/SupportedDocuments.md)
-
 ## Additional services
 Fraud services check people against global databases for PEP, Sanctions, negative news, lost and invalid document registries.
 - [Fraud services](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/FraudApi.md)
