@@ -17,8 +17,7 @@ process and algorithms accurately read data from a document.
 
 - ##### When does a manual verification "kick in"?
 By default every single automatically verified identification is reviewed once more 
-by our manual reviewers. This behaviour can be altered by your custom needs 
-(see [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation) section).
+by our manual reviewers. This behaviour can be altered by your custom needs.
 
 - ##### How do I know when identification was verified manually/automatically?
 After a finished identification process in iDenfy platform you will be notified via email
@@ -46,16 +45,14 @@ There are many reasons why an identification can be denied. There might be vario
 associated with document scanning e.g. could not locate a face in a document, could 
 not read name/surname from the document, document is too blurry, etc. Also, there might
 be various cases associated with face detection and matching e.g. selfie face and 
-document face look too different. Furthermore, in case LID or AML is enabled 
-(see [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation) section) an identification could be denied because
+document face look too different. Furthermore, in case LID or AML is enabled an identification could be denied because
 the document used was registered as lost or a person is in PEP sanctions list.
 
 - ##### When identification is considered approved?
 It is considered approved when document and face analysis both succeed.
 Document analysis: data from a document was read successfully and matched 
 data provided when generating token. Face analysis: selfie face and document face
-both match. Also, in case LID or AML is enabled 
-(see [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation) section), a person has a valid document and is 
+both match. Also, in case LID or AML is enabled a person has a valid document and is 
 not in PEP sanctions list.
 
 
@@ -110,7 +107,7 @@ Yes. iDenfy API will repeat a call once (after 0.5 seconds) if the initial callb
 
 - ##### How many callbacks to expect?
 If your identifications are processed only automatically - just one - after processing is done. 
-If your identifications are processed automatically and then reviewed manually (Please refer to [Functionality configuration](https://github.com/idenfy/Documentation#functionality-customisation)) - then in total two - one after an automatic processing and one after a manual verification.
+If your identifications are processed automatically and then reviewed manually - then in total two - one after an automatic processing and one after a manual verification.
 
 ## Camera issues FAQ's
 
