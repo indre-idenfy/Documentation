@@ -47,3 +47,12 @@
 |`DOC_DAMAGED`                |Document is damaged or cracked therefore no logner valid.|
 |`DOC_FAKE`                   |Document is forged therefore invalid.|
 |`AUTO_UNVERIFIABLE`          |This identification can not be automatically verified and needs to be verified by human.|
+|`FACE_SUSPECTED`             |Automatic algorithms triggered a suspicion that selfie face is not genuine.|
+|`DOC_MOBILE_PHOTO`           |A photo of a document is shown from a mobile screen.|
+|`DEV_TOOLS_OPENED`           |A client performing identification has opened dev-tools in the browser.|
+|`DOC_PRINT_SPOOFED`          |Automatic algorithms triggered a suspicion that document is printed on paper.|
+|`FAKE_PHOTO`                 |General identifier for a fake photo.|
+|`AML_SUSPECTION`             |If AML functionality is turned on for you - this reason specifies that a client is in PEPs or Sanctions list.|
+|`AML_FAILED`                 |If AML functionality is turned on for you - this reason specifies that the check has failed.|
+|`LID_SUSPECTION`             |If LID functionality is turned on for you - this reason specifies that client's document is found in lost or stolen documents database.|
+|`LID_FAILED`                 |If LID functionality is turned on for you - this reason specifies that the check has failed.|
