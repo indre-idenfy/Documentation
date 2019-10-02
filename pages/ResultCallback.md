@@ -80,10 +80,10 @@ Note, that any of the specified fields below can be `null`.
 |`docNationality`     |`String`|- Max length 2   |Clients nationality parsed from the document. Returned value is an alpha-2 country code.|
 |`docIssuingCountry`  |`String`|- Max length 2   |Clients documents issuing country parsed from the document. Returned value is an alpha-2 country code.|
 |`selectedCountry`    |`String`|- Max length 2   |Clients selected country in identification platform. Returned value is an alpha-2 country code.|
-|`birthPlace`           |`String`|- Max length 60  |Clients date of issue parsed from the document.|
-|`authority`            |`String`|- Max length 60  |Clients date of issue parsed from the document.|
-|`address`              |`String`|- Max length 80  |Clients date of issue parsed from the document.|
-|`driverLicenseCategory`|`String`|- Max length 30  |Clients date of issue parsed from the document.|
+|`birthPlace`           |`String`|- Max length 60  |Clients birth place parsed from the document.|
+|`authority`            |`String`|- Max length 60  |The authority of the document parsed from the document.|
+|`address`              |`String`|- Max length 80  |Clients address parsed from the document.|
+|`driverLicenseCategory`|`String`|- Max length 30  |Clients driving license categories (classes) parsed from the document.|
 |`manuallyDataChanged`  |`Bool`  |-                |Indicates whether a manual reviewer has changed any parsed data from the document. Applicable only when a human reviews an identification. In automated verification response this value is `false`.|
 
 ### File urls table
