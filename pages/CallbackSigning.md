@@ -4,7 +4,7 @@ Callback signing is a simple method to secure your callback endpoints from
 foreign requests.
 
 To check webhook callbacks you need to compute SHA-256 HMAC of the whole HTTP body content 
-with API secret as a key, and compare that with `Idnefy-Signature` header.
+with API secret as a key, and compare that with `Idenfy-Signature` header.
 
 **Note**: You should not use standard `==` operator to avoid timing attacks. You
 should use `hmac.compare_digest`, `crypto.timingSafeEqual`  or equivalent constant time string comparison.
