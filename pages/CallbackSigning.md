@@ -39,7 +39,7 @@ def callback():
 const API_SECRET = "Agegb...";
 
 function verifyPostData(req, res, next) {
-    const payload = JSON.stringify(req.body)
+    const payload = req.rawBody;
     
     if (!payload) {
       return next('Request body empty.')
