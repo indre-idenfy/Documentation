@@ -25,7 +25,7 @@ Use this JSON when generating identification token to complete the flow.
 - Lithuania
 - Face
 
-<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/documents/BasanavicieneBiruteFace.jpg" alt="Lithuanian passport." width="700"></kbd>
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/documents/BasanavicieneBiruteFace.jpg" alt="Lithuanian passport." width="350"></kbd>
 
 
 ## AML suspected flow
@@ -52,4 +52,4 @@ Use this JSON when generating identification token to complete the flow.
 - United States
 - Face
 
-<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/documents/BarackObamaFace.jpg" alt="USA passport." width="700"></kbd>
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/documents/BarackObamaFace.jpg" alt="USA passport." width="350"></kbd>
