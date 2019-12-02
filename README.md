@@ -57,6 +57,7 @@ Fraud services check people against global databases for PEP, Sanctions, negativ
 - [Mobile SDKs]()
 
 ## Extra
+- [Resources](https://github.com/idenfy/Documentation/blob/master/pages/DocumentResources.md)
 - [Vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md)
 - [API error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md)
 - [FAQ](https://github.com/idenfy/Documentation/blob/master/pages/FAQ.md)
