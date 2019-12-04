@@ -53,3 +53,26 @@ Use this JSON when generating identification token to complete the flow.
 - Face
 
 <kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/documents/BarackObamaFace.jpg" alt="USA passport." width="350"></kbd>
+
+---
+
+Use this JSON when generating identification token to complete the flow.
+
+```json
+{
+	"clientId": "00000000",
+	"firstName": "Theresa",
+	"lastName": "May"
+}
+```
+
+- United Kingdom
+- Passport
+- Front
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/documents/TheresaMay.jpg" alt="UK passport." width="700"></kbd>
+
+- United Kingdom
+- Face
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/documents/TheresaMayFace.jpg" alt="UK passport." width="350"></kbd>
