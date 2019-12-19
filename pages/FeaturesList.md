@@ -295,8 +295,14 @@ We provide white-labeling for our web ui platform. You can customize
 colors and logos.
 
 - #### Localisation
-Our web and app platforms support *LT*, *RU*, *EN* and *PL* languages.
-
+Our web and app platforms support 
+- *LT*,
+- *EN*,
+- *PL*,
+- *RU*, 
+- *LV*, 
+- *RO*
+languages.
 ---
 
 ### Notifications
