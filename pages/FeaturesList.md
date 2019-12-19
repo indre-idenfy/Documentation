@@ -302,8 +302,9 @@ Our web and app platforms support
 - *RU*, 
 - *LV*, 
 - *RO*
-<br>
+
 languages.
+
 ---
 
 ### Notifications
