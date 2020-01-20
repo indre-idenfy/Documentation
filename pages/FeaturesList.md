@@ -255,12 +255,15 @@ We provide mobile (app/sdk) and web identification platforms.
 - #### Android SDK
 We provide an android SDK which can be integrated directly into your app.
 
+- #### iOS SDK
+We provide an iOS SDK which can be integrated directly into your app.
+
+- #### Cordova SDK wrapper
+We provide our mobile SDK wrapped in Cordova for better integration into your Cordova app.
+
 - #### Immediate redirect
 We support an "immediate redirect" flow which, when enabled, redirects a user 
 to success/error page without showing any success/failure messages.
-
-- #### iOS SDK
-We provide an iOS SDK which can be integrated directly into your app.
 
 - #### Mobile real time document scanning
 We provide in-real-time document scanning for better user experience.
