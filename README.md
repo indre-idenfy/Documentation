@@ -6,7 +6,7 @@ In order for you to start using our API you will need two things – ***API key*
 - support@idenfy.com
 - info@idenfy.com
 
-Also, you can visit [https://www.idenfy.com/start-trial/](https://www.idenfy.com/start-trial/) and fill up the form. Our team will contact you.
+Also, you can visit [https://www.idenfy.com/registration/](https://www.idenfy.com/start-trial/) and fill up the form. Our team will contact you.
 
 ## Understanding the platform
 Our platform has many features - it is best for you to know them all and cherry-pick what is most suitable for you.
