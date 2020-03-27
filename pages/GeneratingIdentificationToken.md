@@ -9,8 +9,8 @@ The request must contain JSON with optional and mandatory parameters:
 |Key|Required|Explanation|Type|Constraints<img width=/>|Default value|
 |---|---|---|---|---|---|
 |`clientId`|Yes|A unique string identifying a client.|String|- Not null<br>- Max length 100<img width=750/>|-|
-|`firstName`|No|A name(s) of a client to be identified.|String|- Min length 1<br>- Max length 100 <br>- Not digits <bt>- Not characters: ~!@#$%^*()_+={}[]\|:;",<>/? |-|
-|`lastName`|No|A surname(s) of a client to be identified.|String|- Min length 1<br>- Max length 100 <br>- Not digits <bt>- Not characters: ~!@#$%^*()_+={}[]\|:;",<>/?|-|
+|`firstName`|No|A name(s) of a client to be identified.|String|- Min length 1<br>- Max length 100 <br>- Not digits <br>- Not characters: ~!@#$%^*()_+={}[]\|:;",<>/? |-|
+|`lastName`|No|A surname(s) of a client to be identified.|String|- Min length 1<br>- Max length 100 <br>- Not digits <br>- Not characters: ~!@#$%^*()_+={}[]\|:;",<>/?|-|
 |`successUrl`|No|An url where a client will be redirected after a successful identification.|String|- Min length 5<br>- Max length 2048|`https://`<br>`ui.idenfy.com/`<br>`result?status=success`|
 |`errorUrl`|No|An url where a client will be redirected after a failed identification.|String|- Min length 5<br>- Max length 2048|`https://`<br>`ui.idenfy.com/`<br>`result?status=fail`|
 |`unverifiedUrl`|No|An url where a client will be redirected after a not analyzed identification. E.g. user immediately cancels process.|String|- Min length 5<br>- Max length 2048|`https://`<br>`ui.idenfy.com/`<br>`result?status=unverified`|
