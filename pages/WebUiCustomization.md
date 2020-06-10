@@ -15,7 +15,7 @@ You can customize the look and feel of our platform to better suite your compani
 ### Default view
 Default platform view without customization.
 
-<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/DEFAULT.jpg" alt="Default view example." width="700"></kbd>
+<kbd><img src="https://github.com/indre-idenfy/Documentation/blob/master/resources/DEFAULT.jpg" alt="Default view example." width="700"></kbd>
 
 ### Logo customization
 You can provide your companies logo to replace our companies logo. This way your customers may feel that they are still using your companies functionality. 
@@ -63,7 +63,7 @@ NOTE! Provided color must be in hex format e.g. #4286f4
 ### Default view
 Default continue view without customization.
 
-<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/DEFAULT_CONTINUE.jpg" alt="Default continue view example." width="700"></kbd>
+<kbd><img src="https://github.com/indre-idenfy/Documentation/blob/master/resources/DEFAULT_CONTINUE.jpg" alt="Default continue view example." width="700"></kbd>
 
 ### Continue buttons color
 You can change 'continue' buttons color to better suite your header and default buttons color.
