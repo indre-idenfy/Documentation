@@ -52,7 +52,7 @@ Request HTTP body is in JSON format which is described in tables below:
 |`client`|`Object`|- |Dictionary that contains the data of the client. [Refer to status table](#client-data-table).|
 |`client_identity_document`|`Object`|- |Dictionary that contains the data of the client identity document. [Refer to status table](#client-identity-document-table).|
 |`attempt_count`|`Int`|- |Count of how many times a client has tried to identify himself|
-|`suspection_reasons`|`List`|- |A list of suspicion reasons constants (strings) indicating why identification was suspected. [For values refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
+|`suspection_reasons`|`List`|- |A list of suspicion reasons constants (strings) indicating why identification was suspected. Possible values:<br>- FACE_SUSPECTED<br>- DOC_MOBILE_PHOTO<br>- DEV_TOOLS_OPENED<br>- DOC_PRINT_SPOOFED<br>- FAKE_PHOTO<br>- AML_SUSPECTION<br>- AML_FAILED<br>- LID_SUSPECTION<br>- LID_FAILED<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
 |`start_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when a client starts the identification process.|
 |`finish_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when the final decision for automatic processing was made.|
 |`review_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of when the identification was reviewed|
@@ -79,46 +79,46 @@ Request HTTP body is in JSON format which is described in tables below:
 
 |JSON key        |Type    |Constraints      |Explanation|
 |----------------|--------|-----------------|-----------|
-|`doc_name`       |`String`|- Max length 100 |Clients name parsed from the document.|
-|`doc_surname`        |`String`|- Max length 100 |Clients surname parsed from the document.|
-|`doc_date_of_birth`  |`String`|- Max length 10  |Clients date of birth parsed from the document.|
-|`doc_expiry_date`    |`String`|- Max length 100 |Clients document expiry date parsed from the document.|
-|`doc_personal_code`  |`String`|- Max length 30  |Clients personal code parsed from the document.|
-|`doc_document_number` `String`|- Max length 100 |Clients document number parsed from the document.|
-|`doc_sex`            |`String`|- Max length 6   |Clients sex parsed from the document. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
-|`doc_nationality`    |`String`|- Max length 2   |Clients nationality parsed from the document. Returned value is an alpha-2 country code.|
-|`doc_date_of_issue`  |`String`|- Max length 10  |Clients date of issue parsed from the document.|
-|`doc_license_categories`|`String`|- Max length 30  |Clients driving license categories (classes) parsed from the document.|
+|`doc_name`       |`String`|- Max length 100 |Client name parsed from the document.|
+|`doc_surname`        |`String`|- Max length 100 |Client surname parsed from the document.|
+|`doc_date_of_birth`  |`String`|- Max length 10  |Client date of birth parsed from the document.|
+|`doc_expiry_date`    |`String`|- Max length 100 |Client document expiry date parsed from the document.|
+|`doc_personal_code`  |`String`|- Max length 30  |Client personal code parsed from the document.|
+|`doc_document_number`|`String`|- Max length 100 |Client document number parsed from the document.|
+|`doc_sex`            |`String`|- Max length 6   |Client sex parsed from the document. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
+|`doc_nationality`    |`String`|- Max length 2   |Client nationality parsed from the document. Returned value is an alpha-2 country code.|
+|`doc_date_of_issue`  |`String`|- Max length 10  |Client date of issue parsed from the document.|
+|`doc_license_categories`|`String`|- Max length 30  |Client driving license categories (classes) parsed from the document.|
 |`doc_document_type`  |`String`|- Max length 30  |Document type to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
 |`doc_country`        |`String`|- Max length 2   |Documents issuing country parsed from the document. Returned value is an alpha-2 country code.|
-|`mrz_name`           |`String`|- Max length 100 |Clients name read from the document MRZ.|
-|`mrz_surname`        |`String`|- Max length 100 |Clients surname read from the document MRZ.|
-|`mrz_date_of_birth`  |`String`|-                |Clients date of birth read from the document MRZ.|
-|`mrz_expiry_date`    |`String`|-                |Clients document expiry date read from the document MRZ.|
-|`mrz_personal_code`  |`String`|- Max length 30  |Clients personal code read from the document MRZ.|
-|`mrz_document_number`|`String`|- Max length 100 |Clients document number read from the document MRZ.|
-|`mrz_sex`            |`String`|- Max length 6   |Clients sex read from the document MRZ. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
-|`mrz_nationality`    |`String`|- Max length 2   |Clients nationality read from the document MRZ. Returned value is an alpha-2 country code.|
-|`mrz_country`        |`String`|- Max length 2   |Clients documents issuing country read from the document MRZ. Returned value is an alpha-2 country code.|
+|`mrz_name`           |`String`|- Max length 100 |Client name read from the document MRZ.|
+|`mrz_surname`        |`String`|- Max length 100 |Client surname read from the document MRZ.|
+|`mrz_date_of_birth`  |`String`|-                |Client date of birth read from the document MRZ.|
+|`mrz_expiry_date`    |`String`|-                |Client document expiry date read from the document MRZ.|
+|`mrz_personal_code`  |`String`|- Max length 30  |Client personal code read from the document MRZ.|
+|`mrz_document_number`|`String`|- Max length 100 |Client document number read from the document MRZ.|
+|`mrz_sex`            |`String`|- Max length 6   |Client sex read from the document MRZ. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
+|`mrz_nationality`    |`String`|- Max length 2   |Client nationality read from the document MRZ. Returned value is an alpha-2 country code.|
+|`mrz_country`        |`String`|- Max length 2   |Client documents issuing country read from the document MRZ. Returned value is an alpha-2 country code.|
 |`mrz_document_type`  |`String`|- Max length 1   |Document type to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
 |`mrz_document_subtype` |`String`|- Max length 1 |Document subtype to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
 |`mrz_optional_data`  |`String`|- Max length 100 |Document optional data.|
 |`mrz_string`         |`String`|- Max length 100 |Whole read mrz string. |
-|`mrz_date_of_issue`  |`String`|- Max length 10  |Clients date of issue read from the document MRZ.|
-|`manual_name`        |`String`|- Max length 100 |Manually entered clients name.|
-|`manual_surname`     |`String`|- Max length 100 |Manually entered clients surname.|
-|`manual_date_of_birth` |`String`|-              |Manually entered clients date of birth.|
-|`manual_expiry_date` |`String`|- Max length 100 |Manually entered clients document expiry date.|
-|`manual_personal_code` |`String`|- Max length 30|Manually entered clients personal code.|
-|`manual_document_number` |`String`|- Max length 100  |Manually entered clients document number.|
-|`manual_sex`         |`String`|- Max length 6   |Manually entered clients sex.|
-|`manual_nationality` |`String`|- Max length 2   |Manually entered clients nationality.|
-|`manual_document_type` |`String`|- Max length 30|Manually entered clients document type.|
-|`manual_date_of_issue` |`String`|- Max length 10|Manually entered clients document date of issue.|
-|`manual_country`     |`String`|- Max length 2   |Manually entered clients documents issuing country.|
-|`document_type`      |`String`|- Max length 30  |Clients selected document type.||
-|`manual_utility_address`|`String`|- Max length 255  |Manually entered clients manual utility address.||
-|`manual_utility_address_match`|`Bool`|-         |Manually entered clients manual utility address match.
+|`mrz_date_of_issue`  |`String`|- Max length 10  |Client date of issue read from the document MRZ.|
+|`manual_name`        |`String`|- Max length 100 |Manually entered client name.|
+|`manual_surname`     |`String`|- Max length 100 |Manually entered client surname.|
+|`manual_date_of_birth` |`String`|-              |Manually entered client date of birth.|
+|`manual_expiry_date` |`String`|- Max length 100 |Manually entered client document expiry date.|
+|`manual_personal_code` |`String`|- Max length 30|Manually entered client personal code.|
+|`manual_document_number` |`String`|- Max length 100  |Manually entered client document number.|
+|`manual_sex`         |`String`|- Max length 6   |Manually entered client sex.|
+|`manual_nationality` |`String`|- Max length 2   |Manually entered client nationality.|
+|`manual_document_type` |`String`|- Max length 30|Manually entered client document type.|
+|`manual_date_of_issue` |`String`|- Max length 10|Manually entered client document date of issue.|
+|`manual_country`     |`String`|- Max length 2   |Manually entered client documents issuing country.|
+|`document_type`      |`String`|- Max length 30  |Client selected document type.||
+|`manual_utility_address`|`String`|- Max length 255  |Manually entered client manual utility address.|
+|`manual_utility_address_match`|`Bool`|-         |Manually entered client manual utility address match.
 
 ### Example of full identification status
 
