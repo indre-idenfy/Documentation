@@ -33,3 +33,165 @@ Returned response:
 
 - Endpoint: https://ivs.idenfy.com/api/v2/files
 
+## Full identification status
+
+The endpoint returns a full status of the identification.
+
+- Endpoint: https://ivs.idenfy.com/api/v2/full-status
+
+### Response structure
+
+Request HTTP body is in JSON format which is described in tables below:
+
+|JSON key        |Type    |Constraints      |Explanation|
+|----------------|--------|-----------------|-----------|
+|`face_match_result`|`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_UNCERTAIN<br>- FACE_NOT_ANALYSED<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>- FAKE_FACE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
+|`document_validity`|`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_FULLY_VISIBLE<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_TOO_BLURRY<br>- DOC_FACE_GLARED<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_TYPE_MISMATCH<br>- DOC_DAMAGED<br>- DOC_FAKE<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>- DOC_NOT_ANALYSED<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_DATE_OF_ISSUE_ERROR<br>- DOC_SEX_ERROR<br>- DOC_NATIONALITY_ERROR<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary)|
+|`manual_face_match_result`|`String`|- Max length 30  |A manual face analysis result (decision made by a human). Possible values are the same as  `face_match_result` field.         |
+|`manual_document_validity`|`String`|- Max length 30  | A manual document analysis result (decision made by a human). Possible values are the same as `document_validity` field.|
+|`client`|`Object`|- |Dictionary that contains the data of the client. [Refer to status table](#client-data-table).|
+|`client_identity_document`|`Object`|- |Dictionary that contains the data of the client identity document. [Refer to status table](#client-identity-document-table).|
+|`attempt_count`|`Int`|- |Count of how many times a client has tried to identify himself|
+|`suspection_reasons`|`List`|- |A list of suspicion reasons constants (strings) indicating why identification was suspected. [For values refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
+|`start_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when a client starts the identification process.|
+|`finish_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when the final decision for automatic processing was made.|
+|`review_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of when the identification was reviewed|
+
+### Client data table
+
+|JSON key        |Type    |Constraints      |Explanation|
+|----------------|--------|-----------------|-----------|
+|`name`|`String`|- Min length 1<br>- Max length 100 |A name of a client. |
+|`surname`|`String`|- Min length 1<br>- Max length 100 |A surname of a client. |
+|`date_of_birth`|`String`|- Format: YYYY-MM-DD |Date of birth of a client. |
+|`personal_id_number`|`String`|- Min length 1  |Personal/national number of a client. |
+|`document_number`|`String`|- Min length 1 |Number of a client document.|
+|`document_type`|`String`|- Max length 30  |Type of a client document.|
+|`expiry_date`|`String`|- Format: YYYY-MM-DD MM:SS.ss|Date when client token will become invalid.|
+|`nationality`|`String`|- Any country in alpha-2 code|Nationality of a client.|
+|`date_of_issue`|`String`|- Format: YYYY-MM-DD |Date of issue of a client document. |
+|`sex`|`String`|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`M`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`F` |Gender of a client. |
+|`country`|`String`|- Any country in alpha-2 code |A default document country in alpha-2 code for a client. |
+|`default_country`|`String`|- Any country in alpha-2 code |A predefined document country for a client by the partner. |
+|`utility_address`|`String`|- Max length 255  |Client address provided by partner |
+
+### Client identity document table
+
+|JSON key        |Type    |Constraints      |Explanation|
+|----------------|--------|-----------------|-----------|
+|`doc_name`       |`String`|- Max length 100 |Clients name parsed from the document.|
+|`doc_surname`        |`String`|- Max length 100 |Clients surname parsed from the document.|
+|`doc_date_of_birth`  |`String`|- Max length 10  |Clients date of birth parsed from the document.|
+|`doc_expiry_date`    |`String`|- Max length 100 |Clients document expiry date parsed from the document.|
+|`doc_personal_code`  |`String`|- Max length 30  |Clients personal code parsed from the document.|
+|`doc_document_number` `String`|- Max length 100 |Clients document number parsed from the document.|
+|`doc_sex`            |`String`|- Max length 6   |Clients sex parsed from the document. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
+|`doc_nationality`    |`String`|- Max length 2   |Clients nationality parsed from the document. Returned value is an alpha-2 country code.|
+|`doc_date_of_issue`  |`String`|- Max length 10  |Clients date of issue parsed from the document.|
+|`doc_license_categories`|`String`|- Max length 30  |Clients driving license categories (classes) parsed from the document.|
+|`doc_document_type`  |`String`|- Max length 30  |Document type to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
+|`doc_country`        |`String`|- Max length 2   |Documents issuing country parsed from the document. Returned value is an alpha-2 country code.|
+|`mrz_name`           |`String`|- Max length 100 |Clients name read from the document MRZ.|
+|`mrz_surname`        |`String`|- Max length 100 |Clients surname read from the document MRZ.|
+|`mrz_date_of_birth`  |`String`|-                |Clients date of birth read from the document MRZ.|
+|`mrz_expiry_date`    |`String`|-                |Clients document expiry date read from the document MRZ.|
+|`mrz_personal_code`  |`String`|- Max length 30  |Clients personal code read from the document MRZ.|
+|`mrz_document_number`|`String`|- Max length 100 |Clients document number read from the document MRZ.|
+|`mrz_sex`            |`String`|- Max length 6   |Clients sex read from the document MRZ. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
+|`mrz_nationality`    |`String`|- Max length 2   |Clients nationality read from the document MRZ. Returned value is an alpha-2 country code.|
+|`mrz_country`        |`String`|- Max length 2   |Clients documents issuing country read from the document MRZ. Returned value is an alpha-2 country code.|
+|`mrz_document_type`  |`String`|- Max length 1   |Document type to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
+|`mrz_document_subtype` |`String`|- Max length 1 |Document subtype to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
+|`mrz_optional_data`  |`String`|- Max length 100 |Document optional data.|
+|`mrz_string`         |`String`|- Max length 100 |Whole read mrz string. |
+|`mrz_date_of_issue`  |`String`|- Max length 10  |Clients date of issue read from the document MRZ.|
+|`manual_name`        |`String`|- Max length 100 |Manually entered clients name.|
+|`manual_surname`     |`String`|- Max length 100 |Manually entered clients surname.|
+|`manual_date_of_birth` |`String`|-              |Manually entered clients date of birth.|
+|`manual_expiry_date` |`String`|- Max length 100 |Manually entered clients document expiry date.|
+|`manual_personal_code` |`String`|- Max length 30|Manually entered clients personal code.|
+|`manual_document_number` |`String`|- Max length 100  |Manually entered clients document number.|
+|`manual_sex`         |`String`|- Max length 6   |Manually entered clients sex.|
+|`manual_nationality` |`String`|- Max length 2   |Manually entered clients nationality.|
+|`manual_document_type` |`String`|- Max length 30|Manually entered clients document type.|
+|`manual_date_of_issue` |`String`|- Max length 10|Manually entered clients document date of issue.|
+|`manual_country`     |`String`|- Max length 2   |Manually entered clients documents issuing country.|
+|`document_type`      |`String`|- Max length 30  |Clients selected document type.||
+|`manual_utility_address`|`String`|- Max length 255  |Manually entered clients manual utility address.||
+|`manual_utility_address_match`|`Bool`|-         |Manually entered clients manual utility address match.
+
+### Example of full identification status
+
+This is an example JSON body.
+
+```json
+{
+    "face_match_result": "FACE_MATCH",
+    "document_validity": "DOC_VALIDATED",
+    "manual_face_match_result": "FACE_MATCH",
+    "manual_document_validity": "DOC_VALIDATED",
+    "client": {
+        "name": "John Tom",
+        "surname": "Smith",
+        "date_of_birth": "2000-06-29",
+        "personal_id_number": "123456789",
+        "document_number": "123456",
+        "document_type": "ID_CARD",
+        "expiry_date": "2021-06-29",
+        "nationality": "LI",
+        "date_of_issue": "2010-12-20",
+        "sex": "M",
+        "country": "LI",
+        "default_country": null,
+        "utility_address": null
+    },
+    "client_identity_document": {
+        "doc_name": "JOHN TOM",
+        "doc_surname": "SMITH",
+        "doc_date_of_birth": "2000-06-29",
+        "doc_expiry_date": "2021-06-29",
+        "doc_personal_code": "123456789",
+        "doc_document_number": "123456",
+        "doc_sex": "M",
+        "doc_nationality": "LI",
+        "doc_date_of_issue": "2010-12-20",
+        "doc_license_categories": "",
+        "doc_document_type": "ID_CARD",
+        "doc_country": "LI",
+        "mrz_name": "JOHN TOM",
+        "mrz_surname": "SMITH",
+        "mrz_date_of_birth": "2000-06-29",
+        "mrz_expiry_date": "2021-06-29",
+        "mrz_personal_code": "123456789",
+        "mrz_document_number": "123456",
+        "mrz_sex": "M",
+        "mrz_nationality": "LI",
+        "mrz_country": "LI",
+        "mrz_document_type": "",
+        "mrz_document_subtype": "",
+        "mrz_optional_data": "",
+        "mrz_string": "P<LIESMITH<<JOHN<TOM<<<<<<<<<<<<<<<<<<<<<<<<<1234567897LIE0006297M2106294<<<<<<<<<<<<<<00",
+        "mrz_date_of_issue": "2010-12-20",
+        "manual_name": "JOHN TOM",
+        "manual_surname": "SMITH",
+        "manual_date_of_birth": "2000-06-29",
+        "manual_expiry_date": "2021-06-29",
+        "manual_personal_code": "123456789",
+        "manual_document_number": "123456",
+        "manual_sex": "M",
+        "manual_nationality": "LI",
+        "manual_document_type": "ID_CARD",
+        "manual_date_of_issue": "",
+        "manual_country": "LI",
+        "document_type": "ID_CARD",
+        "manual_utility_address": "",
+        "manual_utility_address_match": null
+    },
+    "attempt_count": 2,
+    "suspection_reasons": [],
+    "start_time": "2020-06-26 09:54:32",
+    "finish_time": "2020-06-26 09:54:34",
+    "review_time": "2020-06-26 09:54:35"
+}
+```
+
