@@ -132,7 +132,7 @@ This is an example JSON body in the callback HTTP request.
     "docNationality": "LT",
     "docIssuingCountry": "LT",
     "manuallyDataChanged": false
-    "selectedCountry": LT,
+    "selectedCountry": "LT",
     "orgFirstName": "FIRST-NAME-EXAMPLE",
     "orgLastName":  "LAST-NAME-EXAMPLE",
     "orgNationality": "LIETUVOS",
