@@ -131,7 +131,7 @@ This is an example JSON body in the callback HTTP request.
     "docSex": "UNDEFINED",
     "docNationality": "LT",
     "docIssuingCountry": "LT",
-    "manuallyDataChanged": false
+    "manuallyDataChanged": false,
     "selectedCountry": "LT",
     "orgFirstName": "FIRST-NAME-EXAMPLE",
     "orgLastName":  "LAST-NAME-EXAMPLE",
