@@ -29,6 +29,35 @@ Returned response:
 
 - Endpoint: https://ivs.idenfy.com/api/v2/data
 
+Request HTTP body is in JSON format which is described in tables below:
+
+JSON key            |Type    |Constraints      |Explanation|
+|-------------------|--------|-----------------|-----------|
+|`docFirstName`     |`String`|- Max length 100 |Client name parsed from the document.|
+|`docLastName`      |`String`|- Max length 100 |Client surname parsed from the document.|
+|`docNumber`        |`String`|- Max length 100 |Client document number parsed from the document.|
+|`docPersonalCode`  |`String`|- Max length 30  |Client personal code parsed from the document.|
+|`docExpiry`        |`String`|- Format: YYYY-MM-DD |Client document expiry date parsed from the document.|
+|`docDob`           |`String`|- Format: YYYY-MM-DD  |Client date of birth parsed from the document.|
+|`docDateOfIssue`   |`String`|- Format: YYYY-MM-DD  |Client date of issue parsed from the document.|
+|`docType`          |`String`|- Max length 30  |Document type to complete identification. Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER|
+|`docSex`           |`String`|- Max length 6   |Client sex parsed from the document. Possible values:<br>- MALE<br>- FEMALE<br>- UNDEFINED|
+|`docNationality`   |`String`|- Max length 2   |Client nationality parsed from the document. Returned value is an alpha-2 country code.|
+|`docIssuingCountry`|`String`|- Max length 2   |Documents issuing country parsed from the document. Returned value is an alpha-2 country code.|
+|`birthPlace`       |`String`|- Max length 60  |Client birth place parsed from the document.|
+|`authority`        |`String`|- Max length 60  |Client document authority parsed from the document.|
+|`address`          |`String`|- Max length 80  |Client address parsed from the document.|
+|`driverLicenseCategory`|`String`|- Max length 30  |Client driving license categories (classes) parsed from the document.|
+|`manuallyDataChanged`|`Bool`|-  |Defines if data was manually changed after automatic process.|
+|`selectedCountry`  |`String`|- Any country in alpha-2 code |Country which was selected in identification process.|
+|`orgFirstName`     |`String`|- Max length 60  |Client name parsed from the document in original language.|
+|`orgLastName`      |`String`|- Max length 60  |Client surname parsed from the document in original language.|
+|`orgNationality`   |`String`|- Max length 30  |Client nationality parsed from the document in original language.|
+|`orgBirthPlace`    |`String`|- Max length 60  |Client birth place parsed from the document in original language.|
+|`orgAuthority`     |`String`|- Max length 60  |Client document authority categories parsed from the document in original language |
+|`scanRef`          |`String`|- Max length 40  | Client identification unique identifier.|
+|`clientId`         |`Int`|-   |Client unique identifier.|
+
 ## Identification file urls
 
 - Endpoint: https://ivs.idenfy.com/api/v2/files
@@ -43,43 +72,43 @@ The endpoint returns a full status of the identification.
 
 Request HTTP body is in JSON format which is described in tables below:
 
-|JSON key        |Type    |Constraints      |Explanation|
-|----------------|--------|-----------------|-----------|
-|`face_match_result`|`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_UNCERTAIN<br>- FACE_NOT_ANALYSED<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>- FAKE_FACE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
-|`document_validity`|`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_FULLY_VISIBLE<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_TOO_BLURRY<br>- DOC_FACE_GLARED<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_TYPE_MISMATCH<br>- DOC_DAMAGED<br>- DOC_FAKE<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>- DOC_NOT_ANALYSED<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_DATE_OF_ISSUE_ERROR<br>- DOC_SEX_ERROR<br>- DOC_NATIONALITY_ERROR<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary)|
+|JSON key               |Type    |Constraints      |Explanation|
+|-----------------------|--------|-----------------|-----------|
+|`face_match_result`    |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_UNCERTAIN<br>- FACE_NOT_ANALYSED<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>- FAKE_FACE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
+|`document_validity`    |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_FULLY_VISIBLE<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_TOO_BLURRY<br>- DOC_FACE_GLARED<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_TYPE_MISMATCH<br>- DOC_DAMAGED<br>- DOC_FAKE<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>- DOC_NOT_ANALYSED<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_DATE_OF_ISSUE_ERROR<br>- DOC_SEX_ERROR<br>- DOC_NATIONALITY_ERROR<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary)|
 |`manual_face_match_result`|`String`|- Max length 30  |A manual face analysis result (decision made by a human). Possible values are the same as  `face_match_result` field.         |
 |`manual_document_validity`|`String`|- Max length 30  | A manual document analysis result (decision made by a human). Possible values are the same as `document_validity` field.|
-|`client`|`Object`|- |Dictionary that contains the data of the client. [Refer to status table](#client-data-table).|
+|`client`|`Object`      |- |Dictionary that contains the data of the client. [Refer to status table](#client-data-table).|
 |`client_identity_document`|`Object`|- |Dictionary that contains the data of the client identity document. [Refer to status table](#client-identity-document-table).|
-|`attempt_count`|`Int`|- |Count of how many times a client has tried to identify himself.|
-|`suspection_reasons`|`List`|- |A list of suspicion reasons constants (strings) indicating why identification was suspected. Possible values:<br>- FACE_SUSPECTED<br>- DOC_MOBILE_PHOTO<br>- DEV_TOOLS_OPENED<br>- DOC_PRINT_SPOOFED<br>- FAKE_PHOTO<br>- AML_SUSPECTION<br>- AML_FAILED<br>- LID_SUSPECTION<br>- LID_FAILED<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
-|`start_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when a client starts the identification process.|
-|`finish_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when the final decision for automatic processing was made.|
-|`review_time`|`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of when the identification was reviewed.|
+|`attempt_count`        |`Int`|- |Count of how many times a client has tried to identify himself.|
+|`suspection_reasons`   |`List`|- |A list of suspicion reasons constants (strings) indicating why identification was suspected. Possible values:<br>- FACE_SUSPECTED<br>- DOC_MOBILE_PHOTO<br>- DEV_TOOLS_OPENED<br>- DOC_PRINT_SPOOFED<br>- FAKE_PHOTO<br>- AML_SUSPECTION<br>- AML_FAILED<br>- LID_SUSPECTION<br>- LID_FAILED<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
+|`start_time`           |`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when a client starts the identification process.|
+|`finish_time`          |`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of  when the final decision for automatic processing was made.|
+|`review_time`          |`String`|- Format: YYYY-MM-DD MM:SS.ss|The time of when the identification was reviewed.|
 
 ### Client data table
 
-|JSON key        |Type    |Constraints      |Explanation|
-|----------------|--------|-----------------|-----------|
-|`name`|`String`|- Min length 1<br>- Max length 100 |A name of a client. |
-|`surname`|`String`|- Min length 1<br>- Max length 100 |A surname of a client. |
-|`date_of_birth`|`String`|- Format: YYYY-MM-DD |Date of birth of a client. |
+|JSON key           |Type    |Constraints      |Explanation|
+|-------------------|--------|-----------------|-----------|
+|`name`             |`String`|- Min length 1<br>- Max length 100 |A name of a client. |
+|`surname`          |`String`|- Min length 1<br>- Max length 100 |A surname of a client. |
+|`date_of_birth`    |`String`|- Format: YYYY-MM-DD |Date of birth of a client. |
 |`personal_id_number`|`String`|- Min length 1  |Personal/national number of a client. |
-|`document_number`|`String`|- Min length 1 |Number of a client document.|
-|`document_type`|`String`|- Max length 30  |Type of a client document.|
-|`expiry_date`|`String`|- Format: YYYY-MM-DD MM:SS.ss|Date when client token will become invalid.|
-|`nationality`|`String`|- Any country in alpha-2 code|Nationality of a client.|
-|`date_of_issue`|`String`|- Format: YYYY-MM-DD |Date of issue of a client document. |
-|`sex`|`String`|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`M`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`F` |Gender of a client. |
-|`country`|`String`|- Any country in alpha-2 code |A default document country in alpha-2 code for a client. |
-|`default_country`|`String`|- Any country in alpha-2 code |A predefined document country for a client by the partner. |
-|`utility_address`|`String`|- Max length 255  |Client address provided by partner. |
+|`document_number`  |`String`|- Min length 1 |Number of a client document.|
+|`document_type`    |`String`|- Max length 30  |Type of a client document.|
+|`expiry_date`      |`String`|- Format: YYYY-MM-DD MM:SS.ss|Date when client token will become invalid.|
+|`nationality`      |`String`|- Any country in alpha-2 code|Nationality of a client.|
+|`date_of_issue`    |`String`|- Format: YYYY-MM-DD |Date of issue of a client document. |
+|`sex`|`String`     |- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`M`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`F` |Gender of a client. |
+|`country`|`String` |- Any country in alpha-2 code |A default document country in alpha-2 code for a client. |
+|`default_country`  |`String`|- Any country in alpha-2 code |A predefined document country for a client by the partner. |
+|`utility_address`  |`String`|- Max length 255  |Client address provided by partner. |
 
 ### Client identity document table
 
-|JSON key        |Type    |Constraints      |Explanation|
-|----------------|--------|-----------------|-----------|
-|`doc_name`       |`String`|- Max length 100 |Client name parsed from the document.|
+|JSON key             |Type    |Constraints      |Explanation|
+|---------------------|--------|-----------------|-----------|
+|`doc_name`           |`String`|- Max length 100 |Client name parsed from the document.|
 |`doc_surname`        |`String`|- Max length 100 |Client surname parsed from the document.|
 |`doc_date_of_birth`  |`String`|- Format: YYYY-MM-DD  |Client date of birth parsed from the document.|
 |`doc_expiry_date`    |`String`|- Format: YYYY-MM-DD |Client document expiry date parsed from the document.|
