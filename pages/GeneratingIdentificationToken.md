@@ -29,7 +29,7 @@ The request must contain JSON with optional and mandatory parameters:
 |`sex`|No|Gender of a client.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`M`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`F`|`null`|
 |`generateDigitString`|No|Specify whether to generate an 8-digit string identifying the token that can be used in our mobile application.|Boolean|-If true, contract must allow to generate digit string <br> -If true, `expiryTime` must not exceed maximum expiry time of digit string|False|
 |`address`|No|Client address provided by partner.|String|- Max length 255|`null`|
-|`tokenType`|Yes|Determines, what sort of processing the client should go through.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`IDENTIFICATION - regular identification flow.`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL - client gets in a video call with a manager where the manager asks questions.`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_PHOTOS - client gets in a video call with a manager where the manager asks questions and takespictures, but the pictures aren't used for identification flow.`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_IDENTIFICATION - client gets in a video call with a manager where the manager asks questions and takes pictures for regular identification flow.`|`IDENTIFICATION`|
+|`tokenType`|Yes|Determines, what sort of processing the client should go through.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`IDENTIFICATION`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_PHOTOS`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_IDENTIFICATION`|`IDENTIFICATION`|
 |`videoCallQuestions`|No|Questions the partner should ask the client in a video call.|String|-|`[]`|
 
 ### Receiving response
@@ -86,9 +86,9 @@ Specify all of the parameters for full control.
    "personalNumber": "123456789",
    "documentNumber": "123456",
    "sex": "M",
-   "address: "Address",
-   "tokenType: "IDENTIFICATION",
-   "videoCallQuestions: "[Question]",
+   "address": "Address",
+   "tokenType": "IDENTIFICATION",
+   "videoCallQuestions": "[Question]",
 }
 ```
 
@@ -123,9 +123,9 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
    "documentNumber": "123456",
    "sex": "M",   
    "digitString": "4823657",
-   "address: "Address",
-   "tokenType: "IDENTIFICATION",
-   "videoCallQuestions: "[Question]",
+   "address": "Address",
+   "tokenType": "IDENTIFICATION",
+   "videoCallQuestions": "[Question]",
 }
 ```
 
@@ -161,9 +161,9 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
   "documentNumber": null,
   "sex": null,
   "digitString": "4823657",
-  "address: null,
-  "tokenType: "IDENTIFICATION",
-  "videoCallQuestions: "[]",
+  "address": null,
+  "tokenType": "IDENTIFICATION",
+  "videoCallQuestions": "[]",
 }
 ```
 Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standard *iDenfy* API error response. For more on *iDenfy* API responses visit [iDenfy error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md).
