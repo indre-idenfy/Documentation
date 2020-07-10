@@ -15,6 +15,7 @@ The request must contain JSON with optional and mandatory parameters:
 |`errorUrl`|No|An url where a client will be redirected after a failed identification.|String|- Min length 5<br>- Max length 2048|`https://`<br>`ui.idenfy.com/`<br>`result?status=fail`|
 |`unverifiedUrl`|No|An url where a client will be redirected after a not analyzed identification. E.g. user immediately cancels process.|String|- Min length 5<br>- Max length 2048|`https://`<br>`ui.idenfy.com/`<br>`result?status=unverified`|
 |`locale`|No|A country code in alpha-2 format. Determines what default language a client will see in identification UI.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`lt`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`en`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`ru`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`pl`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`ro`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`lv`|`en`|
+|`showInstructions`|No|Indicates whether instructions should be shown.|Bool|-|True|
 |`expiryTime`|No|Length of time in seconds after which a newly generated token will become invalid.|Integer|- More than 0|`3600`|
 |`sessionLength`|No|Length of time in seconds where a client is given to identify himself in indentification UI.|Integer|- More than 60<br>- Less than 3600|`600`|
 |`country`|No|A default document country in alpha-2 code for a client. A client will not be able to select a different country.|String|- Any country in alpha-2 code|`null`|
@@ -26,6 +27,11 @@ The request must contain JSON with optional and mandatory parameters:
 |`personalNumber`|No|Personal/national number of a client.|String|- Min length 1|`null`|
 |`documentNumber`|No|Number of a client document.|String|- Min length 1|`null`|
 |`sex`|No|Gender of a client.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`M`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`F`|`null`|
+|`address`|No|Client address provided by partner.|String|- Max length 255|`null`|
+|`tokenType`|Yes|Determines, what sort of processing the client should go through.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`IDENTIFICATION - regular identification flow.`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL - client gets in a video call with a manager where the manager asks questions.`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_PHOTOS - client gets in a video call with a manager where the manager asks questions and takespictures, but the pictures aren't used for identification flow.`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_IDENTIFICATION - client gets in a video call with a manager where the manager asks questions and takes pictures for regular identification flow.`|`IDENTIFICATION`|
+|`videoCallQuestions`|No|Questions the partner should ask the client in a video call.|String|-|`[]`|
+
+
 ### Receiving response
 The response JSON contains exact same fields as JSON during token generation. It also returns default values for fields
 that were optional and not specified during token generation. Additionally, the response also provides these fields below.
@@ -67,6 +73,7 @@ Specify all of the parameters for full control.
    "successUrl":"https://www.my-company.com/idenfy/success",
    "errorUrl":"https://www.my-company.com/idenfy/fail",
    "locale":"en",
+   "showInstructions":true,
    "expiryTime":600,
    "sessionLength":600,
    "country":"lt",
@@ -77,7 +84,10 @@ Specify all of the parameters for full control.
    "nationality": "lt",
    "personalNumber": "123456789",
    "documentNumber": "123456",
-   "sex": "M"
+   "sex": "M",
+   "address: "Address",
+   "tokenType: "IDENTIFICATION",
+   "videoCallQuestions: "[Question]",
 }
 ```
 
@@ -96,6 +106,7 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
    "successUrl": "https://www.my-company.com/idenfy/success",
    "errorUrl": "https://www.my-company.com/idenfy/fail",
    "locale": "en",
+   "showInstructions":true,
    "country": "lt",
    "expiryTime": 600,
    "sessionLength": 600,
@@ -109,7 +120,10 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
    "nationality": "lt",
    "personalNumber": "123456789",
    "documentNumber": "123456",
-   "sex": "M"
+   "sex": "M",
+   "address: "Address",
+   "tokenType: "IDENTIFICATION",
+   "videoCallQuestions: "[Question]",
 }
 ```
 
@@ -126,6 +140,7 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
   "successUrl": null,
   "errorUrl": null,
   "locale": "en",
+  "showInstructions":true,
   "country": null,
   "expiryTime": 3600,
   "sessionLength": 300,
@@ -142,7 +157,10 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
   "nationality": null,
   "personalNumber": null,
   "documentNumber": null,
-  "sex": null
+  "sex": null,
+  "address: null,
+  "tokenType: "IDENTIFICATION",
+  "videoCallQuestions: "[]",
 }
 ```
 Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standard *iDenfy* API error response. For more on *iDenfy* API responses visit [iDenfy error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md).
