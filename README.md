@@ -33,10 +33,6 @@ Our platform has many features - it is best for you to know them all and cherry-
 - [Webhook callback](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md)
 - [Additional identification data retrieval](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationDataRetrieval.md)
 
-*Fourthly (optional)*, delete client data from iDenfy databases.
-
-- [Deleting client data](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationDeletion.md)
-
 ## Interface customization
 - [WEB UI platform customization](https://github.com/idenfy/Documentation/blob/master/pages/WebUiCustomization.md)
 - [Android SDK Customization](https://github.com/idenfy/Documentation/blob/master/pages/AndroidUICustomization.md)
@@ -53,8 +49,7 @@ Fraud services check people against global databases for PEP, Sanctions, negativ
 ## Tutorials
 - [Administration platform](https://github.com/idenfy/Documentation/blob/master/pages/tutorials/admin-platform-tutorials.md)
 - [API integration](https://github.com/idenfy/Documentation/blob/master/pages/tutorials/api-integration-tutorials.md)
-- [Frontend WEB]()
-- [Mobile SDKs]()
+- [Mobile SDKs](https://github.com/idenfy/Documentation/blob/master/pages/tutorials/mobile-sdk-tutorials.md)
 
 ## Extra
 - [Resources](https://github.com/idenfy/Documentation/blob/master/pages/DocumentResources.md)
