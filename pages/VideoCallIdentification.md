@@ -18,7 +18,7 @@ The request must contain JSON with these parameters:
 | `photos`   | No       | Indicates whether photos of client and document should be taken.| `Bool` | - |
 
 ### Examples
-#### Example request for video call photos identificatiohis endpoint lets you make a video call identification
+#### Example request for video call endpoint to make a video call photo token
 
 ```json
 {
@@ -26,7 +26,7 @@ The request must contain JSON with these parameters:
     "photos": true
 }
 ```
-#### Example request for video call identification
+#### Example request for video call token
 
 ```json
 {
@@ -35,11 +35,11 @@ The request must contain JSON with these parameters:
 ```
 
 #### Example responses
-Successful API call returns json response with url which redirects to identification process.
+Successful API call returns json response with url which redirects to video call.
 
 ## Video call record
 
-This endpoint lets you retrieve video call photos and video if they were created.
+This endpoint lets you retrieve video call photos and video.
 
 ### Sending request
 Send a *HTTP Post* request to: [https://ivs.idenfy.com/api/v2/video-call-record](https://ivs.idenfy.com/api/v2/video-call-record) <br>
