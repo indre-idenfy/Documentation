@@ -47,7 +47,7 @@ The request must contain JSON with these parameters:
 
 |     Key    | Required |              Explanation              |   Type   |                                     Constraints<img width=/>                                     |
 | -----------| -------- | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------ |
-| `scanRef`  | Yes      | A unique string identifying a client identification.                  | `String` | -                                                                                                |
+| `scanRef`  | Yes      | A unique string identifying a client identification. | `String` | -                                                                                                |
 
 ### Examples
 #### Example request 
@@ -70,5 +70,48 @@ Successful API call returns json response with photos and video urls.
     "videos": [
          "http://this-is-a-identification-video-url"
     ]
+}
+```
+
+## Video call callabck
+
+When a client completes video call - your registered web hook endpoint will receive a HTTP POST request containing data and status of the video call.
+
+Your API **must** return HTTP response with status code `200`. Otherwise a client will see a failed identification message and will be redirected to a fail url.
+
+### Callback structure
+
+Request HTTP body is in JSON format:
+
+|JSON key    |Type    |Constraints      |Explanation                                                                                                   |
+|------------|--------|-----------------|--------------------------------------------------------------------------------------------------------------|
+|`videoCallAnswers`|`String`| -         |Dictionary that contains questions and answers with success indicators.                                      |
+|`date`      |`String`|-                |Video call creation time.                                                                                     |
+|`status`    |`Bool`  |-                |Status of the video call. Possible values:<br>- *true* - indicates success<br>- *false* - indicates failure.                                        |
+|`scanRef`   |`String`|-                |A unique string identifying a client identification.                                                          |
+|`authToken` |`String`|-                |A unique string for identification process.                                                                  |
+|`clientId`  |`String`|-                |A unique string identifying a client on your companies side.                                                  |
+
+### Examples
+
+This is an example JSON body in the callback HTTP request.
+
+```json
+{
+    "videoCallAnswers": {
+        "Question 1": {
+            "answer": "Answer to first question.",
+            "correct": true
+        }, 
+        "Question 2": {
+            "answer": "Answer to second question.", 
+            "correct": true
+        }
+    },
+    "date": "2020-08-14 12:48:08.085275+00:00", 
+    "status": true,
+    "scanRef": "unique_scan_ref", 
+    "authToken": "unique_auth_token",
+    "clientId": "unique_client_id"
 }
 ```

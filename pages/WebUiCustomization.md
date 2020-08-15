@@ -12,6 +12,31 @@ You can customize the look and feel of our platform to better suite your compani
 - Continue buttons color
 - Background color
 
+- Chat color
+- Liveness header font color
+- liveness subheader font color
+- Liveness button background color
+- Liveness feedback bar background color
+- Liveness feedback bar text color
+- Liveness frame background color
+- Liveness oval border color
+- Step number color
+- Step text color
+- Camera capture button background color
+- Camera capture button icon color
+- Camera switch button background color
+- Camera switch button icon color
+- Url color
+- Camera container background color
+- Message background color
+- Message text color
+- Message title color
+- Show idenfy water mark
+- Show alternative methods
+- Show header timer
+- Show footer
+
+
 ### Default view
 Default platform view without customization.
 
@@ -71,4 +96,93 @@ You can change 'continue' buttons color to better suite your header and default 
 NOTE! Provided color must be in hex format e.g. #4286f4
 
 <kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/CONTINUE.jpg" alt="Header example." width="700"></kbd>
+
+### Chat color
+You can change the color of the chat.
+
+
+### Liveness header font color
+You can change the color of the liveness header font.
+
+
+### liveness subheader font color
+You can change the color of the liveness subheader font.
+
+
+### Liveness button background color
+You can change the color of the button background  font.
+
+
+### Liveness feedback bar background color
+You can change the color of the liveness feedback bar background.
+
+
+### Liveness feedback bar text color
+You can change the color of the feedback bar text.
+
+
+### Liveness frame background color
+You can change the color of the liveness frame background.
+
+
+### Liveness oval border color
+You can change the color of the liveness oval border.
+
+
+### Step number color
+You can change the color of the step number.
+
+
+### Step text color
+You can change the color of the step text.
+
+
+### Camera capture button background color
+You can change the color of the camera capture button background.
+
+
+### Camera capture button icon color
+You can change the color of the camera capture button icon.
+
+
+### Camera switch button background color
+You can change the color of the camera switch background.
+
+
+### Camera switch button icon color
+You can change the color of the camera switch icon.
+
+
+### Url color
+You can change the color of the url.
+
+
+### Camera container background color
+You can change the color of the camera container background.
+
+
+### Message background color
+You can change the message background.
+
+
+### Message text color
+You can change the message text.
+
+
+### Message title color
+You can change the message title.
+
+
+### Show iDenfy water mark
+You can change to show or not iDenfy water mark.
+
+
+
+### Show header timer
+You can change to show or not header timer.
+
+
+### Show footer
+You can change to show or not footer.
+
 
