@@ -40,7 +40,10 @@ Our platform has many features - it is best for you to know them all and cherry-
 
 ## Additional services
 Fraud services check people against global databases for PEP, Sanctions, negative news, lost and invalid document registries.
-- [Fraud services](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/FraudApi.md)
+- [Fraud services](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/FraudApi.md) <br>
+
+Create video call token and retrieve photos and video captured during video call.
+- [Video call](https://github.com/idenfy/Documentation/blob/master/pages/VideoCallIdentification.md)
 
 ## Security
 - [Callback signing](https://github.com/idenfy/Documentation/blob/master/pages/CallbackSigning.md)

@@ -12,6 +12,31 @@ You can customize the look and feel of our platform to better suite your compani
 - Continue buttons color
 - Background color
 
+- Chat color
+- Liveness header font color
+- liveness subheader font color
+- Liveness button background color
+- Liveness feedback bar background color
+- Liveness feedback bar text color
+- Liveness frame background color
+- Liveness oval border color
+- Step number color
+- Step text color
+- Camera capture button background color
+- Camera capture button icon color
+- Camera switch button background color
+- Camera switch button icon color
+- Url color
+- Camera container background color
+- Message background color
+- Message text color
+- Message title color
+- Show idenfy water mark
+- Show alternative methods
+- Show header timer
+- Show footer
+
+
 ### Default view
 Default platform view without customization.
 
@@ -71,4 +96,89 @@ You can change 'continue' buttons color to better suite your header and default 
 NOTE! Provided color must be in hex format e.g. #4286f4
 
 <kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/CONTINUE.jpg" alt="Header example." width="700"></kbd>
+
+### Liveness header font color
+You can change the color of the liveness header font.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/LIVENESS_HEADER_FONT.png" alt="Liveness header font example." width="700"></kbd>
+
+### Liveness subheader font color
+You can change the color of the liveness subheader font.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/LIVENESS_SUBHEADER_FONT.png" alt="Liveness subheader font example." width="700"></kbd>
+
+### Liveness button background color
+You can change the color of the liveness button background.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/LIVENESS_BUTTON_BACKGROUND.png" alt="Liveness button background example." width="700"></kbd>
+
+### Liveness feedback bar background color
+You can change the color of the liveness feedback bar background.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/LIVENESS_FEEDBACK_BAR_BACKGROUND.png" alt="Liveness feedback bar background example." width="700"></kbd>
+
+### Liveness feedback bar text color
+You can change the color of the feedback bar text.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/LIVENESS_FEEDBACK_BAR_TEXT.png" alt="Liveness feedback bar text example." width="700"></kbd>
+
+### Liveness frame background color
+You can change the color of the liveness frame background.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/LIVENESS_FRAME_BACKGROUND.png" alt="Liveness frame background example." width="700"></kbd>
+
+### Liveness oval border color
+You can change the color of the liveness oval border.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/LIVENESS_OVAL_BORDER_COLOR.png" alt="Liveness oval border example." width="700"></kbd>
+
+### Step number color
+You can change the color of the step number.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/STEP_NUMBER.png" alt="Step number example." width="700"></kbd>
+
+### Step text color
+You can change the color of the step text.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/STEP_TEXT.png" alt="Step text example." width="700"></kbd>
+
+### Camera capture button background color
+You can change the color of the camera capture button background.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/CAMERA_CAPTURE_BUTTON_BACKGROUND.png" alt="Camera capture button background example." width="700"></kbd>
+
+### Camera capture button icon color
+You can change the color of the camera capture button icon.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/CAMERA_CAPTURE_BUTTON_ICON.png" alt="Camera capture button icon example." width="700"></kbd>
+
+### Camera switch button background color
+You can change the color of the camera switch button background.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/CAMERA_SWITCH_BUTTON_BACKGROUND.png" alt="Camera switch button background example." width="700"></kbd>
+
+### Camera switch button icon color
+You can change the color of the camera switch button icon.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/CAMERA_SWITCH_BUTTON_ICON.png" alt="Camera switch button icon example." width="700"></kbd>
+
+### Camera container background color
+You can change the color of the camera container background.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/CAMERA_CONTAINER_BACKGROUND.png" alt="Camera container background example." width="700"></kbd>
+
+### Message background color
+You can change the message background.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/MESSAGE_BACKGROUND.png" alt="Message background example." width="700"></kbd>
+
+### Message text color
+You can change the message text.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/MESSAGE_TEXT.png" alt="Message text example." width="700"></kbd>
+
+### Message title color
+You can change the message title.
+
+<kbd><img src="https://github.com/idenfy/Documentation/blob/master/resources/MESSAGE_TITLE.png" alt="Message title example." width="700"></kbd>
 
