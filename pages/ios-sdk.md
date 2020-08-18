@@ -18,6 +18,12 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+
+## [2.1.0] - 2020-08-03
+### Changed:
+* Migrated to updated liveness version in SDK versions lower than 3.00. A brand new flow with better UX for performing 3D liveness verification. Read more about liveness versioning and [updates frequency](https://github.com/idenfy/Documentation/blob/master/pages/ios-sdk.md#advanced-liveness-detection).
+*Note: this update was already present in the SDK, starting with version 3.0.0.
+
 ## [3.3.0] - 2020-07-01
 ### Added:
 * Added support for proof of address.
@@ -448,7 +454,8 @@ For more information visit [SDK integration tutorials](https://github.com/idenfy
 ## Advanced Liveness detection
 SDK provides advanced liveness recognition. Liveness recognition is attached as separate, optional module inside of the SDK. 
 
-New major liveness version is released every 6-12 months. After major version release SDK must be updated also.
+The new major liveness version is released every 6-12 months. Your app must update the liveness module after every major release. If SDK is not updated, it can lead to the **runtime crashes**.
+
 ### 1. Update Podfile
 In the Podfile **replace** 'iDenfySDK' with following Pod:
 ```ruby
