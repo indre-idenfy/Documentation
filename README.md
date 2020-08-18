@@ -43,7 +43,8 @@ Fraud services check people against global databases for PEP, Sanctions, negativ
 - [Fraud services](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/FraudApi.md) <br>
 
 Create video call token and retrieve photos and video captured during video call.
-- [Video call](https://github.com/idenfy/Documentation/blob/master/pages/VideoCallIdentification.md)
+- [Video call](https://github.com/idenfy/Documentation/blob/master/pages/VideoCall.md)
+
 
 ## Security
 - [Callback signing](https://github.com/idenfy/Documentation/blob/master/pages/CallbackSigning.md)
