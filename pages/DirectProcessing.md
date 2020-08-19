@@ -2,6 +2,11 @@
 
 This endpoint lets you upload customer photos yourself and start processing instantly. The identification token is deactivated after this request.
 
+# Notice
+
+Using this implementation type you lose these functionality: 3D liveness detection and short video before taking photos.
+If 3D liveness detection and short video before taking photos is required for you, please use another integration type.
+
 ### Sending request
 Send a *HTTP Post* request to: `https://ivs.idenfy.com/api/v2/process`<br>
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.<br>
