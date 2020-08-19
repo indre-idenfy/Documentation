@@ -4,7 +4,7 @@ This endpoint lets you upload customer photos yourself and start processing inst
 
 # Notice
 
-Using this implementation type you lose these functionality: 3D liveness detection and short video before taking photos.
+Using this implementation type you lose these features: 3D liveness detection and short video before taking photos.
 If 3D liveness detection and short video before taking photos is required for you, please use another integration type.
 
 ### Sending request
