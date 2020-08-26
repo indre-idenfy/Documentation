@@ -12,26 +12,26 @@ If you are experiencing any issues receiving a callback - [Refer to a callback t
 
 There are certain points of time in identity verification process when your API should expect to receive a callback.
 
-Your API should expect to receive a callback immediately when:
+Your API should expect to receive a callback up to 20 minutes when:
 - A client has successfully completed an identification
 - A client has consecutively failed to identify himself and has reached maximum reattempts allowed in the identification platform.  
 - A client was suspected for a fraudulent activity and his session was terminated.
 
-Your API should not expect to receive an immediate callback when (In case of these events your API will receive a callback only when a **token** (token property `tokenExpiry`) or a **token session** (token property `sessionLength`) has expired. For more on these variables refer to [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)):
+Your API should not expect to receive up to 20 minutes callback when (In case of these events your API will receive a callback only when a **token** (token property `tokenExpiry`) or a **token session** (token property `sessionLength`) has expired. For more on these variables refer to [Generating identification token](https://github.com/idenfy/Documentation/blob/master/pages/GeneratingIdentificationToken.md)):
 - A client has consecutively failed to identify himself and has not reached maximum reattempts allowed in the identification platform.
 - A client did not start an identification session.
 
 ### How many callbacks to expect
 
-In total you should expect two consecutive callbacks per identification: 
-- One generated for an automatic verification.
-- Second generated for a manual verification.
+In total you should expect one callback per identification: 
+- generated for a auto and manual verification.
 
-Two consecutive callbacks are represented in a UML activity graph below:
+Callback are represented in a UML activity graph below:
 
 <img src="https://raw.githubusercontent.com/idenfy/Documentation/master/resources/ClientIdentificationWorkflowActivityDiagram.jpg" alt="Token generation UML activity diagram" width="700">
 
-On how to differentiate which callback represents manual or automatic verification refer to [FAQ section](https://github.com/idenfy/Documentation/blob/master/pages/FAQ.md)
+Final identification status is in "overall" variable.
+Final face and document analysis status is in "manualDocument", "manualFace" variables.
 
 ## Callback structure
 
@@ -59,9 +59,9 @@ Request HTTP body is in JSON format which is described in tables below:
 |`overall`         |`String`|- Max length 30  |An overall status of the identification. It is a combination of manual and automatic verification results. Possible values:<br>- APPROVED<br>- DENIED<br>- SUSPECTED<br>- REVIEWING<br>- ACTIVE<br>- EXPIRED<br>- DELETED<br>- ARCHIVED<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).                                              |
 |`suspicionReasons`|`List  `|-                |A list of suspicion reasons constants (strings) indicating why identification was suspected. Possible values:<br>- FACE_SUSPECTED<br>- DOC_MOBILE_PHOTO<br>- DEV_TOOLS_OPENED<br>- DOC_PRINT_SPOOFED<br>- FAKE_PHOTO<br>- AML_SUSPECTION<br>- AML_FAILED<br>- LID_SUSPECTION<br>- LID_FAILED<br>- AUTO_UNVERIFIABLE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
 |`autoFace`        |`String`|- Max length 30  |An automatic face analysis result (decision made by an automated platform). Possible values:<br>- FACE_MATCH<br>- FACE_MISMATCH<br>- NO_FACE_FOUND<br>- TOO_MANY_FACES<br>- FACE_TOO_BLURRY<br>- FACE_UNCERTAIN<br>- FACE_NOT_ANALYSED<br>- FACE_ERROR<br>- AUTO_UNVERIFIABLE<br>- FAKE_FACE<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).  |
-|`manualFace`      |`String`|- Max length 30  |A manual face analysis result (decision made by a human). Possible values are the same as  `autoFace` field.                                                                                                                        |
+|`manualFace`      |`String`|- Max length 30  |A Final face analysis result (decision made by a automatic system and human). Possible values are the same as  `autoFace` field.                                                                                                                        |
 |`autoDocument`    |`String`|- Max length 30  |An automatic document analysis result (decision made by an automated platform). Possible values:<br>- DOC_VALIDATED<br>- DOC_INFO_MISMATCH<br>- DOC_NOT_FOUND<br>- DOC_NOT_FULLY_VISIBLE<br>- DOC_NOT_SUPPORTED<br>- DOC_FACE_NOT_FOUND<br>- DOC_TOO_BLURRY<br>- DOC_FACE_GLARED<br>- MRZ_NOT_FOUND<br>- MRZ_OCR_READING_ERROR<br>- DOC_EXPIRED<br>- COUNTRY_MISMATCH<br>- DOC_TYPE_MISMATCH<br>- DOC_DAMAGED<br>- DOC_FAKE<br>- DOC_ERROR<br>- AUTO_UNVERIFIABLE<br>- DOC_NOT_ANALYSED<br>- DOC_NAME_ERROR<br>- DOC_SURNAME_ERROR<br>- DOC_EXPIRY_ERROR<br>- DOC_DOB_ERROR<br>- DOC_PERSONAL_NUMBER_ERROR<br>- DOC_NUMBER_ERROR<br>- DOC_DATE_OF_ISSUE_ERROR<br>- DOC_SEX_ERROR<br>- DOC_NATIONALITY_ERROR<br>[For value explanations refer to status vocabulary](https://github.com/idenfy/Documentation/blob/master/pages/Vocabulary.md#identification-status-values-vocabulary).|
-|`manualDocument`  |`String`|- Max length 30  |A manual document analysis result (decision made by a human). Possible values are the same as `autoDocument` field.|
+|`manualDocument`  |`String`|- Max length 30  |A Final document analysis result (decision made by a automatic system and human). Possible values are the same as `autoDocument` field.|
 
 ### Data table
 
@@ -120,8 +120,8 @@ This is an example JSON body in the callback HTTP request.
     "suspicionReasons": [],
     "autoDocument": "DOC_VALIDATED",
     "autoFace": "FACE_MATCH",
-    "manualDocument": null,
-    "manualFace": null
+    "manualDocument": "DOC_VALIDATED",
+    "manualFace": "FACE_MATCH"
   },
   "data": {
     "selectedCountry": "LT",
