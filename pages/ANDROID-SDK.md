@@ -18,6 +18,14 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [3.1.1] - 2020-09-04
+### Added:
+* Started migration to [cameraX](https://developer.android.com/training/camerax) library. Idenfy contributed to an open-sourced cameraX project to make it the most stable camera solution on Android. If your app **overrides idenfy layouts**, make sure to include cameraX preview layout. All layouts are visible in Android Studio or [here](https://github.com/idenfy/Documentation/blob/master/resources/sdk/android/layouts/).
+* A new error message for the user to notice if the identification process could not be completed.
+### Changed:
+* Fixed countries blacklist issue, which affected certain countries.
+* Migrated camera session instructions to [ViewPager2](https://developer.android.com/jetpack/androidx/releases/viewpager2).
+
 ## [3.0.0] - 2020-08-20
 ### Added:
 * Introduced manual identification flow!
