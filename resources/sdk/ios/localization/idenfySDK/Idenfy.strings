@@ -253,6 +253,33 @@
 "idenfy_identification_results_success_fragment_description_v2" = " ";
 "idenfy_identifiaction_results_success_fragment_identified_v2" = "Identified";
 
+/*Idenfy Manual Reviewing Identification Results Status Waiting View V2*/
+"idenfy_manual_reviewing_status_waiting_view_information_title_v2" = "Your Identification Will Be Reviewed";
+"idenfy_manual_reviewing_status_waiting_view_information_description_v2" = "It usually takes up to 20 minutes to verify an identification manually";
+"idenfy_manual_reviewing_status_waiting_view_terminate_button_v2" = "TERMINATE IDENTIFICATION";
+
+/*Idenfy Manual Reviewing Identification Results Status Waiting Terminate Identification Alert V2*/
+"idenfy_alert_title_manual_reviewing_status_waiting_terminate_information" = "Abort identification";
+"idenfy_alert_message_manual_reviewing_status_waiting_terminate_information" = "Are you sure you want to abort identification?";
+"idenfy_alert_positive_button_manual_reviewing_status_waiting_terminate_information" = "YES";
+"idenfy_alert_negative_button_manual_reviewing_status_waiting_terminate_information" = "NO";
+
+/*Idenfy Manual Reviewing Identification Results Status Approved View V2*/
+"idenfy_manual_reviewing_status_approved_view_information_title_v2" = "Your Identification Was Successful!";
+"idenfy_manual_reviewing_status_approved_view_information_description_v2" = "Thank You";
+"idenfy_manual_reviewing_status_approved_view_continue_button_v2" = "CONTINUE";
+
+/*Idenfy Manual Reviewing Identification Results Status Failed View V2*/
+"idenfy_manual_reviewing_status_failed_view_information_title_v2" = "Identification Failed";
+"idenfy_manual_reviewing_status_failed_view_information_description_v2" = "We could not confirm your identity";
+"idenfy_manual_reviewing_status_failed_view_continue_button_v2" = "CONTINUE";
+
+/*Idenfy Camera Permission View V2*/
+"idenfy_camera_permissions_view_information_title_v2" = "May we use your camera?";
+"idenfy_camera_permissions_view_information_description_v2" = "We need to use your camera to take the photo of your document and face photo";
+"idenfy_camera_permissions_view_guidance_information_description_v2" = "Go to settings, tap on “Permissions” to grant access to the camera";
+"idenfy_camera_permissions_view_goto_settings_button_title_v2" = "GO TO SETTINGS";
+
 /**Shared strings**/
 /*Idenfy Permissions*/
 "idenfy_permission_asks_to_provide_camera_permission_manually" = "Provide permissions manually";
