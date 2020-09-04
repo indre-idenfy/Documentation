@@ -18,6 +18,17 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [4.1.0] - 2020-09-04
+### Added:
+* Added a new screen if the user has disabled camera permissions. It provides information about camera permission and why iDenfy needs it.
+* Added Objective-C support for the V2 SDK version.
+* Added additional error message for developers, which will be triggered if the [liveness feature](#advanced-liveness-detection) is enabled, but the wrong SDK is installed.
+* Document confirmation screen is enabled by default now.
+
+### Changed:
+* Migrated to Swift 5.0. Use Xcode version >=11.
+* Locale changes within the app will also affect the locale of the [liveness feature](#advanced-liveness-detection).
+
 ## [4.0.0] - 2020-08-20
 ### Added:
 * Introduced manual identification flow!
@@ -84,7 +95,7 @@ The structure of our changes follow practices from [keep a changelog](https://ke
 
 * SDK supports iOS 9.0.
 * SDK supports all versions previous to Swift 5.0 starting from version 1.0* until 1.2*.
-* SDK supports Swift 5.0 and Xcode 10.2 starting from version 1.2*.
+* SDK supports Swift 5.0 and Xcode 11 starting from version 1.2*.
 
 ### 1. Obtaining token
 
@@ -121,7 +132,7 @@ pod 'iDenfySDK'
 
 #### Manual
 ##### 1. Download iDenfySDK
-[Download](https://s3-eu-west-1.amazonaws.com/sdk.builds/ios-sdk/3.2.1/iDenfySDK.zip) latest iDenfySDK builds.
+[Download](https://s3-eu-west-1.amazonaws.com/sdk.builds/ios-sdk/4.1.0/iDenfySDK.zip) latest iDenfySDK builds.
 ##### 2. Include required modules
 ##### 2.1 With liveness module
 If you are using [Advanced Liveness detection](#advanced-liveness-detection) copy all frameworks from IdenfyLiveness folder into your app target folder.
@@ -159,6 +170,18 @@ let idenfyController = IdenfyController.shared
 idenfyController.initializeIdenfySDKWithManualResults(idenfySettingsV2: idenfySettingsV2)
 ```
 
+##### Objective-C
+```Objective-C
+IdenfyBuilderV2 *idenfyBuilderV2 = [[IdenfyBuilderV2 alloc] init];
+idenfyBuilderV2 = [idenfyBuilderV2 withAuthToken:authToken];
+
+IdenfySettingsV2 *idenfySettingsV2 = [idenfyBuilderV2 build];
+
+IdenfyController *idenfyController = [IdenfyController shared];
+[idenfyController initializeIdenfySDKWithManualResultsWithIdenfySettingsV2:idenfySettingsV2];
+```
+
+
 #### V2
 ##### Swift
 ```swift
@@ -194,6 +217,12 @@ let idenfyVC = idenfyController.instantiateNavigationController()
 self.present(idenfyVC, animated: true, completion: nil)
 ```
 
+##### Objective-C
+```Objective-C
+UINavigationController *idenfyVC = [idenfyController instantiateNavigationController];
+[self presentViewController:idenfyVC animated:YES completion:nil];
+```
+
 ## Callbacks
 
 
@@ -225,6 +254,34 @@ The SDK provides following callback: idenfyIdentificationResult
             
         })
 ```
+##### Objective-C
+```Objective-C
+[idenfyController handleIdenfyCallbacksWithManualResultsWithIdenfyIdentificationResult:^(IdenfyIdentificationResult * _Nonnull idenfyIdentificationResult) {
+        NSLog(@"%ld", (long)idenfyIdentificationResult.autoIdentificationStatus);
+        switch (idenfyIdentificationResult.autoIdentificationStatus) {
+            case AutoIdentificationStatusAPPROVED:
+                break;
+            case AutoIdentificationStatusFAILED:
+                break;
+            case AutoIdentificationStatusUNVERIFIED:
+                break;
+            default:
+                break;
+        }
+        NSLog(@"%ld", (long)idenfyIdentificationResult.manualIdentificationStatus);
+        switch (idenfyIdentificationResult.manualIdentificationStatus) {
+            case ManualIdentificationStatusAPPROVED:
+                break;
+            case ManualIdentificationStatusFAILED:
+                break;
+            case ManualIdentificationStatusINACTIVE:
+                break;
+            default:
+                break;
+        }
+    }];
+```
+
 
 Information about the IdenfyIdentificationResult **autoIdentificationStatus** statuses:
 
