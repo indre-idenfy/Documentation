@@ -57,7 +57,7 @@
 |`LID_SUSPECTION`             |If LID functionality is turned on for you - this reason specifies that client's document is found in lost or stolen documents database.|
 |`LID_FAILED`                 |If LID functionality is turned on for you - this reason specifies that the check has failed.|
 |`UNDER_AGE`                  |An age read from document is lower than partner age limit.|
-|`UNKNOWN_AGE`                |Partner given age limit but age from document was not read.|
+|`UNKNOWN_AGE`                |An age was not read from document and partner has set age limit.|
 |`NAME`                       |Partner given client name does not match one read form document.|
 |`SURNAME`                    |Partner given client surname does not match the one read form document.|
 |`DOCUMENT_NUMBER`            |Partner given client document number does not match the one read form document.|
