@@ -18,6 +18,15 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [4.2.0] - 2020-09-21
+### Added:
+* Added new ID-spoof detection support.
+
+### Changed:
+* Significantly improved 3D-liveness recognition accuracy.
+* Improved 3D-liveness UX flow. Added explanations when the liveness check performed incorrectly.
+
+
 ## [4.1.0] - 2020-09-04
 ### Added:
 * Added a new screen if the user has disabled camera permissions. It provides information about camera permission and why iDenfy needs it.
