@@ -222,44 +222,51 @@ iDenfySDK provides informative instructions during identification session. They 
 
 iDenfy SDK provides additional liveness customization.
 
- ### 1. Creating IdenfyLivenessUIHelper
+### 1. Creating IdenfyLivenessUIHelper
+#### V1, V2
 
  ```swift
- let idenfyLivenessUISettings = IdenfyLivenessUISettings()
+let idenfyLivenessUISettings = IdenfyLivenessUISettings()
 ```
- ### 2. Applying settings
 
- iDenfySDK provides the following attributes for liveness customization:
+### 2.1 Applying regular settings
+If you only need color, text, or width customization, you can use properties from the IdenfyLivenessUISettings class.
+#### V1, V2
+#### IdenfyLivenessUISettings
 
  ```swift
-    //Used for different ui parts
-    public var  idenfyLivenessPrimaryColor = UIColor.white
-    public var  idenfyLivenessAccentColor = UIColor(red:139/255.0, green: 199/255.0, blue: 224/255.0, alpha: 1.0)
-    public var  idenfyLivenessTextColor = UIColor.black
-    
-    //Liveness session feedback settings
-    public var  livenessFeedbackBackgroundColor = UIColor(red:139/255.0, green: 199/255.0, blue: 224/255.0, alpha: 1.0)
-    public var  livenessFeedbackFont : UIFont = UIFont(name: ConstsIdenfyFonts.idenfyFontBoldV2, size: 18) ?? UIFont.boldSystemFont(ofSize: 18)
-    public var  livenessFeedbackFontSizeMobile : CGFloat?
-    public var  livenessFeedbackFontSizeTablet : CGFloat?
-    public var  livenessFeedbackFontColor : UIColor?
-    
-    //Liveness session frame settings
-    public var  livenessFrameBackgroundColor : UIColor = UIColor.black.withAlphaComponent(0.72)
+    @objc public class IdenfyLivenessUISettings: NSObject {
+    // Used for different ui parts
+    public var idenfyLivenessPrimaryColor = UIColor.white
+    public var idenfyLivenessAccentColor = UIColor(red: 139 / 255.0, green: 199 / 255.0, blue: 224 / 255.0, alpha: 1.0)
+    public var idenfyLivenessTextColor = UIColor.black
+
+    // Liveness session feedback settings
+    public var livenessFeedbackBackgroundColor = UIColor(red: 139 / 255.0, green: 199 / 255.0, blue: 224 / 255.0, alpha: 1.0)
+    public var livenessFeedbackFont: UIFont = UIFont(name: ConstsIdenfyFonts.idenfyFontBoldV2, size: 18) ?? UIFont.boldSystemFont(ofSize: 18)
+    public var livenessFeedbackFontSizeMobile: CGFloat?
+    public var livenessFeedbackFontSizeTablet: CGFloat?
+    public var livenessFeedbackFontColor: UIColor?
+
+    // Liveness session frame settings
+    public var livenessFrameBackgroundColor: UIColor = UIColor.black.withAlphaComponent(0.72)
     public var livenessFrameColor: UIColor?
     public var livenessFrameWidth: Int32? = 0
     
-    //Liveness session progress settings
-    public var  livenessIdentificationOvalProgressColor1 = UIColor(red:139/255.0, green: 199/255.0, blue: 224/255.0, alpha: 1.0)
-    public var  livenessIdentificationProgressStrokeColor = UIColor(red:139/255.0, green: 199/255.0, blue: 224/255.0, alpha: 1.0)
-    public var  livenessIdentificationOvalProgressColor2 = UIColor(red:139/255.0, green: 199/255.0, blue: 224/255.0, alpha: 1.0)
+    //Liveness session cancel button settings
+    public var livenessCancelButtonImage = UIImage(named: "idenfy_ic_liveliness_camera_session_cancel_image", in: Bundle(identifier: "com.idenfy.idenfysdk"), compatibleWith: nil)
+
+    // Liveness session progress settings
+    public var livenessIdentificationOvalProgressColor1 = UIColor(red: 139 / 255.0, green: 199 / 255.0, blue: 224 / 255.0, alpha: 1.0)
+    public var livenessIdentificationProgressStrokeColor = UIColor(red: 139 / 255.0, green: 199 / 255.0, blue: 224 / 255.0, alpha: 1.0)
+    public var livenessIdentificationOvalProgressColor2 = UIColor(red: 139 / 255.0, green: 199 / 255.0, blue: 224 / 255.0, alpha: 1.0)
     public var livenessIdentificationProgressStrokeWidth: Int32 = 4
     public var livenessIdentificationStrokeWidth: Int32 = 3
     public var livenessIdentificationProgressRadialOffset: Int32 = 6
-    //Liveness session overlay settings
-    public var livenessOverlayBrandingImage = UIImage(named: "idenfy_ic_idenfy_logo_vector_v1", in: Bundle(identifier: "com.idenfy.idenfysdk"), compatibleWith: nil)
-    
-    //Liveness ready screen settings
+    // Liveness session overlay settings
+    public var livenessOverlayBrandingImage = UIImage(named: "idenfy_ic_liveliness_overlay_branding_image", in: Bundle(identifier: "com.idenfy.idenfysdk"), compatibleWith: nil)
+
+    // Liveness ready screen settings
     public var livenessReadyScreenForegroundColor: UIColor?
     public var livenessReadyScreenBackgroundColors: [UIColor]?
     public var livenessReadyScreenTextBackgroundColor: UIColor?
@@ -270,23 +277,59 @@ iDenfy SDK provides additional liveness customization.
     public var livenessReadyScreenButtonBackgroundHighlightedColor: UIColor?
     public var livenessReadyScreenShowBrandingImage: Bool? = true
     
-    //Liveness result screen settings
+    //Camera permissions screen
+    
+    public var livenessCameraPermissionsScreenImage = UIImage(named: "idenfy_ic_liveliness_camera_permissions_screen_image", in: Bundle(identifier: "com.idenfy.idenfysdk"), compatibleWith: nil)
+
+    // Liveness result screen settings
     public var livenessResultScreenForegroundColor: UIColor?
     public var livenessResultScreenIndicatorColor: UIColor?
     public var livenessResultScreenUploadProgressFillColor: UIColor?
     public var livenessResultScreenUploadProgressTrackColor: UIColor?
     public var livenessResultScreenShowUploadProgressBar: Bool? = true
-    public var livenessResultScreenResultAnimationSuccessBackgroundImage =  UIImage(named: "idenfy_ic_liveliness_results_success_icon_background_v1", in: Bundle(identifier: "com.idenfy.idenfysdk"), compatibleWith: nil)
-    
-    //Full custom settings
-    public var livenessCustomUISettings : ZoomCustomization?
-```
- ### 3. Updating IdenfyUISettings
+    public var livenessResultScreenResultAnimationSuccessBackgroundImage = UIImage(named: "idenfy_ic_liveliness_results_success_icon_background", in: Bundle(identifier: "com.idenfy.idenfysdk"), compatibleWith: nil)
 
+
+    public var livenessCustomUISettings: ZoomCustomization?
+
+    // ID check customization
+    public var livenessIdCheckCustomization = LivenessIdCheckCustomization()
+
+    }
+```
+
+#### LivenessIdCheckCustomization
 ```swift
-let idenfyUISettings = IdenfyUIBuilder()
-    .withLivenessUISettings(livenessUISettings: idenfyUISettings)
-    ...
+@objc public class LivenessIdCheckCustomization: NSObject {
+    public var buttonBackgroundNormalColor: UIColor?
+    public var buttonBackgroundHighlightColor: UIColor?
+    public var captureScreenTextBackgroundColor: UIColor?
+    public var reviewScreenTextBackgroundColor: UIColor?
+    public var captureFrameStrokeColor: UIColor?
+}
+```
+
+### 2.2 Applying full customization
+If you require more changes, you can directly set **livenessCustomUISettings** property in the *IdenfyLivenessUISettings* with your own ZoomCustomization. 
+*Note 
+It will override all other set properties of the IdenfyLivenessUISettings class.
+
+### 3. Updating IdenfyUISettings
+
+#### V1
+```swift
+     let idenfyUISettings = IdenfyUIBuilder()
+            .withLivenessUISettings(idenfyLivenessUISettings)
+            ...
+            .build()
+```
+
+#### V2
+```swift
+     let idenfyUISettingsV2 = IdenfyUIBuilderV2()
+            .withLivenessUISettings(idenfyLivenessUISettings)
+            ...
+            .build()
 ```
 
 
