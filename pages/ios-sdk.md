@@ -18,6 +18,11 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [4.3.0] - 2020-10-07
+### Added:
+* Updated Liveness feature customization [options](https://github.com/idenfy/Documentation/blob/master/pages/IOSUICustomization.md).
+* Improved network requests handling on poor network conditions, specifically short connectivity disappearance.
+
 ## [4.2.0] - 2020-09-21
 ### Added:
 * Added new ID-spoof detection support.
@@ -368,8 +373,8 @@ All keys are located in [here](https://github.com/idenfy/Documentation/blob/mast
 
 ### 2. Forcing specific language
 The default language of SDK is selected by the language configurations of the **device**. In order to force particular locale use:
-##### Java
-```java
+##### Swift
+```swift
     IdenfySettingsV2.IdenfyBuilderV2()
     .withSelectedLocale(IdenfyLocaleEnum.EN)
     ...

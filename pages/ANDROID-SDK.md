@@ -206,7 +206,7 @@ IdenfyController.getInstance().startWithManualResults(context,
 It is required to override onActivityResult for receiving responses.
 
 #### WithManualResults
-### Swift
+### Java
 ```java
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
