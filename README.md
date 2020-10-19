@@ -34,6 +34,7 @@ Our platform has many features - it is best for you to know them all and cherry-
 
 - [Webhook callback](https://github.com/idenfy/Documentation/blob/master/pages/ResultCallback.md)
 - [Additional identification data retrieval](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationDataRetrieval.md)
+- [Download identification report](https://github.com/idenfy/Documentation/blob/master/pages/IdentificationPDF.md)
 
 ## Interface customization
 - [WEB UI platform customization](https://github.com/idenfy/Documentation/blob/master/pages/WebUiCustomization.md)

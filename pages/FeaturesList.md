@@ -68,6 +68,9 @@ Our all servers use SSL certificates enabling https traffic.
 - #### Storing identification data
 We store identification data on our servers as long as needed.
 
+- #### Identification report
+You can download an identification report in pdf.
+
 ---
 
 ### Constraints
