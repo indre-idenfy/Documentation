@@ -31,6 +31,7 @@ The request must contain JSON with optional and mandatory parameters:
 |`address`|No|Client address provided by partner.|String|- Max length 255|`null`|
 |`tokenType`|No|Determines, what sort of processing the client should go through.|String|- Values:<br>&nbsp;&nbsp;&nbsp;&nbsp;-`DOCUMENT`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`IDENTIFICATION`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_PHOTOS`<br>&nbsp;&nbsp;&nbsp;&nbsp;-`VIDEO_CALL_IDENTIFICATION`|`IDENTIFICATION`|
 |`videoCallQuestions`|No|Questions the partner should ask the client in a video call.|List[String]|-|[]|
+|`externalRef`|No|An unique string for external reference to link better the client to you and the iDenfy system.|String|- Length <= 40|null|
 
 ### Receiving response
 The response JSON contains exact same fields as JSON during token generation. It also returns default values for fields
@@ -89,6 +90,7 @@ Specify all of the parameters for full control.
    "address": "Address",
    "tokenType": "IDENTIFICATION",
    "videoCallQuestions": ["Question 1", "Question 2"],
+   "externalRef": "reference"
 }
 ```
 
@@ -126,6 +128,7 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
    "address": "Address",
    "tokenType": "IDENTIFICATION",
    "videoCallQuestions": ["Question 1", "Question 2"],
+   "externalRef": "reference"
 }
 ```
 
@@ -164,6 +167,8 @@ If supplied data in JSON and ***API key*** with ***API secret*** are valid, you 
   "address": null,
   "tokenType": "IDENTIFICATION",
   "videoCallQuestions": [],
+  "externalRef": null
+
 }
 ```
 Note that in case of a malformed JSON body or API key/secret mismatch you will receive a standard *iDenfy* API error response. For more on *iDenfy* API responses visit [iDenfy error messages](https://github.com/idenfy/Documentation/blob/master/pages/StandardErrorMessages.md).
