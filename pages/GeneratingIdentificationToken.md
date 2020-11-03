@@ -5,7 +5,7 @@ If you have ***API key*** and ***API secret*** you can create an identification 
 Send a *HTTP Post* request to: [https://ivs.idenfy.com/api/v2/token](https://ivs.idenfy.com/api/v2/token)<br>
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.<br>
 
-##  Important Note 
+##  Important note 
 If provided information is incorrect or difference than information in the document You would get verification DENIED with document statuses : DOC_INFO_MISMATCH
 ## We recommend:
 Provide only clientId value while generating a token. 
