@@ -6,11 +6,11 @@ Send a *HTTP Post* request to: [https://ivs.idenfy.com/api/v2/token](https://ivs
 The request must contain *basic auth* headers where *username* is *api key* and *password* is *api secret*.<br>
 
 ##  Important Note 
-If information provided incorrectly or difference than information in document You can get verification DENIED with document statuses : DOC_INFO_MISMATCH
+If provided information is incorrect or difference than information in the document You would get verification DENIED with document statuses : DOC_INFO_MISMATCH
 ## We recommend:
-Provide only clientId. 
-Do not provide client information because often clients make mistakes and cannot pass identification successfully.
-Use client information (name, surname and etc.) from our system(Callback). This will prevent errors and improve user experience.
+Provide only clientId value while generating a token. 
+Do not provide client information. Often clients make mistakes and cannot pass identification successfully.
+Use client information (name, surname and etc.) from our system(Callback). This would prevent errors and improve user experience.
 
 The request must contain JSON with optional and mandatory parameters:
 
