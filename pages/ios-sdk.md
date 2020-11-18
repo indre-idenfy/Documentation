@@ -18,6 +18,11 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [4.3.1] - 2020-11-17
+### Added:
+* Added support for the Bulgarian language.
+* Reduced memory footprint.
+
 ## [4.3.0] - 2020-10-07
 ### Added:
 * Updated Liveness feature customization [options](https://github.com/idenfy/Documentation/blob/master/pages/IOSUICustomization.md).
