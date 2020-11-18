@@ -93,7 +93,8 @@ Note, that any of the specified fields below can be `null`.
 |`orgLastName`          |`String`|- Max length 60  |Client surname parsed from the document in original language.|
 |`orgNationality`       |`String`|- Max length 30  |Client nationality parsed from the document in original language.|
 |`orgBirthPlace`        |`String`|- Max length 60  |Client birth place parsed from the document in original language.|
-|`orgAuthority`         |`String`|- Max length 60  |Client document authority categories parsed from the document in original language |
+|`orgAuthority`         |`String`|- Max length 60  |Client document authority categories parsed from the document in original language.|
+|`orgAddress`           |`String`|- Max length 60  |Client address parsed from the document in original language.|
 
 ### File urls table
 
@@ -145,6 +146,7 @@ This is an example JSON body in the callback HTTP request.
     "orgNationality": "LIETUVOS",
     "orgBirthPlace": "ŠILUVA",
     "orgAuthority": null,
+    "orgAddress": null
   },
   "fileUrls": {
     "FRONT": "https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FRONT.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
