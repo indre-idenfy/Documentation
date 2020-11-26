@@ -18,6 +18,10 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [3.2.1] - 2020-11-17
+### Added:
+* Added support for the Bulgarian language.
+
 ## [3.2.0] - 2020-10-06
 ### Added:
 * Added new ID-spoof detection support.

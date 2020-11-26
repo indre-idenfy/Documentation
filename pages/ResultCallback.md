@@ -46,6 +46,7 @@ Request HTTP body is in JSON format which is described in tables below:
 |`aml`       |`Object`|-                |Dictionary that contains anti-money-laundering (AML) service data. Only applicable if AML is enabled for you. [Refer to AML documentation](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/aml.md). |
 |`lid`       |`Object`|-                |Dictionary that contains lost-invalid-documents (LID) service data. Only applicable if LID is enabled for you. [Refer to LID documentation](https://github.com/idenfy/Documentation/blob/master/pages/fraud-check-services/lid.md).|
 |`scanRef`   |`String`|- Max length 36  |A unique string to trace back an identification on iDenfy’s side.                                             |
+|`externalRef`|`String`|- Max length 40  |A unique string for external reference to link better the client to you and the iDenfy system.                                             |
 |`clientId`  |`String`|- Max length 100 |A unique string to trace back a client on your side.                                                          |
 |`startTime` |`Int   `|-                |A timestamp of when a client starts the identification process.|
 |`finishTime`|`Int   `|-                |A timestamp of when the final decision for automatic processing was made.|
@@ -94,8 +95,8 @@ Also, some fields in original language could have symbols encoded in UTF-16.
 |`orgLastName`          |`String`|- Max length 60  |Client surname parsed from the document in original language.|
 |`orgNationality`       |`String`|- Max length 30  |Client nationality parsed from the document in original language.|
 |`orgBirthPlace`        |`String`|- Max length 60  |Client birth place parsed from the document in original language.|
-|`orgAuthority`         |`String`|- Max length 60  |Client document authority categories parsed from the document in original language |
-|`orgAddress`         |`String`|- Max length 60  |Client address parsed from the document in original language.|
+|`orgAuthority`         |`String`|- Max length 60  |Client document authority categories parsed from the document in original language.|
+|`orgAddress`           |`String`|- Max length 60  |Client address parsed from the document in original language.|
 
 ### File urls table
 
@@ -116,6 +117,7 @@ This is an example JSON body in the callback HTTP request.
 {
   "clientId": "123",
   "scanRef": "scan-ref",
+  "externalRef": "external-ref",
   "platform": "MOBILE_APP",
   "startTime": 1554726960, 
   "finishTime": 1554727002,
@@ -147,6 +149,7 @@ This is an example JSON body in the callback HTTP request.
     "orgNationality": "LIETUVOS",
     "orgBirthPlace": "ŠILUVA",
     "orgAuthority": null,
+    "orgAddress": null
   },
   "fileUrls": {
     "FRONT": "https://s3.eu-west-1.amazonaws.com/production.users.storage/users_storage/users/<HASH>/FRONT.png?AWSAccessKeyId=<KEY>&Signature=<SIG>&Expires=<STAMP>",
