@@ -67,6 +67,7 @@ Request HTTP body is in JSON format which is described in tables below:
 ### Data table
 
 Note, that any of the specified fields below can be `null`.
+Also, some fields in original language could have symbols encoded in UTF-16.
 
 |JSON key             |Type    |Constraints      |Explanation|
 |---------------------|--------|-----------------|-----------|
@@ -94,6 +95,7 @@ Note, that any of the specified fields below can be `null`.
 |`orgNationality`       |`String`|- Max length 30  |Client nationality parsed from the document in original language.|
 |`orgBirthPlace`        |`String`|- Max length 60  |Client birth place parsed from the document in original language.|
 |`orgAuthority`         |`String`|- Max length 60  |Client document authority categories parsed from the document in original language |
+|`orgAddress`         |`String`|- Max length 60  |Client address parsed from the document in original language.|
 
 ### File urls table
 
