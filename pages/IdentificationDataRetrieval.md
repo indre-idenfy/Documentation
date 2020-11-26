@@ -54,8 +54,9 @@ JSON key            |Type    |Constraints      |Explanation|
 |`orgLastName`      |`String`|- Max length 60  |Client surname parsed from the document in original language.|
 |`orgNationality`   |`String`|- Max length 30  |Client nationality parsed from the document in original language.|
 |`orgBirthPlace`    |`String`|- Max length 60  |Client birth place parsed from the document in original language.|
-|`orgAuthority`     |`String`|- Max length 60  |Client document authority categories parsed from the document in original language |
-|`scanRef`          |`String`|- Max length 40  | Client identification unique identifier.|
+|`orgAuthority`     |`String`|- Max length 60  |Client document authority categories parsed from the document in original language.|
+|`orgAddress`       |`String`|- Max length 60  |Client address parsed from the document in original language.|
+|`scanRef`          |`String`|- Max length 40  |Client identification unique identifier.|
 |`clientId`         |`Int`|-   |Client unique identifier.|
 
 ## Identification file urls
