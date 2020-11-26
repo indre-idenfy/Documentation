@@ -18,6 +18,19 @@ Our SDK versioning conforms to [Semantic Versioning 2.0.0](https://semver.org/).
 
 The structure of our changes follow practices from [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [3.2.1] - 2020-11-17
+### Added:
+* Added support for the Bulgarian language.
+
+## [3.2.0] - 2020-10-06
+### Added:
+* Added new ID-spoof detection support.
+* Updated Liveness feature customization [options](https://github.com/idenfy/Documentation/blob/master/pages/AndroidUICustomization.md).
+
+## [3.1.2] - 2020-10-05
+### Added:
+* Updated [cameraX](https://developer.android.com/training/camerax) library to the latest version.
+
 ## [3.1.1] - 2020-09-04
 ### Added:
 * Started migration to [cameraX](https://developer.android.com/training/camerax) library. Idenfy contributed to an open-sourced cameraX project to make it the most stable camera solution on Android. If your app **overrides idenfy layouts**, make sure to include cameraX preview layout. All layouts are visible in Android Studio or [here](https://github.com/idenfy/Documentation/blob/master/resources/sdk/android/layouts/).
@@ -197,7 +210,7 @@ IdenfyController.getInstance().startWithManualResults(context,
 It is required to override onActivityResult for receiving responses.
 
 #### WithManualResults
-### Swift
+### Java
 ```java
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

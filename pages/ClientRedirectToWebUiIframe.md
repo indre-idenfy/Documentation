@@ -17,6 +17,12 @@ If you wish to have an iFrame implementation – there is a slightly different a
 ***NOTE!*** 
 When using iFrame locale parameter (when generating token) will have no effect. To force iFrame to use locale append `"lang=<alpha-2-country-code>"` url parameter. Example is given below.
 
+***NOTE!*** 
+If you are using our 3D-liveness feature with our iFrame solution, then the following changes have to be made before **October 21**. 
+Starting from October 21, the liveness feature will not continue to work if your iFrame integration will not be updated.
+
+The only required change is to add the following attribute to your iFrame element:
+**allowfullscreen**
 
 
 ### Examples
@@ -34,6 +40,7 @@ An example redirect url with english locale:<br>https://ui.idenfy.com/?authToken
   
   <iframe 
     id='iframe' 
+    allowfullscreen
     style="width:80%; height:800px;" 
     src="https://ui.idenfy.com/?authToken=3FA5TFPA2ZE3LMPGGS1EGOJNJE"
     allow="camera"

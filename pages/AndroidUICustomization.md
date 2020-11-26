@@ -199,22 +199,21 @@ Coming soon... Stay tuned!
 iDenfy SDK provides additional liveness customization.
 
 ### 1. Creating IdenfyLivenessUIHelper
-#### V2
-##### Java
- ```java
-    IdenfyLivenessUISettingsV2 idenfyLivenessUISettingsV2 = new IdenfyLivenessUISettingsV2();
-```
-
-#### V1
+#### V1, V2
 ##### Java
  ```java
     IdenfyLivenessUISettings idenfyLivenessUISettings = new IdenfyLivenessUISettings();
 ```
-### 2. Applying settings
+
+### 2.1 Applying regular settings
+If you only need color, text, or width customization, you can use properties from the IdenfyLivenessUISettings class.
 #### V1, V2
- **IdenfyLivenessUISettings** has following attributes for liveness customization
+#### IdenfyLivenessUISettings
 ##### Kotlin
  ```Kotlin
+   class IdenfyLivenessUISettings() {
+
+    //Liveness session feedback settings
     var livenessFeedbackBackgroundColor: Int? = null
     var livenessFeedbackFont: Typeface? = null
 
@@ -222,6 +221,9 @@ iDenfy SDK provides additional liveness customization.
     var livenessFrameBackgroundColor: Int? = null
     var livenessFrameColor: Int? = null
     var livenessFrameWidth: Int? = null
+
+    //Liveness session cancel button settings
+    var livenessCancelButtonImage:Int?=null
 
     //Liveness session progress settings
     var livenessIdentificationOvalProgressColor1: Int? = null
@@ -245,6 +247,9 @@ iDenfy SDK provides additional liveness customization.
     var livenessReadyScreenButtonBackgroundDisabledColor: Int? = null
     var livenessReadyScreenShowBrandingImage: Boolean? = true
 
+    //Camera Permission
+    var livenessCameraPermissionsScreenImage:Int?=null
+
     //Liveness result screen settings
     var livenessResultScreenForegroundColor: Int? = null
     var livenessResultScreenIndicatorColor: Int? = null
@@ -253,9 +258,30 @@ iDenfy SDK provides additional liveness customization.
     var livenessResultScreenShowUploadProgressBar: Boolean? = true
     var livenessResultScreenResultAnimationSuccessBackgroundImage: Int? = null
 
+    //Liveness id check customization
+    var livenessIdCheckCustomization = LivenessIdCheckCustomization()
+
     //Full custom settings
-    var livenessCustomUISettings: com.facetec.zoom.sdk.ZoomCustomization?=null
+    var livenessCustomUISettings: com.facetec.zoom.sdk.ZoomCustomization? = null
+   }
 ```
+
+#### LivenessIdCheckCustomization
+##### Kotlin
+```Kotlin
+class LivenessIdCheckCustomization() {
+        var buttonBackgroundNormalColor: Int?=null
+        var buttonBackgroundHighlightColor: Int?=null
+        var captureScreenTextBackgroundColor: Int?=null
+        var reviewScreenTextBackgroundColor: Int?=null
+        var captureFrameStrokeColor: Int?=null
+    }
+```
+
+### 2.2 Applying full customization
+If you require more changes, you can directly set **livenessCustomUISettings** property in the *IdenfyLivenessUISettings* with your own ZoomCustomization. 
+*Note 
+It will override all other set properties of the IdenfyLivenessUISettings class.
 
 ### 3. Updating IdenfyUISettings
 #### V1
@@ -264,6 +290,7 @@ iDenfy SDK provides additional liveness customization.
     IdenfyUISettings idenfyUISettings = new IdenfyUISettings.IdenfyUIBuilder().
     withLivenessUISettings(idenfyLivenessUISettings).
     ...
+    build()
 ```
 
 #### V2
@@ -272,10 +299,8 @@ iDenfy SDK provides additional liveness customization.
     IdenfyUISettingsV2 idenfyUISettingsV2 = new IdenfyUISettingsV2.IdenfyUIBuilderV2().
     withLivenessUISettings(idenfyLivenessUISettingsV2).
     ...
+    build()
 ```
-
-## Liveness customization V2
- iDenfySDK provides the following attributes for liveness customization:
 
 
 

@@ -21,7 +21,7 @@ The request must contain JSON with parameter:
 | -----------| -------- | ------------------------------------- | -------- | ------------------------------------------------------------------------------------------------ |
 | `scanRef`  | Yes      | A unique string identifying a client identification. | `String` | -                                                                                 |
 
-#### Response
+#### Responseexternalref
 For successful API call you get a pdf file in **bytes64** format and a response with a positive **200** status.
 
 

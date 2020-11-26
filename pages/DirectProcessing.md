@@ -17,7 +17,7 @@ The request must contain JSON with these parameters:
 | `authToken`    | Yes      | Identification token                  | `String` | -                                                                                                |
 | `country`      | Yes      | Country code in 3166-1 alpha-2 format | `String` | Any country in alpha-2 code                                                                      |
 | `documentType` | Yes      | Document type                         | `String` | Possible values:<br>- ID_CARD<br>- PASSPORT<br>- RESIDENCE_PERMIT<br>- DRIVER_LICENSE<br>- OTHER |
-| `images`       | Yes      | Images for identification             | `Object` | -                                                                                                |
+| `images`       | Yes      | Images for identification (Base64 format)| `Object` | -                                                                                                |
 
 #### Contents of images
 

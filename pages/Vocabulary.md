@@ -56,3 +56,14 @@
 |`AML_FAILED`                 |If AML functionality is turned on for you - this reason specifies that the check has failed.|
 |`LID_SUSPECTION`             |If LID functionality is turned on for you - this reason specifies that client's document is found in lost or stolen documents database.|
 |`LID_FAILED`                 |If LID functionality is turned on for you - this reason specifies that the check has failed.|
+|`UNDER_AGE`                  |An age read from document is lower than partner age limit.|
+|`UNKNOWN_AGE`                |An age was not read from document and partner has set age limit.|
+|`NAME`                       |Partner given client name does not match one read form document.|
+|`SURNAME`                    |Partner given client surname does not match the one read form document.|
+|`DOCUMENT_NUMBER`            |Partner given client document number does not match the one read form document.|
+|`PERSONAL_CODE`              |Partner given client personal code does not match the one read form document.|
+|`EXPIRY_DATE`                |Partner given client expiry date does not match the one read form document.|
+|`DATE_OF_BIRTH`              |Partner given client date of birth does not match the one read form document.|
+|`DATE_OF_ISSUE`              |Partner given client date of issue does not match the one read form document.|
+|`FULL_NAME`                  |Partner given client full name does not match the one read form document.|
+
